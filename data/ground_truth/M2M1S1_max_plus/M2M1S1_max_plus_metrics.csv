@@ -1,0 +1,2 @@
+Name,Nodes,Edges,avg_degree,std_degree,spectral_radius,mixing_time,assortativity,clustering,pseudo_diameter,S,Kind,Mode,NPs,EPs,gt,GraphML,GML,csv
+M2M1S1_max_plus,6258,45790,787.05,778.52,787.05,787.55,0.84,0.92,1.31,1.00,Directed,Unipartite,name,,N/A,N/A,N/A,N/A

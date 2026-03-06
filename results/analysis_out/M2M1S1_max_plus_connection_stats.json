@@ -1,0 +1,82 @@
+{
+  "syn_ee_contacts": 233631,
+  "syn_ei_contacts": 108198,
+  "syn_ie_contacts": 93896,
+  "syn_ii_contacts": 61826,
+  "ele_ee_conductances": 1276960,
+  "ele_ii_conductances": 681360,
+  "correlation": -0.9912061090936979,
+  "network_name": "M2M1S1_max_plus",
+  "timestamp": "2026-02-14T00:21:57.003459",
+  "connection_percentages": {
+    "excitatory": {
+      "count": 1618789,
+      "percentage": 65.91506638581586
+    },
+    "inhibitory": {
+      "count": 837082,
+      "percentage": 34.08493361418413
+    }
+  },
+  "incoming_connections": {
+    "to_excitatory": {
+      "total": 1604487,
+      "from_excitatory": [
+        1510591,
+        94.14791145082509
+      ],
+      "from_inhibitory": [
+        93896,
+        5.8520885491749075
+      ]
+    },
+    "to_inhibitory": {
+      "total": 851384,
+      "from_excitatory": [
+        108198,
+        12.708484068293508
+      ],
+      "from_inhibitory": [
+        743186,
+        87.29151593170648
+      ]
+    }
+  },
+  "outgoing_connections": {
+    "from_excitatory": {
+      "total": 1618789,
+      "to_excitatory": [
+        1510591,
+        93.31611470055702
+      ],
+      "to_inhibitory": [
+        108198,
+        6.683885299442979
+      ]
+    },
+    "from_inhibitory": {
+      "total": 837082,
+      "to_excitatory": [
+        93896,
+        11.217061172023769
+      ],
+      "to_inhibitory": [
+        743186,
+        88.78293882797624
+      ]
+    }
+  },
+  "synaptic_conductance": {
+    "ampa": 75451.0264146,
+    "nmda": 109385.28000000001,
+    "gabaa": 7544.7309000000005,
+    "gabab": 395.07995036999995,
+    "total": 192776.11726497,
+    "average_per_connection": 0.38744996445584473
+  },
+  "electrical_conductance": {
+    "total": 497551.0,
+    "peak": 5874960.0
+  },
+  "total_peak_conductance": 6067736.11726497
+}

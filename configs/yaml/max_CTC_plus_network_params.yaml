@@ -1,0 +1,53 @@
+network_id: max_CTC_plus
+populations:
+- E
+- I
+N:
+- 34500
+- 38050
+p: 0.1893313547345585
+g: 5.0
+connection_rule: fixed_indegree
+neuron_type: iaf_psc_delta
+multapses: false
+C:
+  val: 1.0
+  unit: pF
+tau_m:
+  val: 20.0
+  unit: ms
+tau_r:
+  val: 2.0
+  unit: ms
+V_0_rel:
+  val: 0.0
+  unit: mV
+V_th_rel:
+  val: 15.0
+  unit: mV
+E_L:
+  val: 0.0
+  unit: mV
+V_m:
+  val: 0.0
+  unit: mV
+tau_s:
+  val: 0.0
+  unit: ms
+d:
+  val: 1.0
+  unit: ms
+delay_dist: none
+j:
+  val: 0.2371
+  unit: mV
+gaussianize: true
+j_std: 0.47
+nu_ext:
+  val:
+  - 300.0
+  - 10.0
+  unit: Hz
+I_ext:
+  val: 1.0
+  unit: pA

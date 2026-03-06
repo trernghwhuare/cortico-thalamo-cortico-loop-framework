@@ -1,0 +1,2 @@
+Name,Nodes,Edges,avg_degree,std_degree,spectral_radius,mixing_time,assortativity,clustering,pseudo_diameter,S,Kind,Mode,NPs,EPs,gt,GraphML,GML,csv
+max_CTC_plus,1043,2420,162.86,61.17,162.86,163.36,0.92,0.36,1.36,1.00,Directed,Unipartite,name,,N/A,N/A,N/A,N/A

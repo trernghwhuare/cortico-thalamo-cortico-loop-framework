@@ -1,0 +1,37 @@
+{
+  "descriptive_stats": {
+    "homogeneous": {
+      "mean": 4593.01,
+      "std": 503.4150513244513,
+      "median": 4555.0,
+      "min": 25.0,
+      "max": 7581.0
+    },
+    "ei_separated": {
+      "mean": 6033.212,
+      "std": 615.49799435579,
+      "median": 5999.0,
+      "min": 25.0,
+      "max": 9495.0
+    }
+  },
+  "normality_tests": {
+    "homogeneous_shapiro_p": 2.2714040676279103e-49,
+    "ei_separated_shapiro_p": 1.3917636678417143e-49,
+    "homogeneous_normal": false,
+    "ei_separated_normal": false
+  },
+  "statistical_test": {
+    "test_name": "Mann-Whitney U test",
+    "statistic": 34325.5,
+    "p_value": 8.936680505360967e-285,
+    "significant": true,
+    "effect_size_cohens_d": null
+  },
+  "time_series_analysis": {
+    "correlation_coefficient": 0.9613172579661649,
+    "mean_absolute_difference": 1440.202,
+    "peak_difference": 2710.0,
+    "variance_ratio": 1.4948612765641045
+  }
+}

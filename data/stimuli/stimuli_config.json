@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "type": "visual",
+      "start_s": 2.0,
+      "duration_s": 6.0,
+      "strength": 0.2,
+      "target_pop": "exc",
+      "random_fraction": 0.12,
+      "pattern": "sustained",
+      "note": "mild, broad visual drive",
+      "target_weights": {
+        "excitatory": 1.0,
+        "inhibitory": 0.0
+      }
+    },
+    {
+      "type": "TMS",
+      "start_s": 5.0,
+      "duration_s": 12.0,
+      "strength": 1.0,
+      "target_pop": "both",
+      "random_n": 30,
+      "pattern": "pulsed",
+      "pulse_interval_s": 0.20,
+      "note": "monophasic-like brief electrical stimulation",
+      "target_weights": {
+        "excitatory": 2.0,
+        "inhibitory": 1.0
+      }
+    },
+    {
+      "type": "visual",
+      "start_s": 10.0,
+      "duration_s": 8.0,
+      "strength": 0.18,
+      "target_pop": "exc",
+      "random_fraction": 0.12,
+      "pattern": "sustained",
+      "note": "follow-up visual",
+      "target_weights": {
+        "excitatory": 1.0,
+        "inhibitory": 0.0
+      }
+    },
+    {
+      "type": "pain",
+      "start_s": 14.0,
+      "duration_s": 12.0,
+      "strength": 1.0,
+      "target_pop": "both",
+      "degree_top_percent": 12.0,
+      "pattern": "short_bursts",
+      "bursts": 10,
+      "burst_interval_s": 0.6,
+      "burst_len_s": 1.0,
+      "note": "strong nociceptive drive targeting high-degree nodes",
+      "target_weights": {
+        "excitatory": 1.0,
+        "inhibitory": 1.0
+      }
+    }
+  ]
+}

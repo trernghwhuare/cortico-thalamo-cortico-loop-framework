@@ -1,0 +1,91 @@
+{
+  "mathematical_models": {
+    "homogeneous_model": {
+      "description": "Single-population SIRS model (from 69_5_gt_combined_ani.py)",
+      "parameters": {
+        "spontaneous_outbreak": "x = 0.004",
+        "recovery_rate": "r = 0.4",
+        "susceptibility_rate": "s = 0.04",
+        "transmission_probability": "\u03b2 = 0.5"
+      },
+      "equations": {
+        "state_transitions": [
+          "P(S_i \u2192 I_i) = x + \u03b2 \u00d7 \u03a3_{j\u2208N(i)} I_j(t)",
+          "P(I_i \u2192 R_i) = r",
+          "P(R_i \u2192 S_i) = s"
+        ],
+        "population_dynamics": [
+          "dS/dt = -xS - \u03b2SI + sR",
+          "dI/dt = xS + \u03b2SI - rI",
+          "dR/dt = rI - sR"
+        ]
+      }
+    },
+    "ei_separated_model": {
+      "description": "Two-population E/I separated SIRS model (from 69_6_gt_combined_ani_adv.py)",
+      "parameters": {
+        "spontaneous_outbreak": "x = 0.004",
+        "recovery_rate": "r = 0.4",
+        "susceptibility_rate": "s = 0.04",
+        "transmission_probability": "\u03b2 = 0.5"
+      },
+      "equations": {
+        "excitatory_dynamics": [
+          "P(S^E_i \u2192 I^E_i) = x + \u03b2 \u00d7 \u03a3_{j\u2208N(i)} [I^E_j(t) if j\u2208Exc else I^I_j(t)]",
+          "P(I^E_i \u2192 R^E_i) = r",
+          "P(R^E_i \u2192 S^E_i) = s"
+        ],
+        "inhibitory_dynamics": [
+          "P(S^I_i \u2192 I^I_i) = x + \u03b2 \u00d7 \u03a3_{j\u2208N(i)} [I^E_j(t) if j\u2208Exc else I^I_j(t)]",
+          "P(I^I_i \u2192 R^I_i) = r",
+          "P(R^I_i \u2192 S^I_i) = s"
+        ],
+        "key_difference": "Same SIRS parameters but tracks E/I populations separately"
+      }
+    },
+    "key_differences": [
+      "Both models use identical SIRS parameters (x=0.004, r=0.4, s=0.04)",
+      "Homogeneous model ignores node type information completely",
+      "E/I model preserves excitatory vs inhibitory classification throughout simulation",
+      "E/I model enables analysis of population-specific dynamics and E/I balance",
+      "E/I model can reveal stability properties through excitatory-inhibitory ratios",
+      "Homogeneous model produces aggregate dynamics without population resolution"
+    ]
+  },
+  "algorithmic_differences": {
+    "node_classification": {
+      "homogeneous": "Ignores node type information completely",
+      "ei_separated": "Uses 'type' field to classify nodes as Exc/Inh"
+    },
+    "state_representation": {
+      "homogeneous": "Single state vector for all nodes",
+      "ei_separated": "Separate state vectors for excitatory and inhibitory populations"
+    },
+    "initialization": {
+      "homogeneous": "Random initial infection across all nodes",
+      "ei_separated": "Separate initial infections for E and I populations"
+    },
+    "dynamics": {
+      "homogeneous": "Same SIRS parameters applied to all nodes",
+      "ei_separated": "Potentially different dynamics for E vs I populations"
+    },
+    "visualization": {
+      "homogeneous": "Single color scheme for all active nodes",
+      "ei_separated": "Different colors for excitatory vs inhibitory active states"
+    }
+  },
+  "network_composition": {
+    "total_nodes": 441552,
+    "excitatory_nodes": 258288,
+    "inhibitory_nodes": 183264,
+    "excitatory_ratio": 0.5849548864006957,
+    "inhibitory_ratio": 0.4150451135993043
+  },
+  "expected_quantitative_differences": [
+    "Smoother dynamics in homogeneous model",
+    "Potential oscillations in E/I separated model",
+    "E/I balance as stability indicator",
+    "Phase relationships between populations",
+    "Different perturbation responses"
+  ]
+}
