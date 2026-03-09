@@ -3,7 +3,7 @@ title: "Morphologically Defined Thalamic Projection Motifs as Structural Control
 authors:
   - name: Hua Cheng M.D.
     affiliations:
-      - uncertain yet
+      - Independant researcher
     orcid: 0000-0003-0903-6766
 corresponding_author: Hua Cheng M.D.
 date: "2026-03-09"
