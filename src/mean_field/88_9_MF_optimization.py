@@ -1671,7 +1671,7 @@ def compare_mean_field_with_simulation(network_name, params, N_E, N_I):
     # If mean-field rates are zero or very small, try to use values from read_results.py approach first
     if (single_r_e <= 0.01 or single_r_i <= 0.01):
         print(f"Warning: Single-neuron mean-field rates are zero or very small, trying to load from pickle files")
-        pkl_file = f'/home/leo520/pynml/storage/pkl_files/{network_name}_results.pkl'
+        pkl_file = f'/home/leo520/pynml/yaml_nest/pkl_files/{network_name}_results.pkl'
         try:
             with open(pkl_file, 'rb') as f:
                 data = pickle.load(f)
@@ -1726,32 +1726,32 @@ def compare_mean_field_with_simulation(network_name, params, N_E, N_I):
         return {}
     
     # Generate mock simulation data for visual stimuli
-    vis_rates_e = SIMULATION_RESULTS[network_name]['visual_stimuli'][0]  # E rate for visual stimuli
-    vis_rates_i = SIMULATION_RESULTS[network_name]['visual_stimuli'][1]  # I rate for visual stimuli
+    vis_rates_e = SIMULATION_RESULTS[network_name]['visual_stimuli']['e_rate']  # E rate for visual stimuli
+    vis_rates_i = SIMULATION_RESULTS[network_name]['visual_stimuli']['i_rate']  # I rate for visual stimuli
     vis_spike_trains_e, vis_spike_trains_i, _, _ = generate_mock_simulation_data(
         vis_rates_e, vis_rates_i, N_E, N_I, network_name)
     
     # Generate mock simulation data for pain stimuli
-    pain_rates_e = SIMULATION_RESULTS[network_name]['pain_stimuli'][0]  # E rate for pain stimuli
-    pain_rates_i = SIMULATION_RESULTS[network_name]['pain_stimuli'][1]  # I rate for pain stimuli
+    pain_rates_e = SIMULATION_RESULTS[network_name]['pain_stimuli']['e_rate']  # E rate for pain stimuli
+    pain_rates_i = SIMULATION_RESULTS[network_name]['pain_stimuli']['i_rate']  # I rate for pain stimuli
     pain_spike_trains_e, pain_spike_trains_i, _, _ = generate_mock_simulation_data(
         pain_rates_e, pain_rates_i, N_E, N_I, network_name)
     
     # Generate mock simulation data for electrical TMS_monophasic stimuli
-    TMS_mono_rates_e = SIMULATION_RESULTS[network_name]['TMS_monophasic'][0]  # E rate for TMS_mono stimuli
-    TMS_mono_rates_i = SIMULATION_RESULTS[network_name]['TMS_monophasic'][1]  # I rate for TMS_mono stimuli
+    TMS_mono_rates_e = SIMULATION_RESULTS[network_name]['TMS_monophasic']['e_rate']  # E rate for TMS_mono stimuli
+    TMS_mono_rates_i = SIMULATION_RESULTS[network_name]['TMS_monophasic']['i_rate']  # I rate for TMS_mono stimuli
     TMS_mono_spike_trains_e, TMS_mono_spike_trains_i, _, _ = generate_mock_simulation_data(
         TMS_mono_rates_e, TMS_mono_rates_i, N_E, N_I, network_name)
     
     # Generate mock simulation data for electrical TMS_half-sine stimuli
-    TMS_half_rates_e = SIMULATION_RESULTS[network_name]['TMS_half_sine'][0]  # E rate for TMS_half-sine stimuli
-    TMS_half_rates_i = SIMULATION_RESULTS[network_name]['TMS_half_sine'][1]  # I rate for TMS_half-sine stimuli
+    TMS_half_rates_e = SIMULATION_RESULTS[network_name]['TMS_half_sine']['e_rate']  # E rate for TMS_half-sine stimuli
+    TMS_half_rates_i = SIMULATION_RESULTS[network_name]['TMS_half_sine']['i_rate']  # I rate for TMS_half-sine stimuli
     TMS_half_spike_trains_e, TMS_half_spike_trains_i, _, _ = generate_mock_simulation_data(
         TMS_half_rates_e, TMS_half_rates_i, N_E, N_I, network_name)
     
     # Generate mock simulation data for electrical TMS_biphasic stimuli
-    TMS_bi_rates_e = SIMULATION_RESULTS[network_name]['TMS_biphasic'][0]  # E rate for TMS_biphasic stimuli
-    TMS_bi_rates_i = SIMULATION_RESULTS[network_name]['TMS_biphasic'][1]  # I rate for TMS_biphasic stimuli
+    TMS_bi_rates_e = SIMULATION_RESULTS[network_name]['TMS_biphasic']['e_rate']  # E rate for TMS_biphasic stimuli
+    TMS_bi_rates_i = SIMULATION_RESULTS[network_name]['TMS_biphasic']['i_rate']  # I rate for TMS_biphasic stimuli
     TMS_bi_spike_trains_e, TMS_bi_spike_trains_i, _, _ = generate_mock_simulation_data(
         TMS_bi_rates_e, TMS_bi_rates_i, N_E, N_I, network_name)
     
@@ -2801,7 +2801,7 @@ def save_actual_simulation_results():
                 # Get spike train data for this network and stimulus type
                 # Pass None for N_E and N_I since generate_mock_simulation_data will load them from network parameters
                 spike_trains_e, spike_trains_i, N_E, N_I = generate_mock_simulation_data(
-                    rates[0], rates[1], None, None, network_id=network
+                    rates['e_rate'], rates['i_rate'], None, None, network_id=network
                 )
                 
                 # Calculate CV statistics
@@ -2809,7 +2809,7 @@ def save_actual_simulation_results():
                 
                 # Store both firing rates and CV statistics
                 serializable_results[network][stimulus] = {
-                    'firing_rates': [float(rates[0]), float(rates[1])],
+                    'firing_rates': [float(rates['e_rate']), float(rates['i_rate'])],
                     'cv_stats': cv_stats
                 }
         
@@ -2832,28 +2832,28 @@ def main():
     
     # Define the list of network names to analyze
     network_names = [
-        # 'TC2PT',
-        # 'TC2CT',
-        # 'TC2IT4_IT2CT',
-        # 'TC2IT2PTCT',
+        'TC2PT',
+        'TC2CT',
+        'TC2IT4_IT2CT',
+        'TC2IT2PTCT',
         'max_CTC_plus',
-        # 'M1a_max_plus',
-        # 'M1_max_plus',
-        # 'M2_max_plus',
-        # 'M2aM1aS1a_max_plus',
-        # 'S1bM1bM2b_max_plus',
+        'M1a_max_plus',
+        'M1_max_plus',
+        'M2_max_plus',
+        'M2aM1aS1a_max_plus',
+        'S1bM1bM2b_max_plus',
         'M2M1S1_max_plus',
-        # 'spike_TC2PT',
-        # 'spike_TC2CT',
-        # 'spike_TC2IT4_IT2CT',
-        # 'spike_TC2IT2PTCT',
-        # 'spike_max_CTC_plus',
-        # 'spike_M1a_max_plus',
-        # 'spike_M1_max_plus',
-        # 'spike_M2_max_plus',
-        # 'spike_M2aM1aS1a_max_plus',
-        # 'spike_S1bM1bM2b_max_plus',
-        # 'spike_M2M1S1_max_plus',
+        'spike_TC2PT',
+        'spike_TC2CT',
+        'spike_TC2IT4_IT2CT',
+        'spike_TC2IT2PTCT',
+        'spike_max_CTC_plus',
+        'spike_M1a_max_plus',
+        'spike_M1_max_plus',
+        'spike_M2_max_plus',
+        'spike_M2aM1aS1a_max_plus',
+        'spike_S1bM1bM2b_max_plus',
+        'spike_M2M1S1_max_plus',
     ]
 
     # Create output directory if it doesn't exist
@@ -2933,11 +2933,16 @@ def main():
     
     for network_name in network_names:
         if network_name in SIMULATION_RESULTS:
-            visual_e, visual_i = SIMULATION_RESULTS[network_name]['visual_stimuli']
-            monophasic_e, monophasic_i = SIMULATION_RESULTS[network_name]['TMS_monophasic']
-            half_sine_e, half_sine_i = SIMULATION_RESULTS[network_name]['TMS_half_sine']
-            biphasic_e, biphasic_i = SIMULATION_RESULTS[network_name]['TMS_biphasic']
-            pain_e, pain_i = SIMULATION_RESULTS[network_name]['pain_stimuli']
+            visual_e = SIMULATION_RESULTS[network_name]['visual_stimuli']['e_rate']
+            visual_i = SIMULATION_RESULTS[network_name]['visual_stimuli']['i_rate']
+            monophasic_e = SIMULATION_RESULTS[network_name]['TMS_monophasic']['e_rate']
+            monophasic_i = SIMULATION_RESULTS[network_name]['TMS_monophasic']['i_rate']
+            half_sine_e = SIMULATION_RESULTS[network_name]['TMS_half_sine']['e_rate']
+            half_sine_i = SIMULATION_RESULTS[network_name]['TMS_half_sine']['i_rate']
+            biphasic_e = SIMULATION_RESULTS[network_name]['TMS_biphasic']['e_rate']
+            biphasic_i = SIMULATION_RESULTS[network_name]['TMS_biphasic']['i_rate']
+            pain_e = SIMULATION_RESULTS[network_name]['pain_stimuli']['e_rate']
+            pain_i = SIMULATION_RESULTS[network_name]['pain_stimuli']['i_rate']
             
             print(f"\n{network_name}:")
             print(f"  Visual stimuli: E={visual_e:.2f} Hz, I={visual_i:.2f} Hz")
