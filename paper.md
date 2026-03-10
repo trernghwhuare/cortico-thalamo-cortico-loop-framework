@@ -110,7 +110,7 @@ and valified morphologically cell models *in silico*, including matrix
 type (TCRm, nRTm), core type (TCRc, nRTc) and intralaminar type (TCRil,
 nRTil). The modeling and simulation were adjusted and modified from
 Bezaire (2016), *etc.*[@10.7554/eLife.18566] (see
-Fig. [2](#fig:fig2){reference-type="ref" reference="fig:fig2"}).
+Fig. [2]{reference-type="ref" reference="fig:fig2"}).
 
 ![Three-dimensional morphology renders (left) and example membrane
 potential responses (right) for each thalamic class. Traces show
@@ -186,7 +186,7 @@ conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
     CTC loops, and distinction conforms reasonably well to the
     classification of the thalamus into matrixtype (calbindinexpressing)
     nuclei and coretype (parvalbuminexpressing (PV), in primates)
-    nuclei[@10.1016/S0306-4522(97)00581-2], respectively, as a results, the
+    nuclei[@10.1016/S0306-4522], respectively, as a results, the
     intralaminar, the matrix and core terminology are used as a proxy
     for the projectiondefined TC classes.
 
@@ -215,7 +215,7 @@ nucleus (TRN). CTC circuits of the primary somatosensory cortex (S1),
 primary motor cortex (M1) and secondary motor cortex (M2) are organized
 hierarchically, with 'top-down' M2 → M1 → S1 pathways running
 countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see
-Fig. [3](#fig:fig3){reference-type="ref" reference="fig:fig3"}).
+Fig. [3]{reference-type="ref" reference="fig:fig3"}).
 
 <figure id="fig:fig3">
 <img src="paper/figures/Picture3.png" style="width:100.0%" />
@@ -262,7 +262,7 @@ were 5 $\rightarrow$ 10 $\rightarrow$ 15 $\rightarrow$ 20 $\rightarrow$
 25 Hz frequency sweeps to explore temporal resolution limits.And the
 complete phase cycle with full 0 $\rightarrow$ 2$\pi$ phase progression
 to assess orientation selectivity mechanisms shown in
-Fig. [4](#fig:fig4){reference-type="ref" reference="fig:fig4"}B.
+Fig. [4]{reference-type="ref" reference="fig:fig4"}B.
 
 The TMS protocol implements three distinct waveform configurations to
 model different stimulation modalities, which are monophasic, half-sine
@@ -277,7 +277,7 @@ comprehensive parameter space exploration with both increasing and
 decreasing DC rate sequences (20$\rightarrow$`<!-- -->`{=html}80 Hz and
 100$\rightarrow$`<!-- -->`{=html}20 Hz), combined DC-amplitude
 modulation, and phase progression analysis shown in
-Fig. [4](#fig:fig4){reference-type="ref" reference="fig:fig4"}D.
+Fig. [4]{reference-type="ref" reference="fig:fig4"}D.
 
 The pain stimulation protocol utilizes a baseline firing rate of 60 Hz
 with moderate amplitude modulation (30 Hz) at a frequency of 10 Hz. This
@@ -294,7 +294,7 @@ $\rightarrow$ 8 $\rightarrow$ 11 $\rightarrow$ 14 Hz to explore temporal
 coding properties.Phase progression systematically phase shifts through
 0 $\rightarrow$ $\pi$/2 $\rightarrow$ $\pi$ $\rightarrow$ 3$\pi$/2
 $\rightarrow$ 2$\pi$ radians to investigate phase-dependent responses
-shown in Fig. [4](#fig:fig4){reference-type="ref"
+shown in Fig. [4]{reference-type="ref"
 reference="fig:fig4"}F.
 
 ![Stimulus waveforms and exemplar response summaries for the three
@@ -333,11 +333,11 @@ single-cell validation (per-class $n=20$); population activity was
 summarized by PSTHs with a default bin width of 5 ms. Analyses reported
 include E/I ratio, coefficient of variation (CV), power spectral
 density/band power are also shown in
-Fig. [4](#fig:fig4){reference-type="ref" reference="fig:fig4"} and
+Fig. [4](paper/figures/Picture4.png){reference-type="ref" reference="fig:fig4"} and
 simulation defaults and trial counts appear in
 Table. [\[tab:protocol_features\]](#tab:protocol_features){reference-type="ref"
-reference="tab:protocol_features"},[\[tab:parameter_sweeps\]](#tab:parameter_sweeps){reference-type="ref"
-reference="tab:parameter_sweeps"}, [1](#tab:network_params){reference-type="ref"
+reference="tab:protocol_features"},[\[tab:parameter_sweeps\]]{reference-type="ref"
+reference="tab:parameter_sweeps"}, [1]{reference-type="ref"
 reference="tab:network_params"}.
 
 ## Analysis methods
@@ -396,10 +396,10 @@ NEST stimulator[@Gewaltig:NEST] is used for simulating large scale
 neuronal networks, which is highly scalable and can be run on
 high-performance computing clusters. In this work, 3 types of sinusoidal
 generators, simulated as visual (see
-Fig. [9](#fig:fig9){reference-type="ref" reference="fig:fig9"}-A,B),
+Fig. [9]{reference-type="ref" reference="fig:fig9"}-A,B),
 transcranial magnetic stimulation (TMS) (see
-Fig. [9](#fig:fig9){reference-type="ref" reference="fig:fig9"}-C,D) and
-pain stimuli (see Fig. [9](#fig:fig9){reference-type="ref"
+Fig. [9]{reference-type="ref" reference="fig:fig9"}-C,D) and
+pain stimuli (see Fig. [9]{reference-type="ref"
 reference="fig:fig9"}-E, F) with sinusoidal_gamma_generator in NEST
 simulator.
 
@@ -411,10 +411,10 @@ excitatory and inhibitory inputs across neurons: networks with greater
 matrix-type projection weight display higher median E/I ratios than
 core-dominant reconstructions, and intralaminar-enriched classes show
 distinct contact-count distributions (see
-Fig. [8](#fig:fig8){reference-type="ref" reference="fig:fig8"} and
-Fig. [5](#fig:fig5){reference-type="ref" reference="fig:fig5"}). These
+Fig. [8]{reference-type="ref" reference="fig:fig8"} and
+Fig. [5]{reference-type="ref" reference="fig:fig5"}). These
 differences are robust across the CTC and M2M1S1 instantiations reported
-in Table [1](#tab:network_params){reference-type="ref"
+in Table [1]{reference-type="ref"
 reference="tab:network_params"}. All pairwise class comparisons were
 evaluated using Wilcoxon tests with Benjamini-Hochberg FDR correction;
 effect sizes are reported in the Supplementary materials (Cliff's delta)
@@ -426,8 +426,8 @@ larger low-frequency (delta/theta) band power and more pronounced
 transient synchrony following perturbation than core-dominant networks.
 Representative intracellular traces and class-resolved PSTH/rate
 distributions illustrating these trends are presented in
-Fig. [12](#fig:fig12){reference-type="ref" reference="fig:fig12"} and
-Fig. [13](#fig:fig13){reference-type="ref" reference="fig:fig13"};
+Fig. [12]{reference-type="ref" reference="fig:fig12"} and
+Fig. [13]{reference-type="ref" reference="fig:fig13"};
 band-power and coherence summaries are provided in the Supplementary
 figures. Statistical comparisons used permutation testing (10,000
 permutations) with FDR correction and report both p-values and effect
@@ -441,7 +441,7 @@ profiles; TMS-like pulses produce brief high-amplitude transients whose
 decay and spatial spread vary with projection motifs; pain-like pulse
 sequences evoke slow rhythmic modulations and repeated transient
 responses. Example waveforms, trial-averaged PSTHs and exemplar rasters
-are shown in Fig. [9](#fig:fig9){reference-type="ref"
+are shown in Fig. [9]{reference-type="ref"
 reference="fig:fig9"}; condition-by-class PSTH summaries (peak
 amplitude, latency) and per-trial metrics are supplied as JSON outputs.
 PSTH peak and latency comparisons were performed using nonparametric
@@ -454,8 +454,8 @@ variability reliably (CV agreement) but tends to misestimate absolute
 firing-rate magnitudes; population mean-field shows larger absolute
 errors in most conditions. Scatterplots and per-condition RMSE and
 Pearson correlation coefficients are presented in
-Fig. [11](#fig:fig11){reference-type="ref" reference="fig:fig11"} and
-Table [\[tab:mf_fit_quality\]](#tab:mf_fit_quality){reference-type="ref"
+Fig. [11]{reference-type="ref" reference="fig:fig11"} and
+Table [\[tab:mf_fit_quality\]]{reference-type="ref"
 reference="tab:mf_fit_quality"}, and per-condition residuals are
 available in the `MF_optimized` outputs.
 
@@ -464,9 +464,9 @@ and contact features provide a robust basis for class separability:
 supervised classifiers trained on these features achieve consistent
 accuracy across cross-validation folds and retain discriminative
 performance under modest feature ablation (see
-Fig. [7](#fig:fig7){reference-type="ref" reference="fig:fig7"}); cluster
+Fig. [7]{reference-type="ref" reference="fig:fig7"}); cluster
 maps and heatmaps that visualise motif grouping are shown in
-Fig. [6](#fig:fig6){reference-type="ref" reference="fig:fig6"}. Reported
+Fig. [6]{reference-type="ref" reference="fig:fig6"}. Reported
 metrics include cross-validated accuracy, confusion matrices and
 feature-ablation effect sizes in the Supplementary.
 
@@ -474,8 +474,8 @@ Single-cell validation and morphologies. NeuroML v2 morphologies and the
 electrophysiological parameterization reproduce canonical single-cell
 signatures used for model calibration. Representative morphology renders
 and validation voltage traces are shown in
-Fig. [1](#fig:fig1){reference-type="ref" reference="fig:fig1"} and
-Fig. [2](#fig:fig2){reference-type="ref" reference="fig:fig2"};
+Fig. [1]{reference-type="ref" reference="fig:fig1"} and
+Fig. [2]{reference-type="ref" reference="fig:fig2"};
 numerical validation metrics (rheobase, FI-curve fits, adaptation
 indices) are tabulated in Supplementary Table S2.
 
@@ -485,7 +485,7 @@ seeds; sensitivity-sweep summaries and the thresholds at which specific
 conclusions change are recorded in the Supplementary CSVs. Where
 applicable we report sample sizes (neurons, trials), RNG seeds and
 simulation defaults
-(Table [\[tab:sim_params\]](#tab:sim_params){reference-type="ref"
+(Table [\[tab:sim_params\]]{reference-type="ref"
 reference="tab:sim_params"}) to support reproducibility.
 
 ## CTC loops and M2M1S1 loops simulations
@@ -497,7 +497,7 @@ organized hierarchically as CTC loops of the primary somatosensory
 cortex (S1), primary motor cortex (M1) and secondary motor cortex (M2),
 M2M1S1. The structer of circuits are adjusted and modified from Gordon,
 M. G. Shepherd.,*etc.*[@10.1038/s41583-021-00459-3], and Eyal Gal.,
-*etc.*[@10.1038/nn.4576] (see Fig. [5](#fig:fig5){reference-type="ref"
+*etc.*[@10.1038/nn.4576] (see Fig. [5]{reference-type="ref"
 reference="fig:fig5"}).
 
 ![Graphviz draw workflow of constructing CTC loops and M2M1S1 loops,
@@ -509,10 +509,10 @@ Using stochastic block model (SBM), the simplest generative process to
 generate the network structure visualization. The Price's, preferential
 attachment network model were performed with graph-tool, and got
 structural plots of the loops (see
-Fig. [6](#fig:fig6){reference-type="ref" reference="fig:fig6"}-A, C).
+Fig. [6]{reference-type="ref" reference="fig:fig6"}-A, C).
 Inferenced the nested SBMs with performing hierarchical fit of the
 degree-corrected model, and got the hierarchical distributions of loops
-(see Fig. [6](#fig:fig6){reference-type="ref" reference="fig:fig6"}-B,
+(see Fig. [6]{reference-type="ref" reference="fig:fig6"}-B,
 D).
 
 ![Price preferential-attachment fits and hierarchical stochastic block
@@ -525,8 +525,8 @@ CTC~loops~ (A, C) and M2M1S1~loops~ (B, D).](paper/figures/Picture6.png)
 The construction of CTC loops and M2M1S1 loops is powered by
 pyNeuroML[@10.3389/fninf.2014.00038]. Analysis of cellular-level
 connections of excitatory and inhibitory projections in CTC and M2M1S1
-loops (see Fig. [7](#fig:fig7){reference-type="ref"
-reference="fig:fig7"} and Fig. [8](#fig:fig8){reference-type="ref"
+loops (see Fig. [7]{reference-type="ref"
+reference="fig:fig7"} and Fig. [8]{reference-type="ref"
 reference="fig:fig8"}). Points clustered around diagonal with tight
 distributions indicated balanced networks. Systematic shifts in E/I
 ratios across regions implys hierarchical organization. Correlation
@@ -574,7 +574,7 @@ contacts to electrical conductances (0.32) and synchronization tendency
 is the weight of synaptic contacts in total connections, which is 0.27,
 showing synchronized. The E/I balance ratio is 2.03, which indicating an
 excitatory neurons dominated networks (see
-Fig. [9](#fig:fig9){reference-type="ref" reference="fig:fig9"}-E,F,G,H).
+Fig. [9]{reference-type="ref" reference="fig:fig9"}-E,F,G,H).
 
 ![Multiple clustering (A,E), Feature Discretization Classification
 (B,F), Multi-Layer Perceptron Analysis (D,G),Classification Comparison
@@ -635,7 +635,7 @@ firing-rate magnitudes in these large, heterogeneous networks.
 Single-cell MF provides better absolute-rate agreement than coarse
 population MF for the CTC case, yet neither MF variant achieves high
 linear correspondence across all conditions as
-Table. [\[tab:mf_fit_quality\]](#tab:mf_fit_quality){reference-type="ref"
+Table. [\[tab:mf_fit_quality\]]{reference-type="ref"
 reference="tab:mf_fit_quality"}.
 
   **Network**           **Condition**             **CV$_E$ (mean $\pm$ std)**   **CV$_I$ (mean $\pm$ std)**
@@ -1111,7 +1111,7 @@ Competing interests The authors declare no competing interests
   machine‑readable Supplementary Table S4 CSV contains all runs used to
   generate figures, including 20 independent trials per condition as
   specified in
-  Table [\[tab:sim_params\]](#tab:sim_params){reference-type="ref"
+  Table [\[tab:sim_params\]]{reference-type="ref"
   reference="tab:sim_params"}.
 :::
 

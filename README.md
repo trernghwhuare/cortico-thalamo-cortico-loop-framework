@@ -112,7 +112,7 @@ cortico-thalamo-cortico-loop-framework/
 
 ## Citation
 
-@article{10.1016/j.celrep.2017.05.044,
+@Article{10.1016/j.celrep.2017.05.044,
     author = {Alexandra, Clemente-Perez
     and Stefanie Ritter, Makinson
     and Bryan, Higashikubo
@@ -136,7 +136,7 @@ cortico-thalamo-cortico-loop-framework/
     doi = {10.1016/j.celrep.2017.05.044},
     url = {http://www.ncbi.nlm.nih.gov/pubmed/28591583},
 }
-@article{10.1038/nn.4576,
+@Article{10.1038/nn.4576,
     author={Eyal, Gal
     and Michael, London
     and Amir, Globerson
@@ -156,7 +156,7 @@ cortico-thalamo-cortico-loop-framework/
     url = {http://www.ncbi.nlm.nih.gov/pubmed/28581480},
 }
 
-@article{10.3389/fncom.2015.00120,
+@Article{10.3389/fncom.2015.00120,
     author = {Reimann, Michael W.  and King, James G.  and Muller, Eilif B.  and Ramaswamy, Srikanth  and Markram, Henry },
     title = {An algorithm to predict the connectome of neural microcircuits},
     journal = {Frontiers in Computational Neuroscience},
@@ -168,7 +168,7 @@ cortico-thalamo-cortico-loop-framework/
     abstract = {Experimentally mapping synaptic connections, in terms of the issues and locations of their synapses and estimating connection probabilities is still not a tractable task, even for small volumes of tissue, In fact, the 6 layers of the neocortex contain thousands of unique types of synaptic connections between the many different types of neurons, of which only a handful have been characterized experimentally. Here we present a theoretical framework and a data-driven algorithmic strategy to digitally reconstruct the complete synaptic connectivity between the different types of neuron in a in a small well-defined volume of tissue – the micro scale connectome of a neural microcircuit. By enforcing a set of established principles of synaptic connectivity and leveraging interdependencies between fundamental properties of neural microcircuits to constrain the reconstructed connectivity, the algorithm yields three parameters per connection type that predict the anatomy of all types of biologically viable synaptic connections. The predictions reproduce a spectrum of experimental data on synaptic connectivity not used by the algorithm. We conclude that an algorithmic approach to the connectome can serve as a tool to accelerate experimental mapping, indicating the minimal dataset required to make useful predictions, identifying the datasets required to improve their accuracy, testing the feasibility of experimental measurements, and making it possible to test hypotheses of synaptic connectivity.}
 }
 
-@article{10.7554/eLife.18566,
+@Article{10.7554/eLife.18566,
     author = {Bezaire, Marianne J and Raikov, Ivan and Burk, Kelly and Vyas, Dhrumil and Soltesz, Ivan},
     article_type = {journal},
     title = {Interneuronal mechanisms of hippocampal theta oscillations in a full-scale model of the rodent CA1 circuit},
@@ -188,7 +188,7 @@ cortico-thalamo-cortico-loop-framework/
     publisher = {eLife Sciences Publications, Ltd},
 }
 
-@article{10.1093/cercor/bhx150,
+@Article{10.1093/cercor/bhx150,
     author = {Reimann, Michael W. and Horlemann, Anna-Lena and Ramaswamy, Srikanth and Muller, Eilif B. and Markram, Henry},
     title = {Morphological Diversity Strongly Constrains Synaptic Connectivity and Plasticity},
     journal = {Cerebral Cortex},
@@ -204,7 +204,7 @@ cortico-thalamo-cortico-loop-framework/
     eprint = {https://academic.oup.com/cercor/article-pdf/27/9/4570/24361383/bhx150.pdf},
 }
 
-@article{10.3389/fncir.2015.00044,
+@Article{10.3389/fncir.2015.00044,
     author = {Ramaswamy, Srikanth  and Courcol, Jean-Denis  and Abdellah, Marwan  and Adaszewski, Stanislaw R.  and Antille, Nicolas  and Arsever, Selim  and Atenekeng, Guy  and Bilgili, Ahmet  and Brukau, Yury  and Chalimourda, Athanassia  and Chindemi, Giuseppe  and Delalondre, Fabien  and Dumusc, Raphael  and Eilemann, Stefan  and Gevaert, Michael Emiel  and Gleeson, Padraig  and Graham, Joe W.  and Hernando, Juan B.  and Kanari, Lida  and Katkov, Yury  and Keller, Daniel  and King, James G.  and Ranjan, Rajnish  and Reimann, Michael W.  and Rössert, Christian  and Shi, Ying  and Shillcock, Julian C.  and Telefont, Martin  and Van Geit, Werner  and Villafranca Diaz, Jafet  and Walker, Richard  and Wang, Yun  and Zaninetta, Stefano M.  and DeFelipe, Javier  and Hill, Sean L.  and Muller, Jeffrey  and Segev, Idan  and Schürmann, Felix  and Muller, Eilif B.  and Markram, Henry },
     title = {The neocortical microcircuit collaboration portal: a resource for rat somatosensory cortex},
     journal = {Frontiers in Neural Circuits},
@@ -216,7 +216,7 @@ cortico-thalamo-cortico-loop-framework/
 
 }
 
-@article{10.1152/jn.00983.2004,
+@Article{10.1152/jn.00983.2004,
     author = {Traub, Roger D. and Contreras, Diego and Cunningham, Mark O. and Murray, Hilary and LeBeau, Fiona E. N. and Roopun, Anita and Bibbig, Andrea and Wilent, W. Bryan and Higley, Michael J. and Whittington, Miles A.},
     title = {Single-Column Thalamocortical Network Model Exhibiting Gamma Oscillations, Sleep Spindles, and Epileptogenic Bursts},
     journal = {Journal of Neurophysiology},
@@ -231,7 +231,7 @@ cortico-thalamo-cortico-loop-framework/
     abstract = { To better understand population phenomena in thalamocortical neuronal ensembles, we have constructed a preliminary network model with 3,560 multicompartment neurons (containing soma, branching dendrites, and a portion of axon). Types of neurons included superficial pyramids (with regular spiking [RS] and fast rhythmic bursting [FRB] firing behaviors); RS spiny stellates; fast spiking (FS) interneurons, with basket-type and axoaxonic types of connectivity, and located in superficial and deep cortical layers; low threshold spiking (LTS) interneurons, which contacted principal cell dendrites; deep pyramids, which could have RS or intrinsic bursting (IB) firing behaviors, and endowed either with nontufted apical dendrites or with long tufted apical dendrites; thalamocortical relay (TCR) cells; and nucleus reticularis (nRT) cells. To the extent possible, both electrophysiology and synaptic connectivity were based on published data, although many arbitrary choices were necessary. In addition to synaptic connectivity (by AMPA/kainate, NMDA, and GABAA receptors), we also included electrical coupling between dendrites of interneurons, nRT cells, and TCR cells, and—in various combinations—electrical coupling between the proximal axons of certain cortical principal neurons. Our network model replicates several observed population phenomena, including 1) persistent gamma oscillations; 2) thalamocortical sleep spindles; 3) series of synchronized population bursts, resembling electrographic seizures; 4) isolated double population bursts with superimposed very fast oscillations (>100 Hz, “VFO”); 5) spike-wave, polyspike-wave, and fast runs (about 10 Hz). We show that epileptiform bursts, including double and multiple bursts, containing VFO occur in rat auditory cortex in vitro, in the presence of kainate, when both GABAA and GABAB receptors are blocked. Electrical coupling between axons appears necessary (as reported previously) for persistent gamma and additionally plays a role in the detailed shaping of epileptogenic events. The degree of recurrent synaptic excitation between spiny stellate cells, and their tendency to fire throughout multiple bursts, also appears critical in shaping epileptogenic events. }
 }
 
-@article{10.1038/s41583-021-00459-3,
+@Article{10.1038/s41583-021-00459-3,
     author = {Gordon M G, Shepherd and Naoki, Yamawaki},
     title = {Untangling the cortico-thalamo-cortical loop: cellular pieces of a knotty circuit puzzle.},
     journal = {Nat Rev Neurosci},
@@ -244,7 +244,7 @@ cortico-thalamo-cortico-loop-framework/
     url= {http://www.ncbi.nlm.nih.gov/pubmed/33958775},
 }
 
-@article{10.1016/j.cell.2015.09.029,
+@Article{10.1016/j.cell.2015.09.029,
     author = {Henry, Markram
     and Eilif, Muller
     and Srikanth, Ramaswamy
@@ -338,7 +338,7 @@ cortico-thalamo-cortico-loop-framework/
     url = {http://www.ncbi.nlm.nih.gov/pubmed/26451489},
 }
 
-@article{10.1038/s41586-019-1716-z,
+@Article{10.1038/s41586-019-1716-z,
     author = {Harris, Julie A.
     and Mihalas, Stefan
     and Hirokawa, Karla E.
@@ -391,7 +391,7 @@ cortico-thalamo-cortico-loop-framework/
     url = {http://www.ncbi.nlm.nih.gov/pubmed/26980805},
 }
 
-@article{10.1038/nn.3917,
+@Article{10.1038/nn.3917,
     author = {Harris, Kenneth D. and Shepherd, Gordon M. G.},
     title = {The neocortical circuit: themes and variations},
     journal = {Nature Neuroscience},
@@ -402,7 +402,7 @@ cortico-thalamo-cortico-loop-framework/
     doi = {10.1038/nn.3917},
     url = {https://pubmed.ncbi.nlm.nih.gov/25622573/}
 }
-@article{10.1016/j.neuron.2014.08.025,
+@Article{10.1016/j.neuron.2014.08.025,
   author = {Wilson, Charles J},
   title = {The Sensory Striatum},
   journal = {Neuron},
@@ -415,7 +415,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://doi.org/10.1016/j.neuron.2014.08.025}
 }
 
-@article{10.1038/srep20072,
+@Article{10.1038/srep20072,
   author = {Jeong, Minju
     and Kim, Yongsoo
     and Kim, Jeongjin
@@ -433,7 +433,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://doi.org/10.1038/srep20072},
 }
 
-@article{10.1016/j.neuron.2019.02.010,
+@Article{10.1016/j.neuron.2019.02.010,
   author = {Bennett, C.
     and Gale, S. D.
     and Garrett, M. E.
@@ -452,7 +452,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://pmc.ncbi.nlm.nih.gov/articles/PMC8638696/}
 }
 
-@article{10.1002/cne.21782,
+@Article{10.1002/cne.21782,
   author = {Alloway, K. D.
     and Olson, M. L.
     and Smith, J. B.},
@@ -467,7 +467,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://pmc.ncbi.nlm.nih.gov/articles/PMC2504743/}
 }
 
-@article{10.1016/j.cell.2019.01.047,
+@Article{10.1016/j.cell.2019.01.047,
   author = {Winnubst, J.
     and Bas, E.
     and Ferreira, T. A.
@@ -510,7 +510,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://pubmed.ncbi.nlm.nih.gov/31495573/},
 }
 
-@article{10.1016/S0306-4522,
+@Article{10.1016/S0306-4522,
   author = {Jones, E. G.},
   journal = {Neuroscience},
   volume = 85,
@@ -523,7 +523,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://pubmed.ncbi.nlm.nih.gov/9622234/}
 }
 
-@article{10.1093/cercor/bhm211,
+@Article{10.1093/cercor/bhm211,
   author = {Landisman, C. E.
     and Connors, B. W.},
   journal = {Cereb Cortex},
@@ -534,11 +534,11 @@ cortico-thalamo-cortico-loop-framework/
   issn = {1047-3211},
   year = 2007,
   doi = {10.1093/cercor/bhm211},
-  url = {https://www.sci-hub.ru/10.1093/cercor/bhm025}
+  url = {https://pubmed.ncbi.nlm.nih.gov/17389627/}
 }
 
 
-@article{10.3389/fninf.2014.00038,
+@Article{10.3389/fninf.2014.00038,
   author = {Vella, Michael and Cannon, Robert C. and Crook, Sharon and Davison, Andrew P. and Ganapathy, Gautham and Robinson, Hugh P. C. and Silver, R. Angus and Gleeson, Padraig},
   title = {libNeuroML and PyLEMS: using Python to combine procedural and declarative modeling approaches in computational neuroscience},
   journal = {Frontiers in Neuroinformatics},
@@ -550,7 +550,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2014.00038},
 }
 
-@article{peixoto_graph-tool_2014,
+@Article{peixoto_graph-tool_2014,
   author = {Peixoto, Tiago P.},
   title = {The graph-tool python library},
   journal = {figshare},
@@ -559,7 +559,7 @@ cortico-thalamo-cortico-loop-framework/
   url = {http://figshare.com/articles/graph_tool/1164194},
 }
 
-@article{Gewaltig:NEST,
+@Article{Gewaltig:NEST,
   author  = {Marc-Oliver Gewaltig and Markus Diesmann},
   title   = {NEST (NEural Simulation Tool)},
   journal = {Scholarpedia},
@@ -571,7 +571,7 @@ cortico-thalamo-cortico-loop-framework/
   url     = {http://www.scholarpedia.org/article/NEST_(NEural_Simulation_Tool)},
 }
 
-@article{Cannon2014,
+@Article{Cannon2014,
   author    = {Robert C. Cannon and Padraig Gleeson and Sharon Crook and Gautham Ganapathy and Boris Marin and Eugenio Piasini and R. Angus Silver},
   title     = {{LEMS}: a language for expressing complex biological models in concise and hierarchical form and its use in underpinning {NeuroML} 2},
   doi       = {10.3389/fninf.2014.00079},
@@ -581,7 +581,7 @@ cortico-thalamo-cortico-loop-framework/
   year      = {2014},
 }
 
-@article{Vella2014,
+@Article{Vella2014,
   author       = {Vella, Michael and Cannon, Robert C. and Crook, Sharon and Davison, Andrew P. and Ganapathy, Gautham and Robinson, Hugh P. C. and Silver, R. Angus and Gleeson, Padraig},
   title        = {libNeuroML and PyLEMS: using Python to combine procedural and declarative modeling approaches in computational neuroscience.},
   doi          = {10.3389/fninf.2014.00038},
@@ -591,7 +591,7 @@ cortico-thalamo-cortico-loop-framework/
   year         = {2014},
 }
 
-@article{10.3389/fninf.2022.835657,
+@Article{10.3389/fninf.2022.835657,
   author       = {Layer, Moritz  and Senk, Johanna  and Essink, Simon  and van Meegen, Alexander  and Bos, Hannah  and Helias, Moritz },
   title        = {NNMT: Mean-Field Based Analysis Tools for Neuronal Network Models},
   journal      = {Frontiers in Neuroinformatics},
@@ -614,7 +614,7 @@ cortico-thalamo-cortico-loop-framework/
                   neuroscientific community can take maximal advantage of them.}
 }
 
-@article{10.1038/s41598-018-38246-3,
+@Article{10.1038/s41598-018-38246-3,
   author  = {Parr, Thomas and Markovic, Dimitrije and Kiebel, Stefan J. and Friston, Karl J.},
   title   = {Neuronal message passing using Mean-field, Bethe, and Marginal approximations},
   journal = {Scientific Reports},
@@ -627,7 +627,7 @@ cortico-thalamo-cortico-loop-framework/
   issn    = {2045-2322}
 }
 
-@article{10.1038/s41467-025-58717-2,
+@Article{10.1038/s41467-025-58717-2,
   author  = {Russo, Simone and Claar, Leslie D. and Furregoni, Giulia and
             Marks, Lydia C. and Krishnan, Giri and Zauli, Flavia Maria and
             Hassan, Gabriel and Solbiati, Michela and d’Orio, Piergiorgio and
@@ -645,7 +645,7 @@ cortico-thalamo-cortico-loop-framework/
   issn    = {2041-1723}
 }
 
-@article{10.1038/s41593-025-01874-w,
+@Article{10.1038/s41593-025-01874-w,
   author  = {Vega-Zuniga, Tomas and
             Sumser, Anton and
             Symonova, Olga and
