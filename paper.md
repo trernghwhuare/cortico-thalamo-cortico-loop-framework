@@ -287,8 +287,8 @@ trains for target neurons. The biphasic waveform is with 70 Hz of
 baseline with 18 Hz amplitude modulation, producing synchronized
 activity across all targets. The TMS protocol also includes
 comprehensive parameter space exploration with both increasing and
-decreasing DC rate sequences (20$\rightarrow$`<!-- -->`{=html}80 Hz and
-100$\rightarrow$`<!-- -->`{=html}20 Hz), combined DC-amplitude
+decreasing DC rate sequences (20$\rightarrow$ 80 Hz and
+100$\rightarrow$ 20 Hz), combined DC-amplitude
 modulation, and phase progression analysis shown in
 Fig. [4]D.
 
@@ -324,10 +324,10 @@ shown in Fig. [4]F.
   Frequency | 20 Hz | 5 Hz | 10 Hz |
   Waveform Types | Single configuration | Monophasic, Half-sine, Biphasic | Single configuration |
   Recording Method | Spike raster plots | Multimeter + spike recording (monophasic), Spike raster (half-sine/biphasic) | Spike raster plots |
-  DC Rate Range | 20 \rightarrow 100 Hz | 20 \rightarrow 80 Hz (increasing), 100 \rightarrow 20 Hz (decreasing) | 10 \rightarrow 70 Hz |
-  Amplitude Range | 80 \rightarrow 10 Hz | 40 \rightarrow 5 Hz | 40 \rightarrow 5 Hz |
-  Frequency Range | 5 \rightarrow 25 Hz | Fixed at 10 Hz (modulation tests) | 2 \rightarrow 14 Hz |
-  Phase Progression | 0 \rightarrow 2\pi | 0 \rightarrow \pi (stepwise) | 0 \rightarrow 2\pi |
+  DC Rate Range | 20 $\rightarrow$ 100 Hz | 20 $\rightarrow$ 80 Hz (increasing), 100 $\rightarrow$ 20 Hz (decreasing) | 10 $\rightarrow$ 70 Hz |
+  Amplitude Range | 80 $\rightarrow$ 10 Hz | 40 $\rightarrow$ 5 Hz | 40 $\rightarrow$ 5 Hz |
+  Frequency Range | 5 $\rightarrow$ 25 Hz | Fixed at 10 Hz (modulation tests) | 2 $\rightarrow$ 14 Hz |
+  Phase Progression | 0 $\rightarrow$ 2$\pi$ | 0 $\rightarrow$ $\pi$ (stepwise) | 0 $\rightarrow$ 2$\pi$ |
   Neuron Population | 20 parrot neurons | 4 nodes (monophasic), 20 parrot neurons (half-sine/biphasic) | 20 parrot neurons |
   Simulation Duration | 1000 ms | 1000 ms | 1000 ms |
   E/I Ratio | High E, minimal I (100/0 Hz) | \sim 2:1 (70/35 Hz range) | 1:1 (60/60 Hz) |
@@ -339,7 +339,7 @@ shown in Fig. [4]F.
   DC Rate Modulation | Linear increase (5 steps) | Both increase and decrease sequences | Linear increase (5 steps) |
   Amplitude Modulation | Large decreasing sequence | Decreasing sequence with combined DC changes | Decreasing sequence |
   Frequency Modulation | Increasing sequence | Not systematically tested in sweeps | Increasing sequence |
-  Phase Modulation | Full cycle progression | Limited progression (0\rightarrow\pi) | Full cycle progression |
+  Phase Modulation | Full cycle progression | Limited progression (0 $\rightarrow\pi$) | Full cycle progression |
   Combined Parameters | Single parameter variation | DC + Amplitude combined modulation | Single parameter variation |
 
 **Table 4:** Network configuration parameters for CTC and M2M1S1 circuit models
@@ -366,11 +366,7 @@ single-cell validation (per-class $n=20$); population activity was
 summarized by PSTHs with a default bin width of 5 ms. Analyses reported
 include E/I ratio, coefficient of variation (CV), power spectral
 density/band power are also shown in
-Fig. [4] and
-simulation defaults and trial counts appear in Table. [\[tab:protocol_features\]](#tab:protocol_features){reference-type="ref"
-reference="tab:protocol_features"},[\[tab:parameter_sweeps\]]{reference-type="ref"
-reference="tab:parameter_sweeps"}, [1]{reference-type="ref"
-reference="tab:network_params"}.
+Fig. [4] and simulation defaults and trial counts appear in Table. [1],[2],[3].
 
 ## Analysis methods
 
@@ -441,8 +437,7 @@ core-dominant reconstructions, and intralaminar-enriched classes show
 distinct contact-count distributions (see
 Fig. [8] and Fig. [5]). These
 differences are robust across the CTC and M2M1S1 instantiations reported
-in Table [1]{reference-type="ref"
-reference="tab:network_params"}. All pairwise class comparisons were
+in Table [1]. All pairwise class comparisons were
 evaluated using Wilcoxon tests with Benjamini-Hochberg FDR correction;
 effect sizes are reported in the Supplementary materials (Cliff's delta)
 alongside the sample counts used for each comparison.
@@ -476,8 +471,7 @@ variability reliably (CV agreement) but tends to misestimate absolute
 firing-rate magnitudes; population mean-field shows larger absolute
 errors in most conditions. Scatterplots and per-condition RMSE and
 Pearson correlation coefficients are presented in
-Fig. [11] and Table [\[tab:mf_fit_quality\]]{reference-type="ref"
-reference="tab:mf_fit_quality"}, and per-condition residuals are
+Fig. [11] and Table [5], and per-condition residuals are
 available in the `MF_optimized` outputs.
 
 Structural separability by morphology-derived features. Morphological
@@ -497,9 +491,7 @@ conclusions hold across parameter perturbations and alternate sampling
 seeds; sensitivity-sweep summaries and the thresholds at which specific
 conclusions change are recorded in the Supplementary CSVs. Where
 applicable we report sample sizes (neurons, trials), RNG seeds and
-simulation defaults
-(Table [\[tab:sim_params\]]{reference-type="ref"
-reference="tab:sim_params"}) to support reproducibility.
+simulation defaults (Table [1]) to support reproducibility.
 
 ## CTC loops and M2M1S1 loops simulations
 
@@ -668,12 +660,10 @@ firing-rate magnitudes in these large, heterogeneous networks.
 Single-cell MF provides better absolute-rate agreement than coarse
 population MF for the CTC case, yet neither MF variant achieves high
 linear correspondence across all conditions as
-Table. [\[tab:mf_fit_quality\]]{reference-type="ref"
-reference="tab:mf_fit_quality"}.
-**Table 5:** Coefficient of variation (CV) comparison between NEST simulations and mean-field predictions across
-different stimulation protocols for CTC and M2M1S1 networks
+Table. [5].
+**Table 5:** Coefficient of variation (CV) comparison between NEST simulations and mean-field predictions across different stimulation protocols for CTC and M2M1S1 networks
    Network | Condition | CV$_E$ (mean $\pm$ std) | CV$_I$ (mean $\pm$ std) |
-   ------- | --------- | ----------------------- | -------------------------|
+   ------- | --------- | ----------------------- | ------------------------|
    max_CTC_plus | Simulation -- Visual | 1.00034 $\pm$ 0.01652 | 0.99976 $\pm$ 0.02264 |
    max_CTC_plus | Simulation -- Pain | 0.99807 $\pm$ 0.01499 | 1.00203 $\pm$ 0.01767 |
    max_CTC_plus | Simulation -- TMS Mono | 0.99907 $\pm$ 0.01827 | 1.00218 $\pm$ 0.02312 |
@@ -786,9 +776,9 @@ in their treatment of neuronal populations:
 
 Treats all neurons identically regardless of type, with state transition
 probabilities: $$\begin{aligned}
-P(S_i \rightarrow I_i) &= x + \beta \sum_{j \in N(i)} I_j(t) \\
-P(I_i \rightarrow R_i) &= r \\
-P(R_i \rightarrow S_i) &= s
+P(S_i → I_i) &= x + \beta \sum_{j \in N(i)} I_j(t) \\
+P(I_i → R_i) &= r \\
+P(R_i → S_i) &= s
 \end{aligned}$$ where $S_i$, $I_i$, $R_i$ represent the susceptible,
 infected, and refractory states of neuron $i$, $x = 0.004$ is the
 spontaneous outbreak probability, $r = 0.4$ is the recovery rate,
@@ -799,18 +789,18 @@ probability, and $N(i)$ denotes the neighbors of neuron $i$.
 
 Preserves excitatory/inhibitory classification throughout simulation,
 with separate state variables for each population: $$\begin{aligned}
-P(S^E_i \rightarrow I^E_i) &= x + \beta \sum_{j \in N(i)} \begin{cases} 
+P(S^E_i → I^E_i) &= x + \beta \sum_{j \in N(i)} \begin{cases} 
 I^E_j(t) & \text{if } j \in \text{Exc} \\
 I^I_j(t) & \text{if } j \in \text{Inh}
 \end{cases} \\
-P(I^E_i \rightarrow R^E_i) &= r \\
-P(R^E_i \rightarrow S^E_i) &= s \\
-P(S^I_k \rightarrow I^I_k) &= x + \beta \sum_{j \in N(k)} \begin{cases} 
+P(I^E_i → R^E_i) &= r \\
+P(R^E_i → S^E_i) &= s \\
+P(S^I_k → I^I_k) &= x + \beta \sum_{j \in N(k)} \begin{cases} 
 I^E_j(t) & \text{if } j \in \text{Exc} \\
 I^I_j(t) & \text{if } j \in \text{Inh}
 \end{cases} \\
-P(I^I_k \rightarrow R^I_k) &= r \\
-P(R^I_k \rightarrow S^I_k) &= s
+P(I^I_k → R^I_k) &= r \\
+P(R^I_k → S^I_k) &= s
 \end{aligned}$$ where $S^E_i$, $I^E_i$, $R^E_i$ and $S^I_k$, $I^I_k$,
 $R^I_k$ represent the states of excitatory neuron $i$ and inhibitory
 neuron $k$ respectively. The key difference is that the E/I model
@@ -1166,8 +1156,7 @@ The full CSV is provided as Supplementary Data S1
   configuration, stimulus type, RNG seed, and output path. The full
   machine‑readable Supplementary Table S4 CSV contains all runs used to
   generate figures, including 20 independent trials per condition as
-  specified in  Table [\[tab:sim_params\]]{reference-type="ref"
-  reference="tab:sim_params"}
+  specified in Table [1]
   run_id | network_config | stimulus_type | seed | output_path |
   -------|----------------|---------------|------|-------------|
   run0001 | max_CTC_plus | visual_stimuli | 1001 | out/ctc/run0001/ |
