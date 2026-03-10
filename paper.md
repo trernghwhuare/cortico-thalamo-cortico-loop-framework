@@ -1,16 +1,16 @@
 ---
-title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks *in silico*"
+title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
 authors:
   - name: Hua Cheng M.D.
     affiliations:
       - Independant researcher
     orcid: 0000-0003-0903-6766
-corresponding_author: Hua Cheng M.D.
+corresponding author: true
 date: "2026-03-09"
 bibliography: paper.bib
 ---
 
-# Abstract {#abstract .unnumbered}
+# Abstract 
 
 Macro-scale cortico-thalamo-cortical (CTC) models increasingly linking
 microcircuit structure to system dynamics, but often omit
@@ -82,11 +82,12 @@ and graph-theoretical analysis using stochastic block models, is
 applicable to other thalamic cell classes and morphologies, and can be
 extended to investigate structure-function relationships across diverse
 neural systems.
-
-![Representative axonal and dendritic reconstructions for cortical (IT,
-PT, CT) and thalamic cell classes (TC). Morphological differences
-underpin the projection-specific connectivity rules used to assemble the
-networks.](paper/figures/Picture1.png)
+<import>
+<figure id="fig:fig1">
+<img src="paper/figures/Picture1.png" style="width:100.0%" />
+<figcaption>Representative axonal and dendritic reconstructions for cortical (IT, PT, CT) and thalamic cell classes (TC). Morphological differences underpin the projection-specific connectivity rules used to assemble the networks.</figcaption>
+</figure>
+</import>
 
 # Methods
 
@@ -109,13 +110,14 @@ traces appear in Figure 2. Create nRT and TCR neurons with newly created
 and valified morphologically cell models *in silico*, including matrix
 type (TCRm, nRTm), core type (TCRc, nRTc) and intralaminar type (TCRil,
 nRTil). The modeling and simulation were adjusted and modified from
-Bezaire (2016), *etc.*[@10.7554/eLife.18566] (see
-Fig. [2]{reference-type="ref" reference="fig:fig2"}).
+Bezaire (2016), *etc.*[@10.7554/eLife.18566] (see Fig. [2]).
 
-![Three-dimensional morphology renders (left) and example membrane
-potential responses (right) for each thalamic class. Traces show
-characteristic firing patterns used for single-cell validation (see
-Supplementary Table S2).](paper/figures/Picture2.png)
+<import>
+<figure id="fig:fig2">
+<img src="paper/figures/Picture2.png" style="width:100.0%" />
+<figcaption>Three-dimensional morphology renders (left) and example membrane potential responses (right) for each thalamic class. Traces show characteristic firing patterns used for single-cell validation (see Supplementary Table S2).</figcaption>
+</figure>
+</import>
 
 ## Network assembly
 
@@ -159,6 +161,18 @@ and electrical synapses (GapJunction, GapJ) were used (features display
 of synapses in Table 1). Short-term plasticity was omitted from the main
 experiments and noted as a limitation; synaptic weights and delay
 distributions are given in Supplementary Table S3.
+
+**Table 1:** Synaptic model parameters used in the network simulations
+   Synapse Type | Model | Conductance (nS) | Reversal Potential (mV) | Rise Time (ms) | Decay Time (ms) |
+   ------------ | ----- | ---------------- | ----------------------- | -------------- | --------------- |
+   AMPA | expTwoSynapse | 0.368 | 0 | 1 | 2 |
+   NMDA | blockingPlasticSynapse | 0.800 | 0 | 1 | 13.3 |
+   GABAa | expTwoSynapse | 0.057 | -75 | 8 | 39 |
+   GABAb | expTwoSynapse | 0.017 | -81 | 180 | 200 |
+   AMPA-NMDA | Combined | 0.368/0.800 | 0/0 | 1/1 | 2/13.3 |
+   GABA | Combined | 0.057/0.017 | -75/-81 | 8/180 | 39/200 |
+   GapJ | gapJunction | 3.000 | N/A | N/A | N/A |
+
 
 CTC loops constructing also includes three broad classes of excitatory
 and inhibitory neurons in the neocortex, which are intratelencephalic
@@ -214,9 +228,8 @@ the five cortical layers (L1, L23, L4, L5, L6) and thalamic reticular
 nucleus (TRN). CTC circuits of the primary somatosensory cortex (S1),
 primary motor cortex (M1) and secondary motor cortex (M2) are organized
 hierarchically, with 'top-down' M2 → M1 → S1 pathways running
-countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see
-Fig. [3]{reference-type="ref" reference="fig:fig3"}).
-
+countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see Fig. [3]).
+<import>
 <figure id="fig:fig3">
 <img src="paper/figures/Picture3.png" style="width:100.0%" />
 <p><span
@@ -232,6 +245,7 @@ microcircuits and thalamic reticular nucleus (TRN).</p>
 <figcaption>Schematic of CTC loop motifs illustrating TC → PT/CT/IT
 projection pathways analyzed.</figcaption>
 </figure>
+<import>
 
 ## Simulation protocols
 
@@ -261,8 +275,7 @@ with constant 100 Hz baseline.The high-frequency Temporal modulation
 were 5 $\rightarrow$ 10 $\rightarrow$ 15 $\rightarrow$ 20 $\rightarrow$
 25 Hz frequency sweeps to explore temporal resolution limits.And the
 complete phase cycle with full 0 $\rightarrow$ 2$\pi$ phase progression
-to assess orientation selectivity mechanisms shown in
-Fig. [4]{reference-type="ref" reference="fig:fig4"}B.
+to assess orientation selectivity mechanisms shown in Fig. [4]B.
 
 The TMS protocol implements three distinct waveform configurations to
 model different stimulation modalities, which are monophasic, half-sine
@@ -277,7 +290,7 @@ comprehensive parameter space exploration with both increasing and
 decreasing DC rate sequences (20$\rightarrow$`<!-- -->`{=html}80 Hz and
 100$\rightarrow$`<!-- -->`{=html}20 Hz), combined DC-amplitude
 modulation, and phase progression analysis shown in
-Fig. [4]{reference-type="ref" reference="fig:fig4"}D.
+Fig. [4]D.
 
 The pain stimulation protocol utilizes a baseline firing rate of 60 Hz
 with moderate amplitude modulation (30 Hz) at a frequency of 10 Hz. This
@@ -294,31 +307,51 @@ $\rightarrow$ 8 $\rightarrow$ 11 $\rightarrow$ 14 Hz to explore temporal
 coding properties.Phase progression systematically phase shifts through
 0 $\rightarrow$ $\pi$/2 $\rightarrow$ $\pi$ $\rightarrow$ 3$\pi$/2
 $\rightarrow$ 2$\pi$ radians to investigate phase-dependent responses
-shown in Fig. [4]{reference-type="ref"
-reference="fig:fig4"}F.
+shown in Fig. [4]F.
 
-![Stimulus waveforms and exemplar response summaries for the three
-driver families. Panels: (A--B) visual sinusoidal drive --- example
-waveform and trial-averaged PSTH (5 ms bins) with ISI histogram; (C--D)
-TMS-like pulses --- representative monophasic and biphasic waveforms and
-corresponding PSTHs; (E--F) pain-like drive --- example pulse sequence
-and PSTH. PSTHs average $N=20$ trials (independent RNG seeds); parameter
-files and example driver scripts are provided in `stimuli_generation/`.
-PSTH: peristimulus time; ISI: inter-spike
-interval.](paper/figures/Picture4.png)
+<import>
+<figure id="fig:fig4">
+<img src="paper/figures/Picture4.png" style="width:100.0%" />
+<figcaption>Stimulus waveforms and exemplar response summaries for the three driver families. Panels: (A--B) visual sinusoidal drive --- example waveform and trial-averaged PSTH (5 ms bins) with ISI histogram; (C--D) TMS-like pulses --- representative monophasic and biphasic waveforms and corresponding PSTHs; (E--F) pain-like drive --- example pulse sequence and PSTH. PSTHs average $N=20$ trials (independent RNG seeds); parameter files and example driver scripts are provided in `stimuli_generation/`. PSTH: peristimulus time; ISI: inter-spike interval.</figcaption>
+</figure>
+</import>
 
-::: {#tab:network_params}
-  **Parameter**        **CTC Circuits**                   **M2M1S1 Circuits**
-  -------------------- ---------------------------------- ----------------------------------
-  Total Neuron Count   $\approx 1043$                     $\approx 6258$
-  Cortical E/I Ratio   60:40                              60:40
-  Thalamic Classes     TCRil/TCRm/TCRc, nRTil/nRTm/nRTc   TCRil/TCRm/TCRc, nRTil/nRTm/nRTc
-  Cortical Layers      L1, L23, L4, L5, L6                L1, L23, L4, L5, L6
-  Circuit Components   PT, IT, CT, TC                     PT, IT, CT, TC
-  Region               single                             S1, M1, M2
+**Table 2:** Comparison of stimulation protocol features across visual,TMS and pain
+  Feature | Visual Stimulation | TMS Stimulation | Pain Stimulation |
+  ------- | -----------------  | --------------- | ---------------- |
+  Baseline Rate | 100 Hz | 70 Hz (monophasic/half-sine/biphasic) | 60 Hz |
+  Amplitude | 50 Hz | 20 Hz (monophasic), 22 Hz (half-sine), 18 Hz (biphasic) | 30 Hz |
+  Frequency | 20 Hz | 5 Hz | 10 Hz |
+  Waveform Types | Single configuration | Monophasic, Half-sine, Biphasic | Single configuration |
+  Recording Method | Spike raster plots | Multimeter + spike recording (monophasic), Spike raster (half-sine/biphasic) | Spike raster plots |
+  DC Rate Range | 20 \rightarrow 100 Hz | 20 \rightarrow 80 Hz (increasing), 100 \rightarrow 20 Hz (decreasing) | 10 \rightarrow 70 Hz |
+  Amplitude Range | 80 \rightarrow 10 Hz | 40 \rightarrow 5 Hz | 40 \rightarrow 5 Hz |
+  Frequency Range | 5 \rightarrow 25 Hz | Fixed at 10 Hz (modulation tests) | 2 \rightarrow 14 Hz |
+  Phase Progression | 0 \rightarrow 2\pi | 0 \rightarrow \pi (stepwise) | 0 \rightarrow 2\pi |
+  Neuron Population | 20 parrot neurons | 4 nodes (monophasic), 20 parrot neurons (half-sine/biphasic) | 20 parrot neurons |
+  Simulation Duration | 1000 ms | 1000 ms | 1000 ms |
+  E/I Ratio | High E, minimal I (100/0 Hz) | \sim 2:1 (70/35 Hz range) | 1:1 (60/60 Hz) |
+  Primary Purpose | Visual temporal processing | Cortical excitability assessment | Nociceptive processing modeling |
 
-  : Network configuration parameters for CTC and M2M1S1 circuit models.
-:::
+**Table 3:** Parameter sweep characteristics for each stimulation protocol
+  Parameter Type | Visual Stimulation | TMS Stimulation | Pain Stimulation |
+  --------------- | ----------------- | --------------- | ---------------- |
+  DC Rate Modulation | Linear increase (5 steps) | Both increase and decrease sequences | Linear increase (5 steps) |
+  Amplitude Modulation | Large decreasing sequence | Decreasing sequence with combined DC changes | Decreasing sequence |
+  Frequency Modulation | Increasing sequence | Not systematically tested in sweeps | Increasing sequence |
+  Phase Modulation | Full cycle progression | Limited progression (0\rightarrow\pi) | Full cycle progression |
+  Combined Parameters | Single parameter variation | DC + Amplitude combined modulation | Single parameter variation |
+
+**Table 4:** Network configuration parameters for CTC and M2M1S1 circuit models
+  Parameter | CTC Circuits | M2M1S1 Circuits |
+  --------- | ------------ | --------------- |
+  Total Neuron Count | 1043 | 6258 |
+  Cortical E/I Ratio | 60:40 | 60:40 |
+  Thalamic Classes | TCRil/TCRm/TCRc, nRTil/nRTm/nRTc | TCRil/TCRm/TCRc, nRTil/nRTm/nRTc |
+  Cortical Layers | L1, L23, L4, L5, L6 | L1, L23, L4, L5, L6 |
+  Circuit Components | PT, IT, CT, TC | PT, IT, CT, TC |
+  Region | single | S1, M1, M2
+
 
 The visual sinusoidal drive in Figure 4A demostate the base rate 60 Hz,
 amplitude 20, frequency 10 Hz simulation.The TMS-like pulses plots of
@@ -333,9 +366,8 @@ single-cell validation (per-class $n=20$); population activity was
 summarized by PSTHs with a default bin width of 5 ms. Analyses reported
 include E/I ratio, coefficient of variation (CV), power spectral
 density/band power are also shown in
-Fig. [4](paper/figures/Picture4.png){reference-type="ref" reference="fig:fig4"} and
-simulation defaults and trial counts appear in
-Table. [\[tab:protocol_features\]](#tab:protocol_features){reference-type="ref"
+Fig. [4] and
+simulation defaults and trial counts appear in Table. [\[tab:protocol_features\]](#tab:protocol_features){reference-type="ref"
 reference="tab:protocol_features"},[\[tab:parameter_sweeps\]]{reference-type="ref"
 reference="tab:parameter_sweeps"}, [1]{reference-type="ref"
 reference="tab:network_params"}.
@@ -395,12 +427,8 @@ scale the maximum number of groups that can be found.
 NEST stimulator[@Gewaltig:NEST] is used for simulating large scale
 neuronal networks, which is highly scalable and can be run on
 high-performance computing clusters. In this work, 3 types of sinusoidal
-generators, simulated as visual (see
-Fig. [9]{reference-type="ref" reference="fig:fig9"}-A,B),
-transcranial magnetic stimulation (TMS) (see
-Fig. [9]{reference-type="ref" reference="fig:fig9"}-C,D) and
-pain stimuli (see Fig. [9]{reference-type="ref"
-reference="fig:fig9"}-E, F) with sinusoidal_gamma_generator in NEST
+generators, simulated as visual (see Fig. [9]-A,B), transcranial magnetic stimulation (TMS) (see
+Fig. [9]-C,D) and pain stimuli (see Fig. [9]-E, F) with sinusoidal_gamma_generator in NEST
 simulator.
 
 # Results
@@ -411,8 +439,7 @@ excitatory and inhibitory inputs across neurons: networks with greater
 matrix-type projection weight display higher median E/I ratios than
 core-dominant reconstructions, and intralaminar-enriched classes show
 distinct contact-count distributions (see
-Fig. [8]{reference-type="ref" reference="fig:fig8"} and
-Fig. [5]{reference-type="ref" reference="fig:fig5"}). These
+Fig. [8] and Fig. [5]). These
 differences are robust across the CTC and M2M1S1 instantiations reported
 in Table [1]{reference-type="ref"
 reference="tab:network_params"}. All pairwise class comparisons were
@@ -426,12 +453,8 @@ larger low-frequency (delta/theta) band power and more pronounced
 transient synchrony following perturbation than core-dominant networks.
 Representative intracellular traces and class-resolved PSTH/rate
 distributions illustrating these trends are presented in
-Fig. [12]{reference-type="ref" reference="fig:fig12"} and
-Fig. [13]{reference-type="ref" reference="fig:fig13"};
-band-power and coherence summaries are provided in the Supplementary
-figures. Statistical comparisons used permutation testing (10,000
-permutations) with FDR correction and report both p-values and effect
-sizes.
+Fig. [12] and Fig. [13]; band-power and coherence summaries are provided in the Supplementary
+figures. Statistical comparisons used permutation testing (10,000 permutations) with FDR correction and report both p-values and effect sizes.
 
 Distinct stimulus-evoked dynamics for visual, TMS and pain protocols.
 Each stimulus family produces characteristic temporal signatures that
@@ -441,8 +464,7 @@ profiles; TMS-like pulses produce brief high-amplitude transients whose
 decay and spatial spread vary with projection motifs; pain-like pulse
 sequences evoke slow rhythmic modulations and repeated transient
 responses. Example waveforms, trial-averaged PSTHs and exemplar rasters
-are shown in Fig. [9]{reference-type="ref"
-reference="fig:fig9"}; condition-by-class PSTH summaries (peak
+are shown in Fig. [9]; condition-by-class PSTH summaries (peak
 amplitude, latency) and per-trial metrics are supplied as JSON outputs.
 PSTH peak and latency comparisons were performed using nonparametric
 tests with effect sizes reported in the Supplementary.
@@ -454,8 +476,7 @@ variability reliably (CV agreement) but tends to misestimate absolute
 firing-rate magnitudes; population mean-field shows larger absolute
 errors in most conditions. Scatterplots and per-condition RMSE and
 Pearson correlation coefficients are presented in
-Fig. [11]{reference-type="ref" reference="fig:fig11"} and
-Table [\[tab:mf_fit_quality\]]{reference-type="ref"
+Fig. [11] and Table [\[tab:mf_fit_quality\]]{reference-type="ref"
 reference="tab:mf_fit_quality"}, and per-condition residuals are
 available in the `MF_optimized` outputs.
 
@@ -464,20 +485,12 @@ and contact features provide a robust basis for class separability:
 supervised classifiers trained on these features achieve consistent
 accuracy across cross-validation folds and retain discriminative
 performance under modest feature ablation (see
-Fig. [7]{reference-type="ref" reference="fig:fig7"}); cluster
-maps and heatmaps that visualise motif grouping are shown in
-Fig. [6]{reference-type="ref" reference="fig:fig6"}. Reported
-metrics include cross-validated accuracy, confusion matrices and
+Fig. [7]); cluster maps and heatmaps that visualise motif grouping are shown in
+Fig. [6]. Reported metrics include cross-validated accuracy, confusion matrices and
 feature-ablation effect sizes in the Supplementary.
 
-Single-cell validation and morphologies. NeuroML v2 morphologies and the
-electrophysiological parameterization reproduce canonical single-cell
-signatures used for model calibration. Representative morphology renders
-and validation voltage traces are shown in
-Fig. [1]{reference-type="ref" reference="fig:fig1"} and
-Fig. [2]{reference-type="ref" reference="fig:fig2"};
-numerical validation metrics (rheobase, FI-curve fits, adaptation
-indices) are tabulated in Supplementary Table S2.
+Single-cell validation and morphologies. NeuroML v2 morphologies and the electrophysiological parameterization reproduce canonical single-cell signatures used for model calibration. Representative morphology renders
+and validation voltage traces are shown in Fig. [1] and Fig. [2]; numerical validation metrics (rheobase, FI-curve fits, adaptation indices) are tabulated in Supplementary Table S2.
 
 Robustness and sensitivity. We verified that the principal qualitative
 conclusions hold across parameter perturbations and alternate sampling
@@ -497,37 +510,40 @@ organized hierarchically as CTC loops of the primary somatosensory
 cortex (S1), primary motor cortex (M1) and secondary motor cortex (M2),
 M2M1S1. The structer of circuits are adjusted and modified from Gordon,
 M. G. Shepherd.,*etc.*[@10.1038/s41583-021-00459-3], and Eyal Gal.,
-*etc.*[@10.1038/nn.4576] (see Fig. [5]{reference-type="ref"
-reference="fig:fig5"}).
+*etc.*[@10.1038/nn.4576] (see Fig. [5]).
+<import>
+<figure id="fig:fig5">
+<img src="paper/figures/Picture5.png" style="width:100.0%" />
+<figcaption>Graphviz draw workflow of constructing CTC loops and M2M1S1 loops,
+powered by graph-tool.</figcaption>
+</figure>
+</import>
 
-![Graphviz draw workflow of constructing CTC loops and M2M1S1 loops,
-powered by graph-tool.](paper/figures/Picture5.png)
 
 ## morphological visualization of CTC loops and M2M1S1 loops
 
 Using stochastic block model (SBM), the simplest generative process to
 generate the network structure visualization. The Price's, preferential
 attachment network model were performed with graph-tool, and got
-structural plots of the loops (see
-Fig. [6]{reference-type="ref" reference="fig:fig6"}-A, C).
-Inferenced the nested SBMs with performing hierarchical fit of the
+structural plots of the loops (see Fig. [6]-A, C). Inferenced the nested SBMs with performing hierarchical fit of the
 degree-corrected model, and got the hierarchical distributions of loops
-(see Fig. [6]{reference-type="ref" reference="fig:fig6"}-B,
-D).
+(see Fig. [6]-B,D).
 
-![Price preferential-attachment fits and hierarchical stochastic block
-model partitions that capture the mesoscopic organization of CTC and
-M2M1S1 loops. Price~network~ model and Hierarchical partitions for
-CTC~loops~ (A, C) and M2M1S1~loops~ (B, D).](paper/figures/Picture6.png)
+<import>
+<figure id="fig:fig6">
+<img src="paper/figures/Picture6.png" style="width:100.0%"  />
+<figcaption>Price preferential-attachment fits and hierarchical stochastic block
+model partitions that capture the mesoscopic organization of CTC and M2M1S1 loops. Price network model and Hierarchical partitions for CTC loops (A, C) and M2M1S1 loops  (B, D).</figcaption>
+</figure> 
+</import>
+
 
 ## Compairison of CTC loops and M2M1S1 loops
 
 The construction of CTC loops and M2M1S1 loops is powered by
 pyNeuroML[@10.3389/fninf.2014.00038]. Analysis of cellular-level
 connections of excitatory and inhibitory projections in CTC and M2M1S1
-loops (see Fig. [7]{reference-type="ref"
-reference="fig:fig7"} and Fig. [8]{reference-type="ref"
-reference="fig:fig8"}). Points clustered around diagonal with tight
+loops (see Fig. [7] and Fig. [8]). Points clustered around diagonal with tight
 distributions indicated balanced networks. Systematic shifts in E/I
 ratios across regions implys hierarchical organization. Correlation
 coefficient (R) in synaptic, overall, E/I Input Ratio, E/I Output Ratio,
@@ -536,24 +552,31 @@ in CTC loops, while are 0.102, 0.865, 0.032, 0.119, 0.865 and 0.865 in
 M2M1S1 loops, respectively, with Linear relationship of significant
 correlation (*p* \< 0.05).
 
-![Comparative analysis of excitatory and inhibitory projection
+<import>
+<figure id="fig:fig7">
+<img src="paper/figures/Picture7.png" style="width:100.0%" />
+<figcaption>Comparative analysis of excitatory and inhibitory projection
 distributions for CTC and M2M1S1 loops, highlighting class-dependent
 input statistics. analysis of synaptic connections for individual neuron
 in CTC loops (A,C,E) and M2M1S1 loops (B,D,F).Synaptic
-($\mathrm{cont\_in}$ vs $\mathrm{cont\_out}$): Overall
-($\mathrm{cont}+\mathrm{elec\_in}$ vs
-$\mathrm{cont}+\mathrm{elec\_out}$): Total inputs (continuous +
-electrical) vs total outputs. $E/I$ Input Ratio (Continuous): Inhibitory
-vs excitatory inputs. $E/I$ Output Ratio (Continuous): Inhibitory vs
-excitatory outputs. $E/I$ Ratio (Overall): Total inhibitory vs total
-excitatory (inputs vs outputs). $I/E$ Ratio (Overall): Total excitatory
-vs total inhibitory (outputs vs inputs)](paper/figures/Picture7.png)
+(cont_in  *vs.* cont_out): Overall (cont + elec_in)  *vs.* (cont + elec_out): Total inputs (continuous + electrical)  *vs.* total outputs. Input Ratio (Continuous): Inhibitory
+ *vs.* excitatory inputs. E/I Output Ratio (Continuous): Inhibitory  *vs.*
+excitatory outputs. E/I Ratio (Overall): Total inhibitory  *vs.* total
+excitatory (inputs  *vs.* outputs). I/E Ratio (Overall): Total excitatory
+ *vs.* total inhibitory (outputs  *vs.* inputs).</figcaption>
+</figure>
+</import>
 
-![Cluster maps and heatmaps of synaptic relationship patterns that
-reveal motif-dependent grouping of neurons in CTC vs M2M1S1 networks.
+<import>
+<figure id="fig:fig8">
+<img src="paper/figures/Picture8.png" style="width:100.0%" />
+<figcaption>Cluster maps and heatmaps of synaptic relationship patterns that reveal motif-dependent grouping of neurons in CTC  *vs.* M2M1S1 networks.
 The display of relationships of synaptic connections for individual
 neuron in CTC loops in cluster map (A) and heapmap (C). Same for
-individual neuron in M2M1S1 loops (B,D)](paper/figures/Picture8.png)
+individual neuron in M2M1S1 loops (B,D).</figcaption>
+</figure>
+</import>
+
 
 CTC loops are simulated with 1043 population samples, 3480 excitatory
 inputs and 1550 inhibitory inputs. And there are 5344 excitatory to
@@ -563,8 +586,7 @@ inhibitory (II) contacts. Synaptic contacts to electrical conductances
 indicated the network dynamics complexity is 0.45, to total connections
 0.40 showing synchronization tendency. E/I balance ratio is 1.35
 indicate an excitatory neurons dominated networks (see
-Fig. [9]{reference-type="ref"
-reference="fig:fig9"}-A,B,C,D). There are 6258 population samples in
+Fig. [9]-A,B,C,D). There are 6258 population samples in
 M2M1S1 loops and excitatory and inhibitory inputs are 29190 and 22980
 respectively. The synaptic contacts including excitatory to excitatory
 (EE), excitatory to inhibitory (EI), inhibitory to excitatory (IE) and
@@ -574,14 +596,20 @@ contacts to electrical conductances (0.32) and synchronization tendency
 is the weight of synaptic contacts in total connections, which is 0.27,
 showing synchronized. The E/I balance ratio is 2.03, which indicating an
 excitatory neurons dominated networks (see
-Fig. [9]{reference-type="ref" reference="fig:fig9"}-E,F,G,H).
+Fig. [9]-E,F,G,H).
 
-![Multiple clustering (A,E), Feature Discretization Classification
+<import>
+<figure id="fig:fig9">
+<img src="paper/figures/Picture9.png" style="width:100.0%" />
+<figcaption>Multiple clustering (A,E), Feature Discretization Classification
 (B,F), Multi-Layer Perceptron Analysis (D,G),Classification Comparison
 (D,H) of excitatory and inhibitory projection distributions for CTC and
 M2M1S1 loops, highlighting cluster-dependent input statistics. Analysis
 of synaptic connections for individual neuron in CTC loops (A,C,E,G) and
-M2M1S1 loops (B,D,F,H).](paper/figures/Picture9.png)
+M2M1S1 loops (B,D,F,H).</figcaption>
+</figure> 
+</import>
+
 
 Total connections to excitatory cells in CTC loops are 49069 and to
 inhibitory cells are 36231. The overall E/I ratio is 1.354337 and the
@@ -600,11 +628,16 @@ correlation coefficient of -0.041756. E/I ratio in electrical
 conductances is 1.874134 and I/E ratio of 0.533580, with a correlation
 coefficient of -0.041756(Figure 10C, 10D).
 
-![Distributions of E/I and I/E ratios and total connections for CTC and
+<import>
+<figure id="fig:fig10">
+<img src="paper/figures/Picture10.png" style="width:100.0%" />
+<figcaption>Distributions of E/I and I/E ratios and total connections for CTC and
 M2M1S1 loops, indicating systematic biases introduced by projection
 classes. Comparison of distributions of E/I and I/E synaptic contacts
 ratios, excitatory and inhibitory connections in CTC loops (A,B) and
-M2M1S1 loops (C,D).](paper/figures/Picture10.png)
+M2M1S1 loops (C,D).</figcaption>
+</figure>
+</import>
 
 ## mean-field analysis of CTC loops and M2M1S1 loops
 
@@ -637,39 +670,38 @@ population MF for the CTC case, yet neither MF variant achieves high
 linear correspondence across all conditions as
 Table. [\[tab:mf_fit_quality\]]{reference-type="ref"
 reference="tab:mf_fit_quality"}.
+**Table 5:** Coefficient of variation (CV) comparison between NEST simulations and mean-field predictions across
+different stimulation protocols for CTC and M2M1S1 networks
+   Network | Condition | CV$_E$ (mean $\pm$ std) | CV$_I$ (mean $\pm$ std) |
+   ------- | --------- | ----------------------- | -------------------------|
+   max_CTC_plus | Simulation -- Visual | 1.00034 $\pm$ 0.01652 | 0.99976 $\pm$ 0.02264 |
+   max_CTC_plus | Simulation -- Pain | 0.99807 $\pm$ 0.01499 | 1.00203 $\pm$ 0.01767 |
+   max_CTC_plus | Simulation -- TMS Mono | 0.99907 $\pm$ 0.01827 | 1.00218 $\pm$ 0.02312 |
+   max_CTC_plus | Simulation -- TMS Half | 1.00015 $\pm$ 0.01416 | 1.00124 $\pm$ 0.02577 |
+   max_CTC_plus | Simulation -- TMS Bi | 0.99881 $\pm$ 0.02103 | 0.99680 $\pm$ 0.02469 |
+   max_CTC_plus | Mean-field Single | 1.00138 $\pm$ 0.02568 | 0.99816 $\pm$ 0.02547 |
+   max_CTC_plus | Mean-field Population | 0.99884 $\pm$ 0.02681 | 0.99773 $\pm$ 0.05287 |
+   M2M1S1_max_plus | Simulation -- Visual | 1.00000 $\pm$ 0.01252 | 1.00272 $\pm$ 0.02301 |
+   M2M1S1_max_plus | Simulation -- Pain | 0.99841 $\pm$ 0.01680 | 0.99616 $\pm$ 0.02833 |
+   M2M1S1_max_plus | Simulation -- TMS Mono | 0.99677 $\pm$ 0.01825 | 0.99429 $\pm$ 0.02291 |
+   M2M1S1_max_plus | Simulation -- TMS Half | 0.99932 $\pm$ 0.01781 | 0.99531 $\pm$ 0.06123 |
+   M2M1S1_max_plus | Simulation -- TMS Bi | 1.00514 $\pm$ 0.01711 | 0.99484 $\pm$ 0.03331 |
+   M2M1S1_max_plus | Mean-field Single | 1.00036 $\pm$ 0.02134 | 0.99671 $\pm$ 0.01695 |
+   M2M1S1_max_plus | Mean-field Population | 0.99016 $\pm$ 0.03358 | 0.99324 $\pm$ 0.03567 |
 
-  **Network**           **Condition**             **CV$_E$ (mean $\pm$ std)**   **CV$_I$ (mean $\pm$ std)**
-  --------------------- ------------------------ ----------------------------- -----------------------------
-  **max_CTC_plus**      Simulation -- Visual         $1.00034 \pm 0.01652$         $0.99976 \pm 0.02264$
-                        Simulation -- Pain           $0.99807 \pm 0.01499$         $1.00203 \pm 0.01767$
-                        Simulation -- TMS Mono       $0.99907 \pm 0.01827$         $1.00218 \pm 0.02312$
-                        Simulation -- TMS Half       $1.00015 \pm 0.01416$         $1.00124 \pm 0.02577$
-                        Simulation -- TMS Bi         $0.99881 \pm 0.02103$         $0.99680 \pm 0.02469$
-                        Mean-field Single            $1.00138 \pm 0.02568$         $0.99816 \pm 0.02547$
-                        Mean-field Population        $0.99884 \pm 0.02681$         $0.99773 \pm 0.05287$
-  **M2M1S1_max_plus**   Simulation -- Visual         $1.00000 \pm 0.01252$         $1.00272 \pm 0.02301$
-                        Simulation -- Pain           $0.99841 \pm 0.01680$         $0.99616 \pm 0.02833$
-                        Simulation -- TMS Mono       $0.99677 \pm 0.01825$         $0.99429 \pm 0.02291$
-                        Simulation -- TMS Half       $0.99932 \pm 0.01781$         $0.99531 \pm 0.06123$
-                        Simulation -- TMS Bi         $1.00514 \pm 0.01711$         $0.99484 \pm 0.03331$
-                        Mean-field Single            $1.00036 \pm 0.02134$         $0.99671 \pm 0.01695$
-                        Mean-field Population        $0.99016 \pm 0.03358$         $0.99324 \pm 0.03567$
 
-  : Coefficient of variation (CV) comparison between NEST simulations
-  and mean-field predictions across different stimulation protocols for
-  CTC and M2M1S1 networks.
-
-  **Metric**                            **M2M1S1_max_plus**                 **max_CTC_plus**
-  ------------------------------ --------------------------------- ----------------------------------
-  **Firing Rates (Hz)**                                            
-  Excitatory (E)                               500.0                             500.0
-  Inhibitory (I)                               228.7                             228.6
-  E/I Ratio                                   2.19:1                             2.19:1
-  **Coefficient of Variation**                                     
-  CV$_E$ (mean $\pm$ std)              $1.00103 \pm 0.02009$             $0.99967 \pm 0.01652$
-  CV$_I$ (mean $\pm$ std)              $1.00177 \pm 0.02292$             $1.00037 \pm 0.02264$
-  **Network Architecture**        Multi-regional CTC microcircuit   Single-regional CTC microcircuit
-  **Neurons Recorded**                      74 E, 74 I                         74 E, 74 I
+**Table 6:** Comparison of neural activity statistics between M2M1S1_max_plus (cortical microcircuit) and max_CTC_plus (thalamocortical loop) networks under visual stimulation conditions
+   Metric | M2M1S1_max_plus | max_CTC_plus |
+   ------ | --------------- | ------------ |
+  Firing Rates (Hz) | | |                                        
+  Excitatory (E) | 500.0 | 500.0 |
+  Inhibitory (I) | 228.7 | 228.6 |
+  E/I Ratio | 2.19:1 | 2.19:1 |
+  Coefficient of Variation | | |                                     
+  CV$_E$ (mean $\pm$ std) | 1.00103 $\pm$ 0.02009 | 0.99967 $\pm$ 0.01652 |
+  CV$_I$ (mean $\pm$ std) | 1.00177 $\pm$ 0.02292 | 1.00037 $\pm$ 0.02264 |
+  Network Architecture | Multi-regional CTC microcircuit | Single-regional CTC microcircuit |
+  Neurons Recorded | 74 E, 74 I | 74 E, 74 I | 
 
   : Comparison of neural activity statistics between M2M1S1_max_plus
   (cortical microcircuit) and max_CTC_plus (thalamocortical loop)
@@ -677,7 +709,7 @@ reference="tab:mf_fit_quality"}.
 
 #### Quantitative comparison.
 
-For clarity we report mean firing-rate comparisons (simulation vs
+For clarity we report mean firing-rate comparisons (simulation  *vs.*
 mean-field single / population predictions). For **max_CTC_plus** the
 simulation visual means are E=4573.02, I=2353.51 while mean-field
 single/pop predict E=3268.18 / 1610.38 and I=3425.16 / 988.50. This
@@ -690,10 +722,40 @@ I=3606.59 / 909.74, i.e. single MF underestimates E by 38.0% and
 population MF underestimates E by 75.1%; for I the single MF
 overestimates by 66.1% while the population MF underestimates by 58.1%.
 
-![Firing rate comparisons among single neuron mean-field approximation,
+<import>
+<figure id="fig:fig11">
+<img src="paper/figures/Picture11.png" style="width:100.0%" />
+<figcaption>Firing rate comparisons among single neuron mean-field approximation,
 population mean-field approximation and visual-stimulus, TMS-stimulus,
 pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
-(B).](paper/figures/Picture11.png)
+(B).</figcaption>
+</figure>
+</import>
+
+**Table 7:** Fit quality (RMSE and Pearson *r*) between simulation visual mean rates and mean-field predictions (single-cell and population MF)
+  Network | MF | RMSE_E | r_E | RMSE_I | r_I |
+  ------- |----|--------|-----|--------|-----|
+  max_CTC_plus | single (visual) | 88.47 | 0.104 | 89.17 | 0.201 |
+  max_CTC_plus | population (visual) | 445.72 | 0.116 | 244.49 | 0.072 |
+  max_CTC_plus | single (TMS mono) | 92.67 | -0.135 | 96.08 | -0.011 |
+  max_CTC_plus | population (TMS mono) | 449.47 | 0.026 | 250.01 | -0.021 |
+  max_CTC_plus | single (TMS half) | 90.74 | -0.094 | 103.94 | -0.025 |
+  max_CTC_plus | population (TMS half) | 454.96 | -0.111 | 238.84 | 0.192 |
+  max_CTC_plus | single (TMS bi) | 368.81 | 0.030 | 107.87 | -0.265 |
+  max_CTC_plus | population (TMS bi) | 579.11 | -0.004 | 250.46 | -0.017 |
+  max_CTC_plus | single (pain) | 91.25 | -0.021 | 148.60 | -0.018 |
+  max_CTC_plus | population (pain) | 453.87 | -0.064 | 267.31 | 0.038 |
+  M2M1S1_max_plus | single (visual) | 734.31 | -0.026 | 894.44 | -0.197 |
+  M2M1S1_max_plus | population (visual) | 484.15 | 0.028 | 672.91 | -0.042 |
+  M2M1S1_max_plus | single (TMS mono) | 823.38 | -0.014 | 834.16 | 0.237 |
+  M2M1S1_max_plus | population (TMS mono) | 622.20 | -0.024 | 817.72 | 0.004 |
+  M2M1S1_max_plus | single (TMS half) | 821.49 | 0.015 | 811.69 | -0.007 |
+  M2M1S1_max_plus | population (TMS half) | 636.01 | -0.012 | 658.21 | -0.030 |
+  M2M1S1_max_plus | single (TMS bi) | 690.60 | -0.016 | 896.29 | -0.025 |
+  M2M1S1_max_plus | population (TMS bi) | 429.52 | 0.012 | 747.80 | -0.006 |
+  M2M1S1_max_plus | single (pain) | 1125.64 | -0.020 | 912.81 | -0.014 |
+  M2M1S1_max_plus | population (pain) | 964.31 | 0.027 | 754.41 | 0.058 |
+ 
 
 ## Dynamics of CTC loops and M2M1S1 loops under stimulations
 
@@ -770,7 +832,7 @@ epidemics models are available: `max_CTC_plus_combined.mp4`,
 To quantitatively assess the impact of maintaining excitatory-inhibitory
 distinctions in our network models, we performed comprehensive
 statistical analyses comparing homogeneous (all neurons treated
-identically) and E/I separated (excitatory vs inhibitory populations
+identically) and E/I separated (excitatory  *vs.* inhibitory populations
 tracked separately) SIRS epidemic implementations across both CTC and
 M2M1S1 networks.
 
@@ -804,20 +866,22 @@ stability properties that emerge from balanced E/I interactions.
 
 The dynamics of firing rates for CTC and M2M1S1 networks under different
 stimulations, visual stimuli, TMS and pain stimuli, are also available
-in voltage traces (Figure 11) and spike-rate KDEs (Figure 12) reveal
+in voltage traces (Figure 12) and spike-rate KDEs (Figure 13) reveal
 class-specific response motifs that match the mean-field predictions.
 
-![Voltage-trace comparisons across thalamic projection classes and
-stimulation protocols. Representative membrane potential traces
-(subsampled cells) show class-dependent differences in evoked and
-spontaneous activity that underlie the network-level synchrony
-differences reported in the text.](paper/figures/Picture12.png)
+<import>
+<figure id="fig:fig12">
+<img src="paper/figures/Picture12.png" style="width:100.0%" />
+<figcation>Voltage-trace comparisons across thalamic projection classes and stimulation protocols. Representative membrane potential traces (subsampled cells) show class-dependent differences in evoked and spontaneous activity that underlie the network-level synchrony differences reported in the text.</figcation>
+</figure>
+</import>
 
-![Kernel density estimates of spike-rate distributions across conditions
-and classes. KDEs summarize how projection motifs shift population
-firing distributions and support the E/I and synchrony claims (see
-Results and Supplementary Table S5 for
-statistics).](paper/figures/Picture13.png)
+<import>
+<figure id="fig:fig13">
+<img src="paper/figures/Picture13.png" style="width:100.0%" />
+<figcaption>Kernel density estimates of spike-rate distributions across conditions and classes. KDEs summarize how projection motifs shift population firing distributions and support the E/I and synchrony claims (see Results and Supplementary Table S5 for statistics).</figcaption>
+</figure>
+</import>
 
 # Discussion
 
@@ -876,7 +940,7 @@ constraints.
 To quantify the impact of maintaining excitatory-inhibitory distinctions
 in our SIRS epidemic models, we performed comprehensive statistical
 comparisons between homogeneous (all neurons treated identically) and
-E/I separated (excitatory vs inhibitory neurons tracked separately)
+E/I separated (excitatory  *vs.* inhibitory neurons tracked separately)
 implementations across both CTC and M2M1S1 networks. Our analysis
 reveals that E/I separation consistently produces significantly higher
 network activity levels while preserving temporal correlation structure.
@@ -950,7 +1014,7 @@ The model yields several experimentally falsifiable predictions:
     responses. These signatures are measurable with laminar probes and
     EEG/MEG.
 
-3.  Pharmacological manipulation of inhibition (*e.g.*, GABA~A~
+3.  Pharmacological manipulation of inhibition (*e.g.*, GABAa
     modulators) will interact with projection-class structure: the same
     global change in inhibition will produce different shifts in
     synchronization tendency depending on the underlying TC
@@ -1009,7 +1073,7 @@ biologically realistic E/I separation is not merely a theoretical
 refinement but a practical necessity for accurate quantitative
 predictions of thalamocortical dynamics.
 
-# Data availability {#data-availability .unnumbered}
+# Data availability 
 
 The processed data generated in this study can be asseced in
 https://figshare.com/account/mycontent/projects/272488. For
@@ -1029,103 +1093,110 @@ Animation Suite for cortico-thalamo-cortical networks:
 https://doi.org/10.6084/m9.figshare.31566496. For mean-field
 approximation analysis: https://doi.org/10.6084/m9.figshare.31567030.
 
-# Code availability {#code-availability .unnumbered}
+# Code availability 
 
 The code generated for all analyses in this study can be accessed here:
 https://github.com/trernghwhuare/cortico-thalamo-cortico-loop-framework.
 
-# Ethics declarations {#ethics-declarations .unnumbered}
+# Ethics declarations 
 
-Competing interests The authors declare no competing interests
+The authors declare no competing interests
 
-# Supplementary Tables {#supplementary-tables .unnumbered}
+# Supplementary Tables 
+**Table S1:** orphology metrics per canonical cell (columns: cell id, class, total length um,
+axon length um (if applicable), n branches, mean branch order, and Sholl counts at 50/100/200/400 µm).
+The full CSV is provided as Supplementary Data S1
+  cell_id | class | total_length_um | axon_length_um | n_branches | mean_branch_order | Sholl_50 | Sholl_100 | Sholl_200 | Sholl_400 |
+  ----------- | -------- | ------------- | ------------- | ---------- | ----------------- | -------- | --------- | --------- | --------- |  
+  TCRc_001 | TCRc | 12540 | 4850 | 48 | 3.6 | 12 | 18 | 14 | 6 |
+  TCRm_001 | TCRm | 9840 | 3920 | 39 | 3.1 | 10 | 15 | 12 | 5 |
+  TCRil_001 | TCRil | 8760 | 3520 | 35 | 2.8 | 9 | 14 | 11 | 4 |
+  nRTc_001 | nRTc | 7420 | 2980 | 30 | 2.8 | 12 | 9 | 3 |
+  nRTil_001 | nRTil | 6890 | 2750 | 28 | 2.2 | 7 | 11 | 8 | 3 |
+  nRTm_001 | nRTm | 8120 | 3250 | 33 | 2.6    8 | 13 | 10 | 4 |
 
-::: {#supp:tableS2}
-  cell_id     class   Cm_uF_per_cm2   g_leak_mS_per_cm2
-  ----------- ------- --------------- -------------------
-  TCRc_001    TCRc    1.3             1.0
-  TCRm_001    TCRm    1.3             1.0
-  TCRil_001   TCRil   1.3             1.0
-  nRTc_001    nRTc    1.3             0.05
-  nRTil_001   nRTil   1.3             0.05
-  nRTm_001    nRTm    1.3             0.05
 
-  : Single‑cell biophysical parameters per canonical morphology
+
+**Table S2:** Single‑cell biophysical parameters per canonical morphology
   (representative values). Full per‑cell parameter lists, channel peak
   conductances and references for kinetics are provided in Supplementary
-  Table S2 CSV (Supplementary Data S2).
-:::
+  Table S2 CSV (Supplementary Data S2)
+  cell_id | class | Cm_uF_per_cm2 | g_leak_mS_per_cm2 |
+  --------|-------| --------------| ------------------|
+  TCRc_001 | TCRc | 1.3 | 1.0 |
+  TCRm_001 | TCRm | 1.3 | 1.0 |
+  TCRil_001 | TCRil | 1.3 | 1.0 |
+  nRTc_001 | nRTc | 1.3 | 0.05 |
+  nRTil_001 | nRTil | 1.3 | 0.05 |
+  nRTm_001 | nRTm | 1.3 | 0.05 |
 
-::: {#supp:tableS3}
-  pre_class   post_class              weight_median_nS
-  ----------- ----------------------- ------------------
-  TCRc        L6 cortical neurons     0.062
-  TCRc        L4 cortical neurons     0.062
-  TCRm        L2/3 cortical neurons   0.075
-  TCRm        L4 cortical neurons     0.075
-  TCRm        L5 cortical neurons     0.075
-  TCRm        L6 cortical neurons     0.075
-  TCRil       L2/3 cortical neurons   0.057
-  TCRil       L4 cortical neurons     0.057
-  TCRil       L5 cortical neurons     0.057
-  TCRil       L6 cortical neurons     0.057
-  nRTc        L6 cortical neurons     0.062
-  nRTc        L4 cortical neurons     0.062
-  nRTil       L2/3 cortical neurons   0.057
-  nRTil       L4 cortical neurons     0.057
-  nRTil       L5 cortical neurons     0.057
-  nRTil       L6 cortical neurons     0.057
-  nRTm        L2/3 cortical neurons   0.077
-  nRTm        L4 cortical neurons     0.077
-  nRTm        L5 cortical neurons     0.077
-  nRTm        L6 cortical neurons     0.077
 
-  : Thalamic output connectivity: median synaptic weights for all
+
+**Table S3:** Thalamic output connectivity: median synaptic weights for all
   thalamic cell subtypes (TCRc, TCRm, TCRil, nRTc, nRTil, nRTm)
   projecting to cortical targets. Values represent gsyn_mean from
   extracted physiology parameters. Full connectivity matrices are
-  provided in Supplementary Data S3.
-:::
+  provided in Supplementary Data S3
+  pre_class | post_class | weight_median_nS |
+  ----------|------------|------------------|
+  TCRc | L6 cortical neurons | 0.062 |
+  TCRc | L4 cortical neurons | 0.062 |
+  TCRm | L2/3 cortical neurons | 0.075 |
+  TCRm | L4 cortical neurons | 0.075 |
+  TCRm | L5 cortical neurons | 0.075 |
+  TCRm | L6 cortical neurons | 0.075 |
+  TCRil | L2/3 cortical neurons | 0.057 |
+  TCRil | L4 cortical neurons | 0.057 |
+  TCRil | L5 cortical neurons | 0.057 |
+  TCRil | L6 cortical neurons | 0.057 |
+  nRTc | L6 cortical neurons | 0.062 |
+  nRTc | L4 cortical neurons | 0.062 |
+  nRTil | L2/3 cortical neurons | 0.057 |
+  nRTil | L4 cortical neurons | 0.057 |
+  nRTil | L5 cortical neurons | 0.057 |
+  nRTil | L6 cortical neurons | 0.057 |
+  nRTm | L2/3 cortical neurons | 0.077 |
+  nRTm | L4 cortical neurons | 0.077 |
+  nRTm | L5 cortical neurons | 0.077 |
+  nRTm | L6 cortical neurons | 0.077 |
 
-::: {#supp:tableS4}
-  run_id    network_config    stimulus_type    seed   output_path
-  --------- ----------------- ---------------- ------ ---------------------
-  run0001   max_CTC_plus      visual_stimuli   1001   out/ctc/run0001/
-  run0002   max_CTC_plus      visual_stimuli   1002   out/ctc/run0002/
-  run0003   max_CTC_plus      visual_stimuli   1003   out/ctc/run0003/
-  run0004   max_CTC_plus      TMS_monophasic   1004   out/ctc/run0004/
-  run0005   max_CTC_plus      TMS_monophasic   1005   out/ctc/run0005/
-  run0006   max_CTC_plus      TMS_monophasic   1006   out/ctc/run0006/
-  run0007   max_CTC_plus      pain_stimuli     1007   out/ctc/run0007/
-  run0008   max_CTC_plus      pain_stimuli     1008   out/ctc/run0008/
-  run0009   max_CTC_plus      pain_stimuli     1009   out/ctc/run0009/
-  run0010   M2M1S1_max_plus   visual_stimuli   1010   out/m2m1s1/run0010/
-  run0011   M2M1S1_max_plus   visual_stimuli   1011   out/m2m1s1/run0011/
-  run0012   M2M1S1_max_plus   visual_stimuli   1012   out/m2m1s1/run0012/
-  run0013   M2M1S1_max_plus   TMS_biphasic     1013   out/m2m1s1/run0013/
-  run0014   M2M1S1_max_plus   TMS_biphasic     1014   out/m2m1s1/run0014/
-  run0015   M2M1S1_max_plus   TMS_biphasic     1015   out/m2m1s1/run0015/
 
-  : Simulation runs metadata: mapping run identifiers to network
+
+**Table S4:** Simulation runs metadata: mapping run identifiers to network
   configuration, stimulus type, RNG seed, and output path. The full
   machine‑readable Supplementary Table S4 CSV contains all runs used to
   generate figures, including 20 independent trials per condition as
-  specified in
-  Table [\[tab:sim_params\]]{reference-type="ref"
-  reference="tab:sim_params"}.
-:::
+  specified in  Table [\[tab:sim_params\]]{reference-type="ref"
+  reference="tab:sim_params"}
+  run_id | network_config | stimulus_type | seed | output_path |
+  -------|----------------|---------------|------|-------------|
+  run0001 | max_CTC_plus | visual_stimuli | 1001 | out/ctc/run0001/ |
+  run0002 | max_CTC_plus | visual_stimuli | 1002 | out/ctc/run0002/ |
+  run0003 | max_CTC_plus | visual_stimuli | 1003 | out/ctc/run0003/ |
+  run0004 | max_CTC_plus | TMS_monophasic | 1004 | out/ctc/run0004/ |
+  run0005 | max_CTC_plus | TMS_monophasic | 1005 | out/ctc/run0005/ |
+  run0006 | max_CTC_plus | TMS_monophasic | 1006 | out/ctc/run0006/ |
+  run0007 | max_CTC_plus | pain_stimuli | 1007 | out/ctc/run0007/ |
+  run0008 | max_CTC_plus | pain_stimuli | 1008 | out/ctc/run0008/ |
+  run0009 | max_CTC_plus | pain_stimuli | 1009 | out/ctc/run0009/ |
+  run0010 | M2M1S1_max_plus | visual_stimuli | 1010 | out/m2m1s1/run0010/ |
+  run0011 | M2M1S1_max_plus | visual_stimuli | 1011 | out/m2m1s1/run0011/ |
+  run0012 | M2M1S1_max_plus | visual_stimuli | 1012 | out/m2m1s1/run0012/ |
+  run0013 | M2M1S1_max_plus | TMS_biphasic | 1013 | out/m2m1s1/run0013/ |
+  run0014 | M2M1S1_max_plus | TMS_biphasic | 1014 | out/m2m1s1/run00１4/ |
+  run0015 | M2M１S１_max_plus | TMS_biphasic | 1015 | out/m2m1s1/run0015/ |
 
-::: {#supp:tableS5}
-  claim_id   claim_text                                                                      figure_ids      stat_test        p_value
-  ---------- ------------------------------------------------------------------------------- --------------- ---------------- ---------
-  C1         Projection class alters E/I balance                                             Fig.8, Fig.5    Wilcoxon         2e-4
-  C2         Class‑dependent response to TMS                                                 Fig.11, Fig.9   permutation      1e-3
-  C3         Pain stimulation significantly shifts firing rate distributions vs baseline     Fig.13          Mann-Whitney U   1e-15
-  C4         TMS stimulation significantly shifts firing rate distributions vs baseline      Fig.13          t-test           3e-12
-  C5         Visual stimulation significantly shifts firing rate distributions vs baseline   Fig.13          Mann-Whitney U   8e-14
-  C6         Stimulation effects are network- and benchmark-dependent                        Fig.13          ANOVA            5e-8
 
-  : Mapping of main claims to figures, statistical tests and example
+**Table S5:**  Mapping of main claims to figures, statistical tests and example
   p‑values. A full mapping with data file links is provided as
-  Supplementary Table S5 (CSV, Supplementary Data S5).
-:::
+  Supplementary Table S5 (CSV, Supplementary Data S5)
+  claim_id | claim_text | figure_ids | stat_test | p_value |
+  ---------|------------|------------|-----------|---------|
+  C1 | Projection class alters E/I balance | Fig.8, Fig.5 | Wilcoxon | 2e-4 |
+  C2 | Class‑dependent response to TMS | Fig.11, Fig.9 | permutation | 1e-3 |
+  C3 | Pain stimulation significantly shifts firing rate distributions  *vs.* baseline | Fig.13 | Mann-Whitney U | 1e-15 |
+  C4 | TMS stimulation significantly shifts firing rate distributions  *vs.* baseline | Fig.13 | t-test | 3e-12 |
+  C5 | Visual stimulation significantly shifts firing rate distributions  *vs.* baseline | Fig.13 | Mann-Whitney U | 8e-14 |
+  C6 | Stimulation effects are network- and benchmark-dependent | Fig.13 | ANOVA | 5e-8 |
+
+
