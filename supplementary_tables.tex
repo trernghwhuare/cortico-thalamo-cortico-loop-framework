@@ -1,0 +1,124 @@
+% Supplementary tables for morpho-dynamical CTC manuscript
+% This file contains LaTeX-formatted Supplementary Tables S1--S5.
+\clearpage
+\section*{Supplementary Tables}
+\renewcommand{\tablename}{Supplementary Table}
+\setcounter{table}{0}
+
+\begin{table}[ht]
+\centering\small
+\caption{Morphology metrics per canonical cell (columns: \texttt{cell\_id}, \texttt{class}, \texttt{total\_length\_um}, \texttt{axon\_length\_um} (if applicable), \texttt{n\_branches}, \texttt{mean\_branch\_order}, and Sholl counts at 50/100/200/400 \textmu m). The full CSV is provided as Supplementary Data S1.}
+\label{supp:tableS1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l l r r r r r r r r}
+\toprule
+cell\_id & class & total\_length\_um & axon\_length\_um & n\_branches & mean\_branch\_order & Sholl\_50 & Sholl\_100 & Sholl\_200 & Sholl\_400 \\
+\midrule
+TCRc\_001 & TCRc & 12540 & 4850 & 48 & 3.6 & 12 & 18 & 14 & 6 \\
+TCRm\_001 & TCRm & 9840 & 3920 & 39 & 3.1 & 10 & 15 & 12 & 5 \\
+TCRil\_001 & TCRil & 8760 & 3520 & 35 & 2.8 & 9 & 14 & 11 & 4 \\
+nRTil\_001 & nRTil & 7420 & 2980 & 30 & 2.4 & 8 & 12 & 9 & 3 \\
+nRTc\_001 & nRTc & 6890 & 2750 & 28 & 2.2 & 7 & 11 & 8 & 3 \\
+nRTm\_001 & nRTm & 8120 & 3250 & 33 & 2.6 & 8 & 13 & 10 & 4 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\caption{Single‑cell biophysical parameters per canonical morphology (representative values). Full per‑cell parameter lists, channel peak conductances and references for kinetics are provided in Supplementary Table S2 CSV (Supplementary Data S2).}
+\label{supp:tableS2}
+\begin{tabular}{l l l l}
+\toprule
+cell\_id & class & Cm\_uF\_per\_cm2 & g\_leak\_mS\_per\_cm2 \\
+\midrule
+TCRc\_001 & TCRc & 1.3 & 1.0 \\
+TCRm\_001 & TCRm & 1.3 & 1.0 \\
+TCRil\_001 & TCRil & 1.3 & 1.0 \\
+nRTc\_001 & nRTc & 1.3 & 0.05 \\
+nRTil\_001 & nRTil & 1.3 & 0.05 \\
+nRTm\_001 & nRTm & 1.3 & 0.05 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\caption{Thalamic output connectivity: median synaptic weights for all thalamic cell subtypes (TCRc, TCRm, TCRil, nRTc, nRTil, nRTm) projecting to cortical targets. Values represent gsyn\_mean from extracted physiology parameters. Full connectivity matrices are provided in Supplementary Data S3.}
+\label{supp:tableS3}
+\begin{tabular}{l l l}
+\toprule
+pre\_class & post\_class & weight\_median\_nS \\
+\midrule
+TCRc & L6 cortical neurons & 0.062 \\
+TCRc & L4 cortical neurons & 0.062 \\
+TCRm & L2/3 cortical neurons & 0.075 \\
+TCRm & L4 cortical neurons & 0.075 \\
+TCRm & L5 cortical neurons & 0.075 \\
+TCRm & L6 cortical neurons & 0.075 \\
+TCRil & L2/3 cortical neurons & 0.057 \\
+TCRil & L4 cortical neurons & 0.057 \\
+TCRil & L5 cortical neurons & 0.057 \\
+TCRil & L6 cortical neurons & 0.057 \\
+nRTc & L6 cortical neurons & 0.062 \\
+nRTc & L4 cortical neurons & 0.062 \\
+nRTil & L2/3 cortical neurons & 0.057 \\
+nRTil & L4 cortical neurons & 0.057 \\
+nRTil & L5 cortical neurons & 0.057 \\
+nRTil & L6 cortical neurons & 0.057 \\
+nRTm & L2/3 cortical neurons & 0.077 \\
+nRTm & L4 cortical neurons & 0.077 \\
+nRTm & L5 cortical neurons & 0.077 \\
+nRTm & L6 cortical neurons & 0.077 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\caption{Simulation runs metadata: mapping run identifiers to network configuration, stimulus type, RNG seed, and output path. The full machine‑readable Supplementary Table S4 CSV contains all runs used to generate figures, including 20 independent trials per condition as specified in Table~\ref{tab:sim_params}.}
+\label{supp:tableS4}
+\begin{tabular}{l l l l l}
+\toprule
+run\_id & network\_config & stimulus\_type & seed & output\_path \\
+\midrule
+run0001 & max\_CTC\_plus & visual\_stimuli & 1001 & out/ctc/run0001/ \\
+run0002 & max\_CTC\_plus & visual\_stimuli & 1002 & out/ctc/run0002/ \\
+run0003 & max\_CTC\_plus & visual\_stimuli & 1003 & out/ctc/run0003/ \\
+run0004 & max\_CTC\_plus & TMS\_monophasic & 1004 & out/ctc/run0004/ \\
+run0005 & max\_CTC\_plus & TMS\_monophasic & 1005 & out/ctc/run0005/ \\
+run0006 & max\_CTC\_plus & TMS\_monophasic & 1006 & out/ctc/run0006/ \\
+run0007 & max\_CTC\_plus & pain\_stimuli & 1007 & out/ctc/run0007/ \\
+run0008 & max\_CTC\_plus & pain\_stimuli & 1008 & out/ctc/run0008/ \\
+run0009 & max\_CTC\_plus & pain\_stimuli & 1009 & out/ctc/run0009/ \\
+run0010 & M2M1S1\_max\_plus & visual\_stimuli & 1010 & out/m2m1s1/run0010/ \\
+run0011 & M2M1S1\_max\_plus & visual\_stimuli & 1011 & out/m2m1s1/run0011/ \\
+run0012 & M2M1S1\_max\_plus & visual\_stimuli & 1012 & out/m2m1s1/run0012/ \\
+run0013 & M2M1S1\_max\_plus & TMS\_biphasic & 1013 & out/m2m1s1/run0013/ \\
+run0014 & M2M1S1\_max\_plus & TMS\_biphasic & 1014 & out/m2m1s1/run0014/ \\
+run0015 & M2M1S1\_max\_plus & TMS\_biphasic & 1015 & out/m2m1s1/run0015/ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\caption{Mapping of main claims to figures, statistical tests and example p‑values. A full mapping with data file links is provided as Supplementary Table S5 (CSV, Supplementary Data S5).}
+\label{supp:tableS5}
+\begin{tabular}{l p{7cm} l l l}
+\toprule
+claim\_id & claim\_text & figure\_ids & stat\_test & p\_value \\
+\midrule
+C1 & Projection class alters E/I balance & Fig.8, Fig.5 & Wilcoxon & 2e-4 \\
+C2 & Class‑dependent response to TMS & Fig.11, Fig.9 & permutation & 1e-3 \\
+C3 & Pain stimulation significantly shifts firing rate distributions vs baseline & Fig.13 & Mann-Whitney U & 1e-15 \\
+C4 & TMS stimulation significantly shifts firing rate distributions vs baseline & Fig.13 & t-test & 3e-12 \\
+C5 & Visual stimulation significantly shifts firing rate distributions vs baseline & Fig.13 & Mann-Whitney U & 8e-14 \\
+C6 & Stimulation effects are network- and benchmark-dependent & Fig.13 & ANOVA & 5e-8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% End of supplementary_tables.tex
