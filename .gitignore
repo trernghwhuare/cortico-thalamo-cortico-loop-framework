@@ -56,3 +56,5 @@ Thumbs.db
 # Backup files
 *~
 *.bak
+# MyST build outputs
+_build

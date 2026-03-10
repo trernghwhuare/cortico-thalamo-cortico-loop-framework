@@ -86,7 +86,7 @@ neural systems.
 ![Representative axonal and dendritic reconstructions for cortical (IT,
 PT, CT) and thalamic cell classes (TC). Morphological differences
 underpin the projection-specific connectivity rules used to assemble the
-networks.](Picture1.png){#fig:fig1 width="90%"}
+networks.](paper/figures/Picture1.png)
 
 # Methods
 
@@ -115,7 +115,7 @@ Fig. [2](#fig:fig2){reference-type="ref" reference="fig:fig2"}).
 ![Three-dimensional morphology renders (left) and example membrane
 potential responses (right) for each thalamic class. Traces show
 characteristic firing patterns used for single-cell validation (see
-Supplementary Table S2).](Picture2.png){#fig:fig2 width="90%"}
+Supplementary Table S2).](paper/figures/Picture2.png)
 
 ## Network assembly
 
@@ -186,7 +186,7 @@ conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
     CTC loops, and distinction conforms reasonably well to the
     classification of the thalamus into matrixtype (calbindinexpressing)
     nuclei and coretype (parvalbuminexpressing (PV), in primates)
-    nuclei[@10.1016/S0306-4522], respectively, as a results, the
+    nuclei[@10.1016/S0306-4522(97)00581-2], respectively, as a results, the
     intralaminar, the matrix and core terminology are used as a proxy
     for the projectiondefined TC classes.
 
@@ -218,7 +218,7 @@ countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see
 Fig. [3](#fig:fig3){reference-type="ref" reference="fig:fig3"}).
 
 <figure id="fig:fig3">
-<img src="Picture3.png" style="width:100.0%" />
+<img src="paper/figures/Picture3.png" style="width:100.0%" />
 <p><span
 class="math display"><em>T</em><em>C</em><sup>intralaminar</sup> + <em>T</em><em>C</em><sup>matrix</sup> → <em>P</em><em>T</em> = <em>T</em><em>C</em>2<em>P</em><em>T</em>_<em>l</em><em>o</em><em>o</em><em>p</em>  (blue
 hollow arrows);</span> <span
@@ -305,7 +305,7 @@ corresponding PSTHs; (E--F) pain-like drive --- example pulse sequence
 and PSTH. PSTHs average $N=20$ trials (independent RNG seeds); parameter
 files and example driver scripts are provided in `stimuli_generation/`.
 PSTH: peristimulus time; ISI: inter-spike
-interval.](Picture4.png){#fig:fig4 width="100%"}
+interval.](paper/figures/Picture4.png)
 
 ::: {#tab:network_params}
   **Parameter**        **CTC Circuits**                   **M2M1S1 Circuits**
@@ -501,7 +501,7 @@ M. G. Shepherd.,*etc.*[@10.1038/s41583-021-00459-3], and Eyal Gal.,
 reference="fig:fig5"}).
 
 ![Graphviz draw workflow of constructing CTC loops and M2M1S1 loops,
-powered by graph-tool.](Picture5.png){#fig:fig5 width="100%"}
+powered by graph-tool.](paper/figures/Picture5.png)
 
 ## morphological visualization of CTC loops and M2M1S1 loops
 
@@ -518,8 +518,7 @@ D).
 ![Price preferential-attachment fits and hierarchical stochastic block
 model partitions that capture the mesoscopic organization of CTC and
 M2M1S1 loops. Price~network~ model and Hierarchical partitions for
-CTC~loops~ (A, C) and M2M1S1~loops~ (B, D).](Picture6.png){#fig:fig6
-width="100%"}
+CTC~loops~ (A, C) and M2M1S1~loops~ (B, D).](paper/figures/Picture6.png)
 
 ## Compairison of CTC loops and M2M1S1 loops
 
@@ -548,15 +547,13 @@ electrical) vs total outputs. $E/I$ Input Ratio (Continuous): Inhibitory
 vs excitatory inputs. $E/I$ Output Ratio (Continuous): Inhibitory vs
 excitatory outputs. $E/I$ Ratio (Overall): Total inhibitory vs total
 excitatory (inputs vs outputs). $I/E$ Ratio (Overall): Total excitatory
-vs total inhibitory (outputs vs inputs)](Picture7.png){#fig:fig7
-width="100%"}
+vs total inhibitory (outputs vs inputs)](paper/figures/Picture7.png)
 
 ![Cluster maps and heatmaps of synaptic relationship patterns that
 reveal motif-dependent grouping of neurons in CTC vs M2M1S1 networks.
 The display of relationships of synaptic connections for individual
 neuron in CTC loops in cluster map (A) and heapmap (C). Same for
-individual neuron in M2M1S1 loops (B,D)](Picture8.png){#fig:fig8
-width="100%"}
+individual neuron in M2M1S1 loops (B,D)](paper/figures/Picture8.png)
 
 CTC loops are simulated with 1043 population samples, 3480 excitatory
 inputs and 1550 inhibitory inputs. And there are 5344 excitatory to
@@ -566,7 +563,7 @@ inhibitory (II) contacts. Synaptic contacts to electrical conductances
 indicated the network dynamics complexity is 0.45, to total connections
 0.40 showing synchronization tendency. E/I balance ratio is 1.35
 indicate an excitatory neurons dominated networks (see
-FigFig. [9](#fig:fig9){reference-type="ref"
+Fig. [9]{reference-type="ref"
 reference="fig:fig9"}-A,B,C,D). There are 6258 population samples in
 M2M1S1 loops and excitatory and inhibitory inputs are 29190 and 22980
 respectively. The synaptic contacts including excitatory to excitatory
@@ -584,7 +581,7 @@ Fig. [9](#fig:fig9){reference-type="ref" reference="fig:fig9"}-E,F,G,H).
 (D,H) of excitatory and inhibitory projection distributions for CTC and
 M2M1S1 loops, highlighting cluster-dependent input statistics. Analysis
 of synaptic connections for individual neuron in CTC loops (A,C,E,G) and
-M2M1S1 loops (B,D,F,H).](Picture9.png){#fig:fig9 width="90%"}
+M2M1S1 loops (B,D,F,H).](paper/figures/Picture9.png)
 
 Total connections to excitatory cells in CTC loops are 49069 and to
 inhibitory cells are 36231. The overall E/I ratio is 1.354337 and the
@@ -607,7 +604,7 @@ coefficient of -0.041756(Figure 10C, 10D).
 M2M1S1 loops, indicating systematic biases introduced by projection
 classes. Comparison of distributions of E/I and I/E synaptic contacts
 ratios, excitatory and inhibitory connections in CTC loops (A,B) and
-M2M1S1 loops (C,D).](Picture10.png){#fig:fig10 width="90%"}
+M2M1S1 loops (C,D).](paper/figures/Picture10.png)
 
 ## mean-field analysis of CTC loops and M2M1S1 loops
 
@@ -696,7 +693,7 @@ overestimates by 66.1% while the population MF underestimates by 58.1%.
 ![Firing rate comparisons among single neuron mean-field approximation,
 population mean-field approximation and visual-stimulus, TMS-stimulus,
 pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
-(B).](Picture11.png){#fig:fig11 width="100%"}
+(B).](paper/figures/Picture11.png)
 
 ## Dynamics of CTC loops and M2M1S1 loops under stimulations
 
@@ -814,15 +811,13 @@ class-specific response motifs that match the mean-field predictions.
 stimulation protocols. Representative membrane potential traces
 (subsampled cells) show class-dependent differences in evoked and
 spontaneous activity that underlie the network-level synchrony
-differences reported in the text.](Picture12.png){#fig:fig12
-width="\\textwidth" height="0.825\\textheight"}
+differences reported in the text.](paper/figures/Picture12.png)
 
 ![Kernel density estimates of spike-rate distributions across conditions
 and classes. KDEs summarize how projection motifs shift population
 firing distributions and support the E/I and synchrony claims (see
 Results and Supplementary Table S5 for
-statistics).](Picture13.png){#fig:fig13 width="\\textwidth"
-height="0.65\\textheight"}
+statistics).](paper/figures/Picture13.png)
 
 # Discussion
 
