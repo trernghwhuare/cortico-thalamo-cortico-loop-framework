@@ -19,14 +19,7 @@ shape, which limits mechanistic insights. This study presents a
 reproducible computational framework intriduced that integrates six
 morphologically validated thalamic neuron classes (TCRil/TCRm/TCRc and
 nRTil/nRTm/nRTc) into single-regional and multi-regional CTC koops
-(*ie.*, CTC and M2M1S1 circuits loops) reconstructions. Using pyNeuroML,
-NEST, graph-tool packages and mean-field approxination, we show that
-projection motifs systematically bias E/I balance, synchronization
-tendency, and network complexity, producing distinct responses to
-visual, TMS-like, and nociceptive stimuli. Results reveal that thalamic
-projection classes act as structural control parameters, E/I balance as
-state variables shaping emergent CTC dynamics in ways that align with
-and predict variability observed in rodent experiments.
+(*ie.*, CTC and M2M1S1 circuits loops) reconstructions. Using pyNeuroML,NEST, graph-tool packages and mean-field approxination, we show that projection motifs systematically bias E/I balance, synchronization tendency, and network complexity, producing distinct responses to visual, TMS-like, and nociceptive stimuli. Results reveal that thalamic projection classes act as structural control parameters, E/I balance as state variables shaping emergent CTC dynamics in ways that align with and predict variability observed in rodent experiments.
 
 **Keywords:** cortico-thalamo-cortical, computational neuroscience,
 network dynamics, E/I balance, synchronization, pyNeuroML, NEST

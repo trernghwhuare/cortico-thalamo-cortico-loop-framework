@@ -1,0 +1,72 @@
+<Lems>
+
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v1.3.21 (libNeuroML v0.6.7)
+
+     -->
+
+    <!-- Specify which component to run -->
+    <Target component="iv_nRTc"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    <Include file="nRTc.cell.nml"/>
+    <Include file="ar__m00.channel.nml"/>
+    <Include file="cal.channel.nml"/>
+    <Include file="cat_a.channel.nml"/>
+    <Include file="k2.channel.nml"/>
+    <Include file="ka.channel.nml"/>
+    <Include file="kahp_slower.channel.nml"/>
+    <Include file="kc.channel.nml"/>
+    <Include file="kdr_fs.channel.nml"/>
+    <Include file="km.channel.nml"/>
+    <Include file="naf2__a0__b0__c0__d0__fastNa_shift0.channel.nml"/>
+    <Include file="pas.channel.nml"/>
+    <Include file="iv_nRTc.net.nml"/>
+
+    <Simulation id="iv_nRTc" length="30.0ms" step="0.01ms" target="network_of_nRTc" seed="12345">  <!-- Note seed: ensures same random numbers used every run -->
+        <Display id="Voltage_display" title="Voltages" timeScale="1ms" xmin="-3.0" xmax="33.0" ymin="-90" ymax="50">
+            <Line id="v_cell0" quantity="population_of_nRTc[0]/v" scale="1mV" color="#9a02e9" timeScale="1ms"/>
+            <Line id="v_cell1" quantity="population_of_nRTc[1]/v" scale="1mV" color="#d2ee6f" timeScale="1ms"/>
+            <Line id="v_cell2" quantity="population_of_nRTc[2]/v" scale="1mV" color="#d694f7" timeScale="1ms"/>
+            <Line id="v_cell3" quantity="population_of_nRTc[3]/v" scale="1mV" color="#2ab174" timeScale="1ms"/>
+            <Line id="v_cell4" quantity="population_of_nRTc[4]/v" scale="1mV" color="#409d79" timeScale="1ms"/>
+            <Line id="v_cell5" quantity="population_of_nRTc[5]/v" scale="1mV" color="#04063b" timeScale="1ms"/>
+            <Line id="v_cell6" quantity="population_of_nRTc[6]/v" scale="1mV" color="#e6f536" timeScale="1ms"/>
+            <Line id="v_cell7" quantity="population_of_nRTc[7]/v" scale="1mV" color="#f1e2f0" timeScale="1ms"/>
+            <Line id="v_cell8" quantity="population_of_nRTc[8]/v" scale="1mV" color="#75505b" timeScale="1ms"/>
+            <Line id="v_cell9" quantity="population_of_nRTc[9]/v" scale="1mV" color="#040581" timeScale="1ms"/>
+            <Line id="v_cell10" quantity="population_of_nRTc[10]/v" scale="1mV" color="#8677e6" timeScale="1ms"/>
+            <Line id="v_cell11" quantity="population_of_nRTc[11]/v" scale="1mV" color="#7d9463" timeScale="1ms"/>
+            <Line id="v_cell12" quantity="population_of_nRTc[12]/v" scale="1mV" color="#3ab794" timeScale="1ms"/>
+            <Line id="v_cell13" quantity="population_of_nRTc[13]/v" scale="1mV" color="#06a601" timeScale="1ms"/>
+            <Line id="v_cell14" quantity="population_of_nRTc[14]/v" scale="1mV" color="#5b6350" timeScale="1ms"/>
+            <Line id="v_cell15" quantity="population_of_nRTc[15]/v" scale="1mV" color="#b1af38" timeScale="1ms"/>
+        </Display>
+
+        <OutputFile id="Volts_file" fileName="iv_nRTc.v.dat">
+            <OutputColumn id="v_cell0" quantity="population_of_nRTc[0]/v"/>
+            <OutputColumn id="v_cell1" quantity="population_of_nRTc[1]/v"/>
+            <OutputColumn id="v_cell2" quantity="population_of_nRTc[2]/v"/>
+            <OutputColumn id="v_cell3" quantity="population_of_nRTc[3]/v"/>
+            <OutputColumn id="v_cell4" quantity="population_of_nRTc[4]/v"/>
+            <OutputColumn id="v_cell5" quantity="population_of_nRTc[5]/v"/>
+            <OutputColumn id="v_cell6" quantity="population_of_nRTc[6]/v"/>
+            <OutputColumn id="v_cell7" quantity="population_of_nRTc[7]/v"/>
+            <OutputColumn id="v_cell8" quantity="population_of_nRTc[8]/v"/>
+            <OutputColumn id="v_cell9" quantity="population_of_nRTc[9]/v"/>
+            <OutputColumn id="v_cell10" quantity="population_of_nRTc[10]/v"/>
+            <OutputColumn id="v_cell11" quantity="population_of_nRTc[11]/v"/>
+            <OutputColumn id="v_cell12" quantity="population_of_nRTc[12]/v"/>
+            <OutputColumn id="v_cell13" quantity="population_of_nRTc[13]/v"/>
+            <OutputColumn id="v_cell14" quantity="population_of_nRTc[14]/v"/>
+            <OutputColumn id="v_cell15" quantity="population_of_nRTc[15]/v"/>
+        </OutputFile>
+
+    </Simulation>
+
+</Lems>

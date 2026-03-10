@@ -1,0 +1,156 @@
+<Lems>
+
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v1.3.21 (libNeuroML v0.6.7)
+
+     -->
+
+    <!-- Specify which component to run -->
+    <Target component="nRTc_sim"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    <Include file="nRTc.net.nml"/>
+    <Include file="nRTc.cell.nml"/>
+    <Include file="ar__m00.channel.nml"/>
+    <Include file="cal.channel.nml"/>
+    <Include file="cat_a.channel.nml"/>
+    <Include file="k2.channel.nml"/>
+    <Include file="ka.channel.nml"/>
+    <Include file="kahp_slower.channel.nml"/>
+    <Include file="kc.channel.nml"/>
+    <Include file="kdr_fs.channel.nml"/>
+    <Include file="km.channel.nml"/>
+    <Include file="naf2__a0__b0__c0__d0__fastNa_shift0.channel.nml"/>
+    <Include file="pas.channel.nml"/>
+
+    <Simulation id="nRTc_sim" length="200.0ms" step="0.01ms" target="nRTc_net" seed="123">  <!-- Note seed: ensures same random numbers used every run -->
+        <OutputFile id="output0" fileName="nRTc_sim.dat">
+            <OutputColumn id="pop0_0_v" quantity="pop0[0]/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_soma_0" quantity="pop0/0/nRT/0/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_soma_0" quantity="pop0/0/nRT/1/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_0" quantity="pop0/0/nRT/2/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_0" quantity="pop0/0/nRT/3/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_1" quantity="pop0/0/nRT/4/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_1" quantity="pop0/0/nRT/5/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_2" quantity="pop0/0/nRT/6/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_2" quantity="pop0/0/nRT/7/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_3" quantity="pop0/0/nRT/8/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_3" quantity="pop0/0/nRT/9/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_4" quantity="pop0/0/nRT/10/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_4" quantity="pop0/0/nRT/11/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_axon_5" quantity="pop0/0/nRT/12/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_axon_5" quantity="pop0/0/nRT/13/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_0" quantity="pop0/0/nRT/14/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_0" quantity="pop0/0/nRT/15/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_1" quantity="pop0/0/nRT/16/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_1" quantity="pop0/0/nRT/17/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_2" quantity="pop0/0/nRT/18/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_2" quantity="pop0/0/nRT/19/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_3" quantity="pop0/0/nRT/20/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_3" quantity="pop0/0/nRT/21/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_4" quantity="pop0/0/nRT/22/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_4" quantity="pop0/0/nRT/23/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_5" quantity="pop0/0/nRT/24/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_5" quantity="pop0/0/nRT/25/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_6" quantity="pop0/0/nRT/26/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_6" quantity="pop0/0/nRT/27/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_7" quantity="pop0/0/nRT/28/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_7" quantity="pop0/0/nRT/29/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_8" quantity="pop0/0/nRT/30/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_8" quantity="pop0/0/nRT/31/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_9" quantity="pop0/0/nRT/32/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_9" quantity="pop0/0/nRT/33/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_10" quantity="pop0/0/nRT/34/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_10" quantity="pop0/0/nRT/35/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_11" quantity="pop0/0/nRT/36/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_11" quantity="pop0/0/nRT/37/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_12" quantity="pop0/0/nRT/38/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_12" quantity="pop0/0/nRT/39/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_13" quantity="pop0/0/nRT/40/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_13" quantity="pop0/0/nRT/41/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_14" quantity="pop0/0/nRT/42/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_14" quantity="pop0/0/nRT/43/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_15" quantity="pop0/0/nRT/44/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_15" quantity="pop0/0/nRT/45/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_16" quantity="pop0/0/nRT/46/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_16" quantity="pop0/0/nRT/47/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_17" quantity="pop0/0/nRT/48/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_17" quantity="pop0/0/nRT/49/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_18" quantity="pop0/0/nRT/50/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_18" quantity="pop0/0/nRT/51/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_19" quantity="pop0/0/nRT/52/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_19" quantity="pop0/0/nRT/53/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_20" quantity="pop0/0/nRT/54/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_20" quantity="pop0/0/nRT/55/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_21" quantity="pop0/0/nRT/56/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_21" quantity="pop0/0/nRT/57/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_22" quantity="pop0/0/nRT/58/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_22" quantity="pop0/0/nRT/59/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_23" quantity="pop0/0/nRT/60/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_23" quantity="pop0/0/nRT/61/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_24" quantity="pop0/0/nRT/62/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_24" quantity="pop0/0/nRT/63/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_25" quantity="pop0/0/nRT/64/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_25" quantity="pop0/0/nRT/65/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_26" quantity="pop0/0/nRT/66/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_26" quantity="pop0/0/nRT/67/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_27" quantity="pop0/0/nRT/68/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_27" quantity="pop0/0/nRT/69/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_28" quantity="pop0/0/nRT/70/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_28" quantity="pop0/0/nRT/71/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_29" quantity="pop0/0/nRT/72/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_29" quantity="pop0/0/nRT/73/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_30" quantity="pop0/0/nRT/74/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_30" quantity="pop0/0/nRT/75/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_31" quantity="pop0/0/nRT/76/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_31" quantity="pop0/0/nRT/77/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_32" quantity="pop0/0/nRT/78/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_32" quantity="pop0/0/nRT/79/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_33" quantity="pop0/0/nRT/80/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_33" quantity="pop0/0/nRT/81/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_34" quantity="pop0/0/nRT/82/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_34" quantity="pop0/0/nRT/83/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_35" quantity="pop0/0/nRT/84/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_35" quantity="pop0/0/nRT/85/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_36" quantity="pop0/0/nRT/86/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_36" quantity="pop0/0/nRT/87/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_37" quantity="pop0/0/nRT/88/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_37" quantity="pop0/0/nRT/89/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_38" quantity="pop0/0/nRT/90/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_38" quantity="pop0/0/nRT/91/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_39" quantity="pop0/0/nRT/92/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_39" quantity="pop0/0/nRT/93/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_40" quantity="pop0/0/nRT/94/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_40" quantity="pop0/0/nRT/95/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_41" quantity="pop0/0/nRT/96/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_41" quantity="pop0/0/nRT/97/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_42" quantity="pop0/0/nRT/97/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_42" quantity="pop0/0/nRT/99/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_43" quantity="pop0/0/nRT/100/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_43" quantity="pop0/0/nRT/101/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_44" quantity="pop0/0/nRT/102/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_44" quantity="pop0/0/nRT/103/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_45" quantity="pop0/0/nRT/104/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_45" quantity="pop0/0/nRT/105/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_46" quantity="pop0/0/nRT/106/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_46" quantity="pop0/0/nRT/107/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_47" quantity="pop0/0/nRT/108/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_47" quantity="pop0/0/nRT/109/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_48" quantity="pop0/0/nRT/110/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_48" quantity="pop0/0/nRT/111/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_49" quantity="pop0/0/nRT/112/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_49" quantity="pop0/0/nRT/113/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_50" quantity="pop0/0/nRT/114/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_50" quantity="pop0/0/nRT/115/v"/>
+            <OutputColumn id="pop0_0_v_Seg1_dend_51" quantity="pop0/0/nRT/116/v"/>
+            <OutputColumn id="pop0_0_v_Seg0_dend_51" quantity="pop0/0/nRT/117/v"/>
+        </OutputFile>
+
+    </Simulation>
+
+</Lems>
