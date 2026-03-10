@@ -74,11 +74,40 @@ The framework follows a 15-step modular workflow:
 
 ```
 cortico-thalamo-cortico-loop-framework/
-├── data/                    # Input data and morphologies
-├── src/                     # Source code organized by functionality
-├── configs/                 # Configuration files
-├── results/                 # Generated results and outputs
-└── paper/                   # Publication figures and materials
+├── src/                     # Source code organized by functional modules
+│   ├── morphology/          # Thalamic neuron morphology simulations
+│   ├── cell_catalog/        # Cortical neuron cataloging and clustering
+│   ├── network_construction/ # Large-scale CTC and M2M1S1 network generation
+│   ├── analysis/            # Network topology and connectivity analysis
+│   ├── ground_truth/        # Ground truth parameter extraction and visualization
+│   ├── dynamics/            # Network dynamics and statistical comparisons
+│   ├── stimuli/             # Multi-modal stimulation simulations
+│   ├── mean_field/          # Mean-field theory integration and optimization
+│   └── pynn/                # PyNN simulations and visualization
+├── data/                    # Input data and generated morphologies
+│   ├── morphologies/        # Generated NeuroML cell morphology files
+│   ├── catalog/             # Cell catalog data and clustering results
+│   ├── networks/            # Generated NeuroML network files
+│   ├── net_params/          # Extracted network parameters by anatomy/circuit/layer
+│   ├── ground_truth/        # Ground truth parameter configurations
+│   └── stimuli/             # Stimuli configuration files
+├── configs/                 # Network configuration files
+│   └── yaml/                # YAML configuration files for CTC and M2M1S1 networks
+├── results/                 # Generated results and analysis outputs
+│   ├── analysis_out/        # Network analysis statistics and summaries
+│   ├── plots/               # Generated visualization plots
+│   ├── MF_optimized/        # Mean-field optimization results
+│   ├── PyNN_results/        # PyNN simulation outputs
+│   └── yaml_nest/           # NEST-compatible YAML parameter files
+├── notebooks/               # Jupyter notebooks for interactive demonstrations
+├── paper/                   # Publication figures and supplementary materials
+├── binder/                  # Binder environment configuration
+├── _build/                  # Build artifacts and cached content
+├── requirements.txt         # Python dependencies
+├── myst.yml                 # MyST documentation configuration
+├── paper.md                 # Main manuscript
+├── paper.bib                # Bibliography references
+└── supplementary_tables.tex # Supplementary tables in LaTeX format
 ```
 
 ## Citation
