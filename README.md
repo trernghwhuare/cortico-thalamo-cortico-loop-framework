@@ -10,48 +10,48 @@ This framework demonstrates that thalamic projection classes act as structural c
 
 The framework follows a 15-step modular workflow:
 
-### Step 1: Morphology Generation
-- Six thalamic cell class simulations (`00_sim_*.py`)
-- NeuroML morphology files (`.cell.nml`)
+### Step 1: Thalamus Neurons construction
+- Six thalamic cell class simulations (`src/morphology/00_sim_nRTc.py`, `src/morphology/01_sim_nRTm.py`, `src/morphology/02_sim_nRTil.py`, `src/morphology/03_sim_TCRc.py`, `src/morphology/04_sim_TCRm.py`, `src/morphology/05_sim_TCRil.py`)
+- Validate newly generated NeuroML cell files (`data/morphologies/nRTc.cell.nml`,`data/morphologies/nRTil.cell.nml`, `data/morphologies/nRTm.cell.nml`,`data/morphologies/TCRc.cell.nml`, `data/morphologies/TCRil.cell.nml`, `data/morphologies/TCRil.cell.nml`)
 
-### Step 2: Cell Cataloging & Clustering  
-- Cell data extraction and pattern cataloging
-- Clustering of CT, IT, and PT cell types
-- CSV outputs for cell catalogs and clusters
+### Step 2: cortical Neurons Cataloging & Clustering  
+- Cell data extraction and pattern cataloging (`src/cell_catalog/01_extract_cell_data.py`, `src/cell_catalog/02_catalog_cells_by_pattern.py`)
+- Clustering of CT, IT, and PT cell types (`src/cell_catalog/cluster_ct_cells.py`, `src/cell_catalog/cluster_it_cells.py`, `src/cell_catalog/cluster_pt_cells.py`)
+- CSV outputs for cell catalogs and clusters (`src/cell_catalog/extract_member_segment_count.py`)
 
 ### Step 3: Network Construction
-- CTC and M2M1S1 network generation (`11_CTC_max+.py`, `33_M2M1S1_max+.py`)
-- NeuroML network files (`.net.nml`)
-- Connection statistics and population analysis
+- CTC and M2M1S1 network generation (`src/network_construction/11_CTC_max+.py`, `src/network_construction/33_M2M1S1_max+.py`)
+- Newly generated NeuroML network files (`data/networks/M2M1S1_max_plus.net.nml`, `data/networks/max_CTC_plus.net.nml`)
+- Connection statistics and population analysis  (`src/analysis/77_0_extract_net_params.py`)
 
 ### Step 4-6: Network Analysis
-- Comprehensive network analysis (`55_0_analysis.py`)
-- Clustering coefficient, fractal dimension, and machine learning analysis
-- Connection ratio analysis
+- Comprehensive network analysis (`src/analysis/55_0_analysis.py`)
+- Clustering coefficient, fractal dimension, and machine learning analysis (`src/analysis/55_1_CC.py`, `src/analysis/55_2_FD.py`, `src/analysis/55_3_MLP.py`, `src/analysis/55_1_clustering.py`)
+- Connection ratio analysis (`src/analysis/55_2_connection_ratio.py`, `src/analysis/generate_all_ei_plots.py`)
 
 ### Step 7-8: Ground Truth Parameter Extraction
-- GT parameter extraction from network structure
-- Hierarchical and SFDP visualization (macro/meso scale)
+- GT parameter extraction from network structure (`src/ground_truth/66_1_extract_gt_params.py`)
+- Hierarchical and SFDP visualization of networks modes in macro/meso scale (`src/ground_truth/66_1_gt_sfdp_meso.py`, `src/ground_truth/66_1_gt_sfdp_macro.py`, `src/ground_truth/66_1_gt_hierarchical.py`)
 
 ### Step 9: Dynamic Analysis & Comparisons
-- Animation of network dynamics
-- E/I vs homogeneous model comparisons
-- Statistical comparison results
+- Animation of network dynamics (`src/dynamics/69_5_gt_combined_ani.py`,`src/dynamics/69_6_gt_combined_ani_adv.py`)
+- E/I vs homogeneous model comparisons (`src/dynamics/69_6_simple_ei_vs_homogeneous_comparison.py`)
+- Statistical comparison results (`src/dynamics/69_6_sirs_statistical_comparison.py`)
 
 ### Step 10: Network Parameter Extraction
-- Anatomy, circuit, layer, pathway, and region parameter extraction
+- Anatomy, circuit, layer, pathway, and region parameter extraction (`src/analysis/77_0_extract_net_params.py`)
 
 ### Step 11: Stimulation Simulations
-- Pain, TMS, and visual stimuli simulations
-- Dynamic stimulation response animations
+- Pain, TMS, and visual stimuli simulations (`src/stimuli/77_1_pain_stimuli_simulation.py`, `src/stimuli/77_1_TMS_stimuli_simulation.py`, `src/stimuli/77_1_visual_stimuli_simulation.py`)
+- Dynamic stimulation response animations (`src/stimuli/77_2_animate_stimulation_dynamics.py`)
 
 ### Step 12-13: Mean-Field Integration
-- YAML parameter generation for NEST simulations
-- Mean-field optimization and validation
+- YAML parameter generation for NEST simulations (`src/mean_field/88_1_generate_MF_params.py`, `src/mean_field/88_5_nest_yaml_simulation.py`)
+- Mean-field optimization (`src/mean_field/88_9_MF_optimization.py`)
 
 ### Step 14-15: PyNN Integration & Visualization
-- Unified PyNN mean-field simulations
-- Comprehensive plotting and voltage comparisons
+- Unified PyNN mean-field simulations (`src/pynn/99_1_pynn_MF_unified.py`, `src/pynn/99_3_pynn_MF_visual.py`, `src/pynn/99_5_pynn_MF_TMS.py`, `src/pynn/99_7_pynn_MF_pain.py`)
+- Comprehensive plotting and voltage comparisons (`src/pynn/99_9_plot_pynn_comparisons.py`,`src/pynn/99_10_plot_pynn_voltage_comparisons.py`)
 
 ## Dependencies
 
