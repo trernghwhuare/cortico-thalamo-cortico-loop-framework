@@ -550,18 +550,15 @@ correlation (*p* \< 0.05).
 distributions for CTC and M2M1S1 loops, highlighting class-dependent
 input statistics. analysis of synaptic connections for individual neuron
 in CTC loops (A,C,E) and M2M1S1 loops (B,D,F).Synaptic
-(cont_in  *vs.* cont_out): Overall (cont + elec_in)  *vs.* (cont + elec_out): Total inputs (continuous + electrical)  *vs.* total outputs. Input Ratio (Continuous): Inhibitory
- *vs.* excitatory inputs. E/I Output Ratio (Continuous): Inhibitory  *vs.*
-excitatory outputs. E/I Ratio (Overall): Total inhibitory  *vs.* total
-excitatory (inputs  *vs.* outputs). I/E Ratio (Overall): Total excitatory
- *vs.* total inhibitory (outputs  *vs.* inputs).</figcaption>
+(cont_in/cont_out): Overall (cont + elec_in)/(cont + elec_out): Total inputs (continuous + electrical)  /total outputs. Input Ratio (Continuous): Inhibitory/excitatory inputs. E/I Output Ratio (Continuous): Inhibitory/excitatory outputs. E/I Ratio (Overall): Total inhibitory/total
+excitatory (inputs/outputs). I/E Ratio (Overall): Total excitatory/total inhibitory (outputs/inputs).</figcaption>
 </figure>
 </import>
 
 <import>
 <figure id="fig:fig8">
 <img src="paper/figures/Picture8.png" style="width:100.0%" />
-<figcaption>Cluster maps and heatmaps of synaptic relationship patterns that reveal motif-dependent grouping of neurons in CTC  *vs.* M2M1S1 networks.
+<figcaption>Cluster maps and heatmaps of synaptic relationship patterns that reveal motif-dependent grouping of neurons in CTC/M2M1S1 networks.
 The display of relationships of synaptic connections for individual
 neuron in CTC loops in cluster map (A) and heapmap (C). Same for
 individual neuron in M2M1S1 loops (B,D).</figcaption>
@@ -750,17 +747,13 @@ pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
 
 Construct animations of loops with SIRS epidemics model, showing the
 populations' activation (I, infected), refractory (R, recovered) and
-inactivation (S, susceptible) periods as time evolution (see GIF.[1], GIF.[2], GIF.[3], GIF.[4]). During the animations, graph layout with the spatial segregation were updated and edges lines repeatedly and randomly rewired throught time, which give us more insightful dynamics of the network. Furthermore, the network dynamic SIRS epidemics models devide into two categories: one is homogeneous model and the other is exciatory inhibitory separated model (E/I seperated SIRS model). The homogeneous model is the basic SIRS epidemics model, which treats all neurons as the same type and simulates their state transitions (S→I→R→S) based on fixed probabilities. The E/I separated model, on the other hand, distinguishes between excitatory and
+inactivation (S, susceptible) periods as time evolution (see Figure.[12], Figure.[13], Figure.[14], Figure.[15]). During the animations, graph layout with the spatial segregation were updated and edges lines repeatedly and randomly rewired throught time, which give us more insightful dynamics of the network. Furthermore, the network dynamic SIRS epidemics models devide into two categories: one is homogeneous model and the other is exciatory inhibitory separated model (E/I seperated SIRS model). The homogeneous model is the basic SIRS epidemics model, which treats all neurons as the same type and simulates their state transitions (S→I→R→S) based on fixed probabilities. The E/I separated model, on the other hand, distinguishes between excitatory and
 inhibitory neurons and incorporates different transition probabilities
 for each type, reflecting their distinct roles in network dynamics. This
 allows us to capture more realistic patterns of activation and
 inhibition in the network, providing deeper insights into how different
 neuron types contribute to overall network behavior under various
 stimulation conditions.
-
-
-
-
 
 The mathematical formulations for both models use identical SIRS
 parameters ($x = 0.004$, $r = 0.4$, $s = 0.04$) but differ fundamentally
@@ -779,13 +772,13 @@ spontaneous outbreak probability, $r = 0.4$ is the recovery rate,
 $s = 0.04$ is the susceptibility rate, $\beta = 0.5$ is the transmission
 probability, and $N(i)$ denotes the neighbors of neuron $i$.
 <import>
-<figure id="fig:gif1"> 
+<figure id="fig:fig12"> 
 <img src="paper/GIF/max_CTC_plus_combined.gif" style="width:100.0%" />
 <figcaption>CTC loop homogeneous model SIRS epidemics animation.</figcaption>
 </figure>
 </import>
 <import> 
-<figure id="fig:gif2">
+<figure id="fig:fig13">
 <img src="paper/GIF/M2M1S1_max_plus_combined.gif" style="width:100.0%" />
 <figcaption>M2M1S1 loop homogeneous model SIRS epidemics animation.</figcaption>
 </figure>
@@ -818,13 +811,13 @@ Both models use identical SIRS parameters but the E/I separated model
 reveals stability properties through excitatory-inhibitory relationships
 that are invisible in the homogeneous model.
 <import>
-<figure id="fig:gif3">
+<figure id="fig:fig14">
 <img src="paper/GIF/max_CTC_plus_combined_adv.gif" style="width:100.0%" />
 <figcaption>CTC loop E/I seperated model SIRS epidemics animation.</figcaption>
 </figure>
 </import>
 <import>
-<figure id="fig:gif4">
+<figure id="fig:fig15">
 <img src="paper/GIF/M2M1S1_max_plus_combined_adv.gif" style="width:100.0%" />
 <figcaption>M2M1S1 loop E/I seperated model SIRS epidemics animation.</figcaption>
 </figure>
@@ -849,17 +842,17 @@ network activity while preserving fundamental dynamic patterns. Both
 distributions were non-normal (Shapiro-Wilk $p < 10^{-40}$), validating
 our use of non-parametric statistics. The variance ratio (E/I separated
 to homogeneous) was 1.56, reflecting enhanced dynamic variability in the
-E/I separated model (Figure.[12], Figure.[13]).
+E/I separated model (Figure.[16], Figure.[17]).
 <import>
-<figure id="fig:fig12">
-<img src="paper/figures/Picture12.png" style="width:100.0%" />
+<figure id="fig:fig16">
+<img src="paper/figures/Picture16.png" style="width:100.0%" />
 <figcaption>E/I Separated Model vs. Homogeneous Model comparison in dynamic behavior (CTC loop)</figcaption>
 </figure>
 </import>
 
 <import>
-<figure id="fig:fig13"> 
-<img src="paper/figures/Picture13.png" style="width:100.0%" />
+<figure id="fig:fig17"> 
+<img src="paper/figures/Picture17.png" style="width:100.0%" />
 <figcaption>Mann-Whitney U test Homogeneous vs. E/I seperated model (CTC loop)</figcaption>
 </figure>
 </import>
@@ -872,17 +865,17 @@ test). The temporal correlation was exceptionally strong in this larger
 network ($r = 0.961$), suggesting that the relative advantage of E/I
 separation becomes more consistent and predictable at larger scales. The
 variance ratio was 1.49, again indicating greater dynamic complexity in
-the E/I separated implementation (Figure.[14], Figure.[15]).
+the E/I separated implementation (Figure.[18], Figure.[19]).
 <import>
-<figure id="fig:fig14">
-<img src="paper/figures/Picture14.png" style="width:100.0%" />
+<figure id="fig:fig18">
+<img src="paper/figures/Picture18.png" style="width:100.0%" />
 <figcaption>E/I Separated Model vs. Homogeneous Model comparison in dynamic behavior (M2M1S1 loop)</figcaption>
 </figure>
 </import>
 
 <import>
-<figure id="fig:fig15">
-<img src="paper/figures/Picture15.png" style="width:100.0%" />
+<figure id="fig:fig19">
+<img src="paper/figures/Picture19.png" style="width:100.0%" />
 <figcaption>Mann-Whitney U test Homogeneous vs. E/I separated model (M2M1S1 loop)</figcaption>
 </figure>
 </import>
@@ -895,33 +888,33 @@ stability properties that emerge from balanced E/I interactions.
 
 The dynamics of firing rates for CTC and M2M1S1 networks under different
 stimulations, visual stimuli, TMS and pain stimuli, 
-are also available in GIF.[5]and GIF.[6]. The visual stimuli evoke sustained increases in firing rates, while TMS induces transient peaks followed by rapid decay, and pain stimuli produce moderate but prolonged elevations. These dynamic patterns are consistent with the known physiological responses to these stimulus types and further validate the realism of our network models.
+are also available in Figure.[20]and Figure.[21]. The visual stimuli evoke sustained increases in firing rates, while TMS induces transient peaks followed by rapid decay, and pain stimuli produce moderate but prolonged elevations. These dynamic patterns are consistent with the known physiological responses to these stimulus types and further validate the realism of our network models.
 <import>
-<figure id="fig:gif5">
+<figure id="fig:fig20">
 <img src="paper/GIF/max_CTC_plus_stimulation_response.gif" style="width:100.0%" />
 <figcaption>Dynamic response of CTC loops to different stimulations.</figcaption>
 </figure>
 </import>
 
 <import>
-<figure id="fig:gif6">
+<figure id="fig:fig21">
 <img src="paper/GIF/M2M1S1_max_plus_stimulation_response.gif" style="width:100.0%" />
 <figcaption>Dynamic response of M2M1S1 loops to different stimulations.</figcaption>
 </figure>
 </import>
 
-The differences under variate stimulations in voltage traces are as the Figure 16 were shown. And the differences of spike-rate through time shown in Figure 17. 
+The differences under variate stimulations in voltage traces are as the Figure 22 were shown. And the differences of spike-rate through time shown in Figure 23. 
 
 <import>
-<figure id="fig:fig16">
-<img src="paper/figures/Picture16.png" style="width:100.0%" />
+<figure id="fig:fig22">
+<img src="paper/figures/Picture22.png" style="width:100.0%" />
 <figcation>Voltage-trace comparisons across thalamic projection classes and stimulation protocols. Representative membrane potential traces (subsampled cells) show class-dependent differences in evoked and spontaneous activity that underlie the network-level synchrony differences reported in the text.</figcation>
 </figure>
 </import>
 
 <import>
-<figure id="fig:fig17">
-<img src="paper/figures/Picture17.png" style="width:100.0%" />
+<figure id="fig:fig23">
+<img src="paper/figures/Picture23.png" style="width:100.0%" />
 <figcaption>Kernel density estimates of spike-rate distributions across conditions and classes. KDEs summarize how projection motifs shift population firing distributions and support the E/I and synchrony claims (see Results and Supplementary Table S5 for statistics).</figcaption>
 </figure>
 </import>
