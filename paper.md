@@ -5,7 +5,6 @@ authors:
     affiliations:
       - Independant researcher
     orcid: 0000-0003-0903-6766
-corresponding author: true
 date: "2026-03-09"
 bibliography: paper.bib
 ---
@@ -200,7 +199,7 @@ conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
     CTC loops, and distinction conforms reasonably well to the
     classification of the thalamus into matrixtype (calbindinexpressing)
     nuclei and coretype (parvalbuminexpressing (PV), in primates)
-    nuclei[@10.1016/S0306-4522], respectively, as a results, the
+    nuclei[@Jones1998], respectively, as a results, the
     intralaminar, the matrix and core terminology are used as a proxy
     for the projectiondefined TC classes.
 
@@ -644,7 +643,7 @@ a higher E/I ratio (2.46:1). Both networks show high standard deviations
 relative to their means, indicating substantial trial-to-trial
 variability and heterogeneous responses across neurons.
 
-#### Mean-field analysis outcome.
+### Mean-field analysis outcome
 
 To quantify fit quality we computed RMSE and Pearson correlation between
 simulation and both single-cell and population mean-field predictions.
@@ -697,7 +696,7 @@ Table. [5].
   (cortical microcircuit) and max_CTC_plus (thalamocortical loop)
   networks under visual stimulation conditions.
 
-#### Quantitative comparison.
+### Quantitative comparison
 
 For clarity we report mean firing-rate comparisons (simulation  *vs.*
 mean-field single / population predictions). For **max_CTC_plus** the
@@ -751,7 +750,7 @@ pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
 
 Construct animations of loops with SIRS epidemics model, showing the
 populations' activation (I, infected), refractory (R, recovered) and
-inactivation (S, susceptible) periods as time evolution (see mp4 files).
+inactivation (S, susceptible) periods as time evolution (see ![CTC loop homogeneous model](paper/GIF/max_CTC_plus_combined.gif), ![M2M1S1 loop homogeneous model](paper/GIF/M2M1S1_max_plus_combined.gif), ![CTC loop E/I seperated model](paper/GIF/max_CTC_plus_combined_adv.gif), ![M2M1S1 loop E/I seperated model](paper/GIF/M2M1S1_max_plus_combined_adv.gif)).
 During the animations, graph layout with the spatial segregation were
 updated and edges lines repeatedly and randomly rewired throught time,
 which give us more insightful dynamics of the network. Furthermore, the
@@ -812,10 +811,6 @@ Both models use identical SIRS parameters but the E/I separated model
 reveals stability properties through excitatory-inhibitory relationships
 that are invisible in the homogeneous model.
 
-The supplementary video files for CTC and M2M1S1 network dynamics SIRS
-epidemics models are available: `max_CTC_plus_combined.mp4`,
-`max_CTC_plus_combined_adv.mp4`, and `M2M1S1_max_plus_combined.mp4`,
-`M2M1S1_max_plus_combined_adv.mp4`.
 
 ## Statistical comparison of homogeneous versus E/I separated SIRS dynamics
 
@@ -855,9 +850,9 @@ underestimate network responsiveness and fail to capture the nuanced
 stability properties that emerge from balanced E/I interactions.
 
 The dynamics of firing rates for CTC and M2M1S1 networks under different
-stimulations, visual stimuli, TMS and pain stimuli, are also available
-in voltage traces (Figure 12) and spike-rate KDEs (Figure 13) reveal
-class-specific response motifs that match the mean-field predictions.
+stimulations, visual stimuli, TMS and pain stimuli, 
+are also available in ![Dynamic respond of CTC to different stimulations](paper/GIF/max_CTC_plus_stimulation_response.gif) and ![Dynamic respond of M2M1S1 to different stimulations](paper/GIF/M2M1S1_max_plus_stimulation_response.gif). The visual stimuli evoke sustained increases in firing rates, while TMS induces transient peaks followed by rapid decay, and pain stimuli produce moderate but prolonged elevations. These dynamic patterns are consistent with the known physiological responses to these stimulus types and further validate the realism of our network models.
+The differences under variate stimulations in voltage traces are as the Figure 12 were shown. And the differences of spike-rate through time shown in Figure 13. 
 
 <import>
 <figure id="fig:fig12">
