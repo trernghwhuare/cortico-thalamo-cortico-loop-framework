@@ -5,13 +5,7 @@ project:
   title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
   # description:
   # keywords: []
-  # authors: []
-  bibliography: paper.bib
-  csl: nature.csl
-  exports:
-   - format: typst
-   - template: lapreprint-typst
-     
+  authors: "Hua Cheng"
   github: https://github.com/trernghwhuare/cortico-thalamo-cortico-loop-framework
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
