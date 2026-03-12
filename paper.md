@@ -15,8 +15,6 @@ exports:
   - output: paper.pdf
 ---
 
----
-
 # Abstract 
 
 Macro-scale cortico-thalamo-cortical (CTC) models increasingly linking
