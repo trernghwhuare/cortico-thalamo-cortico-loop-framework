@@ -2,7 +2,7 @@
 version: 1
 project:
   id: b618323c-a65f-44e0-9f90-78639fe2c81c
-  title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
+  title: "Simulation Framework Reveals How Thalamic Neuronal Diversity and E/I Balance Shape Cortico-Thalamo-Cortical Circuit States"
   # description:
   # keywords: []
   authors: "Hua Cheng"

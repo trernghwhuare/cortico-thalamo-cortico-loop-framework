@@ -1,5 +1,5 @@
 ---
-title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
+title: "Simulation Framework Reveals How Thalamic Neuronal Diversity and E/I Balance Shape Cortico-Thalamo-Cortical Circuit States"
 authors:
   - name: Hua Cheng
     affiliations:
@@ -13,6 +13,8 @@ exports:
   - format: typst
   - template: https://github.com/myst-templates/article-theme.git
   - output: paper.pdf
+---
+
 ---
 
 # Abstract 
