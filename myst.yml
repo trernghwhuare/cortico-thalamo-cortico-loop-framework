@@ -1,11 +1,15 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  id: 54626c14-592f-4753-b1af-c21d149624e9
+  id: b618323c-a65f-44e0-9f90-78639fe2c81c
   # title:
   # description:
   # keywords: []
   # authors: []
+  exports:
+   - format: typst
+   - template: https://github.com/myst-templates/lapreprint-typst.git
+     
   github: https://github.com/trernghwhuare/cortico-thalamo-cortico-loop-framework
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:

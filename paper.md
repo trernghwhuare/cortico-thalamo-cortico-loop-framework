@@ -5,6 +5,7 @@ authors:
     affiliations:
       - Independant researcher
     orcid: 0000-0003-0903-6766
+license: CC-BY-4.0
 date: "2026-03-09"
 bibliography: paper.bib
 ---
@@ -30,7 +31,7 @@ The cortico-thalamo-cortical (CTC) circuits loop is central to regulates
 brain sensory processing, learning and memory, sleep, plasticity, and
 consciousness proved by compelling evidence for a similar role in *mus
 musculus* to *homo
-sapiens*[@10.1038/s41467-025-58717-2; @10.1038/s41593-025-01874-w].
+sapiens*[@Russo2025](10.1038/s41467-025-58717-2); [@Vega-Zuniga2025](10.1038/s41593-025-01874-w).
 Although large-scale computational models have clarified many aspects of
 cortical function, thalamic heterogeneity---particularly differences in
 projection motifs (core, matrix, intralaminar) and corresponding
@@ -45,12 +46,12 @@ and network behavior. Here the gap with a morpho-dynamical approach that
 integrates six thalamic neuron classes---three relay classes (TCRil,
 TCRm, TCRc) and three reticular classes (nRTil, nRTm, nRTc)---into
 large-scale CTC and M2M1S1 reconstructions is addressed. Each class is
-instantiated from validated pyNeuroML[@Cannon2014; @Vella2014]
+instantiated from validated pyNeuroML[@Cannon2014](10.3389/fninf.2014.00079); [@Vella2014](10.3389/fninf.2014.00038)
 morphologies and parameterized to reproduce key single-cell
 electrophysiological signatures. Networks are assembled with explicit
 projection rules motivated by experimental tract-tracing and single-cell
 connectivity literature, and dynamics are probed with reproducible NEST
-simulations[@Gewaltig:NEST] under visual, transcranial magnetic
+simulations[@Gewaltig:NEST](10.4249/scholarpedia.1430) under visual, transcranial magnetic
 stimulation (TMS)-like, and nociceptive protocols. To characterize
 emergent population dynamics, we employ SIRS
 (Susceptible-Infected-Recovered-Susceptible) epidemic models that
@@ -59,9 +60,9 @@ homogeneous implementations (treating all neurons identically) and
 excitatory-inhibitory (E/I) separated variants (distinguishing between
 excitatory and inhibitory neurons with distinct transition
 probabilities). The resulting structure and dynamics were analyzed using
-graph-tool inference[@peixoto_graph-tool_2014], standard network
+graph-tool inference[@peixoto_graph-tool_2014](10.6084/m9.figshare.1164194), standard network
 statistics, and mean-field
-approximations[@10.3389/fninf.2022.835657; @10.1038/s41598-018-38246-3].
+approximations[@Layer2022](10.3389/fninf.2022.835657); [@Parr2019](10.1038/s41598-018-38246-3).
 
 This trials exploration contributs a reproducible
 morphological-to-network computational framework of six thalamic neuron
@@ -109,7 +110,7 @@ traces appear in Figure 2. Create nRT and TCR neurons with newly created
 and valified morphologically cell models *in silico*, including matrix
 type (TCRm, nRTm), core type (TCRc, nRTc) and intralaminar type (TCRil,
 nRTil). The modeling and simulation were adjusted and modified from
-Bezaire (2016), *etc.*[@10.7554/eLife.18566] (see Fig. [2]).
+Bezaire (2016), *etc.*[@Bezaire2016](10.7554/eLife.18566) (see Fig. [2]).
 
 <import>
 <figure id="fig:fig2">
@@ -125,7 +126,7 @@ circuits networks with population_count $\approx 1043$ and M2M1S1
 circuits networks with population_count $\approx 6258$. The neuron class
 assignment in cortical and thalamic population compositions follow
 literature proportions where
-available[@10.1016/j.cell.2015.09.029; @10.3389/fncir.2015.00044; @10.3389/fncom.2015.00120; @10.1152/jn.00983.2004].
+available[@Henry2015](10.1016/j.cell.2015.09.029); [@Ramaswamy2015](10.3389/fncir.2015.00044); [@Reimann2015](10.3389/fncom.2015.00120); [@Traub2005](10.1152/jn.00983.2004).
 A default cortical excitatory:inhibitory ratio of 60:40 and assigned
 thalamic class fractions according to the projection-motif definitions
 described above when data are unavailable.
@@ -133,9 +134,9 @@ described above when data are unavailable.
 Connectivity rules in the simulation network connectivity was generated
 from class-pair projection rules and sampled probabilistically, which
 are adjusted from previously works of Gordon M
-G,*etc.*,[@10.1038/s41583-021-00459-3], Reimann, Michael W,
-*etc.*,[@10.1093/cercor/bhx150], and Eyal, Gal,
-*etc.*,[@10.1038/nn.4576].
+G,*etc.*,[@Gordon2021](10.1038/s41583-021-00459-3), Reimann, Michael W,
+*etc.*,[@Reimann2017](10.1093/cercor/bhx150), and Eyal, Gal,
+*etc.*,[@Eyal2017](10.1038/nn.4576).
 
 -   **Cortex $\rightarrow$ Thalamus**: CT and PT axons provide cortical
     inputs to thalamic relay cells. Connection probabilities are denoted
@@ -177,7 +178,7 @@ CTC loops constructing also includes three broad classes of excitatory
 and inhibitory neurons in the neocortex, which are intratelencephalic
 (ITs), pyramidal tract (PTs) and corticothalamic (CTs) neurons. The
 rules of projections among neurons in CTC loops are references to the
-conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
+conclusion of Gordon M. G. Shepherd.[@Gordon2021](10.1038/s41583-021-00459-3):
 
 -   Cortical projections to the thalamus are composed of axons from two
     of the three main classes of cortical projection neurons. CT neurons
@@ -187,19 +188,19 @@ conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
     intracortically[@10.1038/s41586-019-1716-z; @10.1038/nn.3917]. The
     other component of the cortical projection to the thalamus arises as
     branches of 'pyramidal tract' (PT)
-    neurons[@10.1016/j.neuron.2014.08.025].
+    neurons[@Wilson2014](10.1016/j.neuron.2014.08.025).
 
 -   The CT and PT projection patterns from a cortical site tend to be
     similar, although they are not identical. Their axons project mainly
     to ipsilateral thalamus, and also branch
-    contralaterally[@10.1038/s41586-019-1716-z; @10.1038/srep20072; @10.1016/j.neuron.2019.02.010; @10.1002/cne.21782; @10.1016/j.cell.2019.01.047].
+    contralaterally[@Harris2019](10.1038/s41586-019-1716-z); [@Jeong2016](10.1038/srep20072); [@Bennett2019](10.1016/j.neuron.2019.02.010); [@Alloway2007](10.1002/cne.21782); [@Winnubst2019](10.1016/j.cell.2019.01.047).
 
 -   Due to the intralaminar pattern of TC axonal branching in the cortex
     is a fundamental structural determinant of cellular connectivity in
     CTC loops, and distinction conforms reasonably well to the
     classification of the thalamus into matrixtype (calbindinexpressing)
     nuclei and coretype (parvalbuminexpressing (PV), in primates)
-    nuclei[@Jones1998], respectively, as a results, the
+    nuclei[@Jones1998](10.1016/S0306-4522(97)00581-2), respectively, as a results, the
     intralaminar, the matrix and core terminology are used as a proxy
     for the projectiondefined TC classes.
 
@@ -219,7 +220,7 @@ conclusion of Gordon M. G. Shepherd.[@10.1038/s41583-021-00459-3]:
     core-type ventral basal complex (VB) consisting of ventral posterior
     medial (whiskers) and lateral (limbs and trunk) nuclei. CT axons
     also project matrix-type posterior nucleus (PO)
-    nucleus[@10.1093/cercor/bhm211]. The PT axons are similar to the CT
+    nucleus[@Landisman2007](10.1093/cercor/bhm211). The PT axons are similar to the CT
     axons, overlap anatomically with and strongly excite PO neurons.
 
 CTC loops simulated are distributed across neocortex microcircuits with
@@ -388,7 +389,7 @@ population class compute effective input mean $\mu$ and variance
 $\sigma^2$ due to incoming contacts and conductances; map to firing rate
 via transfer function fitted from single-cell simulations.
 
-The graph-tool[@peixoto_graph-tool_2014] is a powerful tool for
+The graph-tool[@peixoto_graph-tool_2014](10.6084/m9.figshare.1164194) is a powerful tool for
 visualizing network structure and statistical analysis large-scale
 networks and their dynamics. We perform an analysis of the centralities
 of CTC network model and M2M1S1 network model based on the preferential
@@ -419,7 +420,7 @@ agglomerative heuristic to fit the nested stochastic block model (SBM)
 using $B_{\text{max}}=O(\sqrt{N})$ or $B_{\text{max}}=O(N/\log(N))$ to
 scale the maximum number of groups that can be found.
 
-NEST stimulator[@Gewaltig:NEST] is used for simulating large scale
+NEST stimulator[@Gewaltig:NEST](10.4249/scholarpedia.1430) is used for simulating large scale
 neuronal networks, which is highly scalable and can be run on
 high-performance computing clusters. In this work, 3 types of sinusoidal
 generators, simulated as visual (see Fig. [9]-A,B), transcranial magnetic stimulation (TMS) (see
@@ -500,8 +501,8 @@ Together with the countercurrent `S1b → M1b → M2b` pathways in the right
 organized hierarchically as CTC loops of the primary somatosensory
 cortex (S1), primary motor cortex (M1) and secondary motor cortex (M2),
 M2M1S1. The structer of circuits are adjusted and modified from Gordon,
-M. G. Shepherd.,*etc.*[@10.1038/s41583-021-00459-3], and Eyal Gal.,
-*etc.*[@10.1038/nn.4576] (see Fig. [5]).
+M. G. Shepherd.,*etc.*[@Gordon2021](10.1038/s41583-021-00459-3), and Eyal Gal.,
+*etc.*[@Eyal2017](10.1038/nn.4576) (see Fig. [5]).
 <import>
 <figure id="fig:fig5">
 <img src="paper/figures/Picture5.png" style="width:100.0%" />
@@ -532,7 +533,7 @@ model partitions that capture the mesoscopic organization of CTC and M2M1S1 loop
 ## Compairison of CTC loops and M2M1S1 loops
 
 The construction of CTC loops and M2M1S1 loops is powered by
-pyNeuroML[@10.3389/fninf.2014.00038]. Analysis of cellular-level
+pyNeuroML[@Vella2014](10.3389/fninf.2014.00038). Analysis of cellular-level
 connections of excitatory and inhibitory projections in CTC and M2M1S1
 loops (see Fig. [7] and Fig. [8]). Points clustered around diagonal with tight
 distributions indicated balanced networks. Systematic shifts in E/I
