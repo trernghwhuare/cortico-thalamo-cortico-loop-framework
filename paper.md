@@ -1,13 +1,14 @@
 ---
 title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
 authors:
-  - name: Hua Cheng M.D.
+  - name: Hua Cheng
     affiliations:
       - Independant researcher
     orcid: 0000-0003-0903-6766
 license: CC-BY-4.0
 date: "2026-03-09"
 bibliography: paper.bib
+csl: nature.csl
 ---
 
 # Abstract 
@@ -31,7 +32,7 @@ The cortico-thalamo-cortical (CTC) circuits loop is central to regulates
 brain sensory processing, learning and memory, sleep, plasticity, and
 consciousness proved by compelling evidence for a similar role in *mus
 musculus* to *homo
-sapiens*[@Russo2025](10.1038/s41467-025-58717-2); [@Vega-Zuniga2025](10.1038/s41593-025-01874-w).
+sapiens*[@Russo2025; @Vega-Zuniga2025].
 Although large-scale computational models have clarified many aspects of
 cortical function, thalamic heterogeneity---particularly differences in
 projection motifs (core, matrix, intralaminar) and corresponding
@@ -46,12 +47,12 @@ and network behavior. Here the gap with a morpho-dynamical approach that
 integrates six thalamic neuron classes---three relay classes (TCRil,
 TCRm, TCRc) and three reticular classes (nRTil, nRTm, nRTc)---into
 large-scale CTC and M2M1S1 reconstructions is addressed. Each class is
-instantiated from validated pyNeuroML[@Cannon2014](10.3389/fninf.2014.00079); [@Vella2014](10.3389/fninf.2014.00038)
+instantiated from validated pyNeuroML[@Cannon2014; @Vella2014]
 morphologies and parameterized to reproduce key single-cell
 electrophysiological signatures. Networks are assembled with explicit
 projection rules motivated by experimental tract-tracing and single-cell
 connectivity literature, and dynamics are probed with reproducible NEST
-simulations[@Gewaltig:NEST](10.4249/scholarpedia.1430) under visual, transcranial magnetic
+simulations[@Gewaltig:NEST] under visual, transcranial magnetic
 stimulation (TMS)-like, and nociceptive protocols. To characterize
 emergent population dynamics, we employ SIRS
 (Susceptible-Infected-Recovered-Susceptible) epidemic models that
@@ -60,9 +61,9 @@ homogeneous implementations (treating all neurons identically) and
 excitatory-inhibitory (E/I) separated variants (distinguishing between
 excitatory and inhibitory neurons with distinct transition
 probabilities). The resulting structure and dynamics were analyzed using
-graph-tool inference[@peixoto_graph-tool_2014](10.6084/m9.figshare.1164194), standard network
+graph-tool inference[@peixoto_graph-tool_2014], standard network
 statistics, and mean-field
-approximations[@Layer2022](10.3389/fninf.2022.835657); [@Parr2019](10.1038/s41598-018-38246-3).
+approximations[@Layer2022; @Parr2019].
 
 This trials exploration contributs a reproducible
 morphological-to-network computational framework of six thalamic neuron
@@ -110,7 +111,7 @@ traces appear in Figure 2. Create nRT and TCR neurons with newly created
 and valified morphologically cell models *in silico*, including matrix
 type (TCRm, nRTm), core type (TCRc, nRTc) and intralaminar type (TCRil,
 nRTil). The modeling and simulation were adjusted and modified from
-Bezaire (2016), *etc.*[@Bezaire2016](10.7554/eLife.18566) (see Fig. [2]).
+Bezaire [@Bezaire2016](see Figure.2).
 
 <import>
 <figure id="fig:fig2">
@@ -126,17 +127,14 @@ circuits networks with population_count $\approx 1043$ and M2M1S1
 circuits networks with population_count $\approx 6258$. The neuron class
 assignment in cortical and thalamic population compositions follow
 literature proportions where
-available[@Henry2015](10.1016/j.cell.2015.09.029); [@Ramaswamy2015](10.3389/fncir.2015.00044); [@Reimann2015](10.3389/fncom.2015.00120); [@Traub2005](10.1152/jn.00983.2004).
+available[@Henry2015; @Ramaswamy2015; @Reimann2015; @Traub2005].
 A default cortical excitatory:inhibitory ratio of 60:40 and assigned
 thalamic class fractions according to the projection-motif definitions
 described above when data are unavailable.
 
 Connectivity rules in the simulation network connectivity was generated
 from class-pair projection rules and sampled probabilistically, which
-are adjusted from previously works of Gordon M
-G,*etc.*,[@Gordon2021](10.1038/s41583-021-00459-3), Reimann, Michael W,
-*etc.*,[@Reimann2017](10.1093/cercor/bhx150), and Eyal, Gal,
-*etc.*,[@Eyal2017](10.1038/nn.4576).
+are adjusted from previously works of Alexandra, Clemente-Perez[@Alexandra2017], Gordon[@Gordon2021], Reimann[@Reimann2017], and Eyal[@Eyal2017].
 
 -   **Cortex $\rightarrow$ Thalamus**: CT and PT axons provide cortical
     inputs to thalamic relay cells. Connection probabilities are denoted
@@ -156,7 +154,7 @@ G,*etc.*,[@Gordon2021](10.1038/s41583-021-00459-3), Reimann, Michael W,
     appropriate target compartments (for example, proximal dendrites for
     AMPA-dominated contacts).
 
-For synapse models, chemical synapses (AMPA, NMDA, GABA$_A$, GABA$_B$)
+For synapse models, chemical synapses (AMPA, NMDA, GABA$_a$, GABA$_b$)
 and electrical synapses (GapJunction, GapJ) were used (features display
 of synapses in Table 1). Short-term plasticity was omitted from the main
 experiments and noted as a limitation; synaptic weights and delay
@@ -178,29 +176,29 @@ CTC loops constructing also includes three broad classes of excitatory
 and inhibitory neurons in the neocortex, which are intratelencephalic
 (ITs), pyramidal tract (PTs) and corticothalamic (CTs) neurons. The
 rules of projections among neurons in CTC loops are references to the
-conclusion of Gordon M. G. Shepherd.[@Gordon2021](10.1038/s41583-021-00459-3):
+conclusion of Gordon M. G. Shepherd.[@Gordon2021]:
 
 -   Cortical projections to the thalamus are composed of axons from two
     of the three main classes of cortical projection neurons. CT neurons
     in layer 6 project their axons almost exclusively to the thalamus,
     with branches in the thalamic reticular nucleus (TRN) but few
     branches
-    intracortically[@10.1038/s41586-019-1716-z; @10.1038/nn.3917]. The
+    intracortically[@Harris2019; @Harris2015]. The
     other component of the cortical projection to the thalamus arises as
     branches of 'pyramidal tract' (PT)
-    neurons[@Wilson2014](10.1016/j.neuron.2014.08.025).
+    neurons[@Wilson2014].
 
 -   The CT and PT projection patterns from a cortical site tend to be
     similar, although they are not identical. Their axons project mainly
     to ipsilateral thalamus, and also branch
-    contralaterally[@Harris2019](10.1038/s41586-019-1716-z); [@Jeong2016](10.1038/srep20072); [@Bennett2019](10.1016/j.neuron.2019.02.010); [@Alloway2007](10.1002/cne.21782); [@Winnubst2019](10.1016/j.cell.2019.01.047).
+    contralaterally[@Harris2019; @Jeong2016;@Bennett2019; @Alloway2007; @Winnubst2019].
 
 -   Due to the intralaminar pattern of TC axonal branching in the cortex
     is a fundamental structural determinant of cellular connectivity in
     CTC loops, and distinction conforms reasonably well to the
     classification of the thalamus into matrixtype (calbindinexpressing)
     nuclei and coretype (parvalbuminexpressing (PV), in primates)
-    nuclei[@Jones1998](10.1016/S0306-4522(97)00581-2), respectively, as a results, the
+    nuclei[@Jones1998], respectively, as a results, the
     intralaminar, the matrix and core terminology are used as a proxy
     for the projectiondefined TC classes.
 
@@ -220,7 +218,7 @@ conclusion of Gordon M. G. Shepherd.[@Gordon2021](10.1038/s41583-021-00459-3):
     core-type ventral basal complex (VB) consisting of ventral posterior
     medial (whiskers) and lateral (limbs and trunk) nuclei. CT axons
     also project matrix-type posterior nucleus (PO)
-    nucleus[@Landisman2007](10.1093/cercor/bhm211). The PT axons are similar to the CT
+    nucleus[@Landisman2007]. The PT axons are similar to the CT
     axons, overlap anatomically with and strongly excite PO neurons.
 
 CTC loops simulated are distributed across neocortex microcircuits with
@@ -228,7 +226,7 @@ the five cortical layers (L1, L23, L4, L5, L6) and thalamic reticular
 nucleus (TRN). CTC circuits of the primary somatosensory cortex (S1),
 primary motor cortex (M1) and secondary motor cortex (M2) are organized
 hierarchically, with 'top-down' M2 → M1 → S1 pathways running
-countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see Fig. [3]).
+countercurrent to 'bottom-up' S1 → M1 → M2 pathways (see Figure.3).
 <import>
 <figure id="fig:fig3">
 <img src="paper/figures/Picture3.png" style="width:100.0%" />
@@ -275,7 +273,7 @@ with constant 100 Hz baseline.The high-frequency Temporal modulation
 were 5 $\rightarrow$ 10 $\rightarrow$ 15 $\rightarrow$ 20 $\rightarrow$
 25 Hz frequency sweeps to explore temporal resolution limits.And the
 complete phase cycle with full 0 $\rightarrow$ 2$\pi$ phase progression
-to assess orientation selectivity mechanisms shown in Fig. [4]B.
+to assess orientation selectivity mechanisms shown in Figure.4B.
 
 The TMS protocol implements three distinct waveform configurations to
 model different stimulation modalities, which are monophasic, half-sine
@@ -290,7 +288,7 @@ comprehensive parameter space exploration with both increasing and
 decreasing DC rate sequences (20$\rightarrow$ 80 Hz and
 100$\rightarrow$ 20 Hz), combined DC-amplitude
 modulation, and phase progression analysis shown in
-Fig. [4]D.
+Figure.4D.
 
 The pain stimulation protocol utilizes a baseline firing rate of 60 Hz
 with moderate amplitude modulation (30 Hz) at a frequency of 10 Hz. This
@@ -307,7 +305,7 @@ $\rightarrow$ 8 $\rightarrow$ 11 $\rightarrow$ 14 Hz to explore temporal
 coding properties.Phase progression systematically phase shifts through
 0 $\rightarrow$ $\pi$/2 $\rightarrow$ $\pi$ $\rightarrow$ 3$\pi$/2
 $\rightarrow$ 2$\pi$ radians to investigate phase-dependent responses
-shown in Fig. [4]F.
+shown in Figure.4F.
 
 <import>
 <figure id="fig:fig4">
@@ -366,7 +364,7 @@ single-cell validation (per-class $n=20$); population activity was
 summarized by PSTHs with a default bin width of 5 ms. Analyses reported
 include E/I ratio, coefficient of variation (CV), power spectral
 density/band power are also shown in
-Fig. [4] and simulation defaults and trial counts appear in Table. [1],[2],[3].
+Figure. 4 and simulation defaults and trial counts appear in Table.1,2,3.
 
 ## Analysis methods
 
@@ -389,7 +387,7 @@ population class compute effective input mean $\mu$ and variance
 $\sigma^2$ due to incoming contacts and conductances; map to firing rate
 via transfer function fitted from single-cell simulations.
 
-The graph-tool[@peixoto_graph-tool_2014](10.6084/m9.figshare.1164194) is a powerful tool for
+The graph-tool[@peixoto_graph-tool_2014] is a powerful tool for
 visualizing network structure and statistical analysis large-scale
 networks and their dynamics. We perform an analysis of the centralities
 of CTC network model and M2M1S1 network model based on the preferential
@@ -420,11 +418,11 @@ agglomerative heuristic to fit the nested stochastic block model (SBM)
 using $B_{\text{max}}=O(\sqrt{N})$ or $B_{\text{max}}=O(N/\log(N))$ to
 scale the maximum number of groups that can be found.
 
-NEST stimulator[@Gewaltig:NEST](10.4249/scholarpedia.1430) is used for simulating large scale
+NEST stimulator[@Gewaltig:NEST] is used for simulating large scale
 neuronal networks, which is highly scalable and can be run on
 high-performance computing clusters. In this work, 3 types of sinusoidal
-generators, simulated as visual (see Fig. [9]-A,B), transcranial magnetic stimulation (TMS) (see
-Fig. [9]-C,D) and pain stimuli (see Fig. [9]-E, F) with sinusoidal_gamma_generator in NEST
+generators, simulated as visual (see Figure. 9A,9B), transcranial magnetic stimulation (TMS) (see
+Figure. 9C,9D) and pain stimuli (see Figure.9E,9F) with sinusoidal_gamma_generator in NEST
 simulator.
 
 # Results
@@ -435,9 +433,9 @@ excitatory and inhibitory inputs across neurons: networks with greater
 matrix-type projection weight display higher median E/I ratios than
 core-dominant reconstructions, and intralaminar-enriched classes show
 distinct contact-count distributions (see
-Fig. [8] and Fig. [5]). These
+Figure.8 and Figure.5). These
 differences are robust across the CTC and M2M1S1 instantiations reported
-in Table [1]. All pairwise class comparisons were
+in Table.1. All pairwise class comparisons were
 evaluated using Wilcoxon tests with Benjamini-Hochberg FDR correction;
 effect sizes are reported in the Supplementary materials (Cliff's delta)
 alongside the sample counts used for each comparison.
@@ -448,7 +446,7 @@ larger low-frequency (delta/theta) band power and more pronounced
 transient synchrony following perturbation than core-dominant networks.
 Representative intracellular traces and class-resolved PSTH/rate
 distributions illustrating these trends are presented in
-Fig. [12] and Fig. [13]; band-power and coherence summaries are provided in the Supplementary
+Figure.12 and Figure.13; band-power and coherence summaries are provided in the Supplementary
 figures. Statistical comparisons used permutation testing (10,000 permutations) with FDR correction and report both p-values and effect sizes.
 
 Distinct stimulus-evoked dynamics for visual, TMS and pain protocols.
@@ -459,7 +457,7 @@ profiles; TMS-like pulses produce brief high-amplitude transients whose
 decay and spatial spread vary with projection motifs; pain-like pulse
 sequences evoke slow rhythmic modulations and repeated transient
 responses. Example waveforms, trial-averaged PSTHs and exemplar rasters
-are shown in Fig. [9]; condition-by-class PSTH summaries (peak
+are shown in Figure.9; condition-by-class PSTH summaries (peak
 amplitude, latency) and per-trial metrics are supplied as JSON outputs.
 PSTH peak and latency comparisons were performed using nonparametric
 tests with effect sizes reported in the Supplementary.
@@ -471,7 +469,7 @@ variability reliably (CV agreement) but tends to misestimate absolute
 firing-rate magnitudes; population mean-field shows larger absolute
 errors in most conditions. Scatterplots and per-condition RMSE and
 Pearson correlation coefficients are presented in
-Fig. [11] and Table [5], and per-condition residuals are
+Figure.11 and Table.5, and per-condition residuals are
 available in the `MF_optimized` outputs.
 
 Structural separability by morphology-derived features. Morphological
@@ -479,19 +477,19 @@ and contact features provide a robust basis for class separability:
 supervised classifiers trained on these features achieve consistent
 accuracy across cross-validation folds and retain discriminative
 performance under modest feature ablation (see
-Fig. [7]); cluster maps and heatmaps that visualise motif grouping are shown in
-Fig. [6]. Reported metrics include cross-validated accuracy, confusion matrices and
+Figure.7); cluster maps and heatmaps that visualise motif grouping are shown in
+Figure.6. Reported metrics include cross-validated accuracy, confusion matrices and
 feature-ablation effect sizes in the Supplementary.
 
 Single-cell validation and morphologies. NeuroML v2 morphologies and the electrophysiological parameterization reproduce canonical single-cell signatures used for model calibration. Representative morphology renders
-and validation voltage traces are shown in Fig. [1] and Fig. [2]; numerical validation metrics (rheobase, FI-curve fits, adaptation indices) are tabulated in Supplementary Table S2.
+and validation voltage traces are shown in Figure.1 and Figure.2; numerical validation metrics (rheobase, FI-curve fits, adaptation indices) are tabulated in Supplementary Table S2.
 
 Robustness and sensitivity. We verified that the principal qualitative
 conclusions hold across parameter perturbations and alternate sampling
 seeds; sensitivity-sweep summaries and the thresholds at which specific
 conclusions change are recorded in the Supplementary CSVs. Where
 applicable we report sample sizes (neurons, trials), RNG seeds and
-simulation defaults (Table [1]) to support reproducibility.
+simulation defaults (Table.1) to support reproducibility.
 
 ## CTC loops and M2M1S1 loops simulations
 
@@ -501,8 +499,8 @@ Together with the countercurrent `S1b → M1b → M2b` pathways in the right
 organized hierarchically as CTC loops of the primary somatosensory
 cortex (S1), primary motor cortex (M1) and secondary motor cortex (M2),
 M2M1S1. The structer of circuits are adjusted and modified from Gordon,
-M. G. Shepherd.,*etc.*[@Gordon2021](10.1038/s41583-021-00459-3), and Eyal Gal.,
-*etc.*[@Eyal2017](10.1038/nn.4576) (see Fig. [5]).
+M. G. Shepherd.,*etc.*[@Gordon2021], and Eyal Gal.,
+*etc.*[@Eyal2017] (see Figure.5).
 <import>
 <figure id="fig:fig5">
 <img src="paper/figures/Picture5.png" style="width:100.0%" />
@@ -517,9 +515,9 @@ powered by graph-tool.</figcaption>
 Using stochastic block model (SBM), the simplest generative process to
 generate the network structure visualization. The Price's, preferential
 attachment network model were performed with graph-tool, and got
-structural plots of the loops (see Fig. [6]-A, C). Inferenced the nested SBMs with performing hierarchical fit of the
+structural plots of the loops (see Figure.6A,6C). Inferenced the nested SBMs with performing hierarchical fit of the
 degree-corrected model, and got the hierarchical distributions of loops
-(see Fig. [6]-B,D).
+(see Figure. 6B,6D).
 
 <import>
 <figure id="fig:fig6">
@@ -533,9 +531,9 @@ model partitions that capture the mesoscopic organization of CTC and M2M1S1 loop
 ## Compairison of CTC loops and M2M1S1 loops
 
 The construction of CTC loops and M2M1S1 loops is powered by
-pyNeuroML[@Vella2014](10.3389/fninf.2014.00038). Analysis of cellular-level
+pyNeuroML[@Vella2014]. Analysis of cellular-level
 connections of excitatory and inhibitory projections in CTC and M2M1S1
-loops (see Fig. [7] and Fig. [8]). Points clustered around diagonal with tight
+loops (see Figure.7 and Figure.8). Points clustered around diagonal with tight
 distributions indicated balanced networks. Systematic shifts in E/I
 ratios across regions implys hierarchical organization. Correlation
 coefficient (R) in synaptic, overall, E/I Input Ratio, E/I Output Ratio,
@@ -575,7 +573,7 @@ inhibitory (II) contacts. Synaptic contacts to electrical conductances
 indicated the network dynamics complexity is 0.45, to total connections
 0.40 showing synchronization tendency. E/I balance ratio is 1.35
 indicate an excitatory neurons dominated networks (see
-Fig. [9]-A,B,C,D). There are 6258 population samples in
+Figure. 9A,9B,9C,9D). There are 6258 population samples in
 M2M1S1 loops and excitatory and inhibitory inputs are 29190 and 22980
 respectively. The synaptic contacts including excitatory to excitatory
 (EE), excitatory to inhibitory (EI), inhibitory to excitatory (IE) and
@@ -585,7 +583,7 @@ contacts to electrical conductances (0.32) and synchronization tendency
 is the weight of synaptic contacts in total connections, which is 0.27,
 showing synchronized. The E/I balance ratio is 2.03, which indicating an
 excitatory neurons dominated networks (see
-Fig. [9]-E,F,G,H).
+Figure. 9E,9F,9G,9H).
 
 <import>
 <figure id="fig:fig9">
@@ -657,7 +655,7 @@ firing-rate magnitudes in these large, heterogeneous networks.
 Single-cell MF provides better absolute-rate agreement than coarse
 population MF for the CTC case, yet neither MF variant achieves high
 linear correspondence across all conditions as
-Table. [5].
+Table.5.
 **Table 5:** Coefficient of variation (CV) comparison between NEST simulations and mean-field predictions across different stimulation protocols for CTC and M2M1S1 networks
    Network | Condition | CV$_E$ (mean $\pm$ std) | CV$_I$ (mean $\pm$ std) |
    ------- | --------- | ----------------------- | ------------------------|
@@ -748,7 +746,7 @@ pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
 
 Construct animations of loops with SIRS epidemics model, showing the
 populations' activation (I, infected), refractory (R, recovered) and
-inactivation (S, susceptible) periods as time evolution (see Figure.[12], Figure.[13], Figure.[14], Figure.[15]). During the animations, graph layout with the spatial segregation were updated and edges lines repeatedly and randomly rewired throught time, which give us more insightful dynamics of the network. Furthermore, the network dynamic SIRS epidemics models devide into two categories: one is homogeneous model and the other is exciatory inhibitory separated model (E/I seperated SIRS model). The homogeneous model is the basic SIRS epidemics model, which treats all neurons as the same type and simulates their state transitions (S→I→R→S) based on fixed probabilities. The E/I separated model, on the other hand, distinguishes between excitatory and
+inactivation (S, susceptible) periods as time evolution (see Figure.12, Figure.13, Figure.14, Figure.15). During the animations, graph layout with the spatial segregation were updated and edges lines repeatedly and randomly rewired throught time, which give us more insightful dynamics of the network. Furthermore, the network dynamic SIRS epidemics models devide into two categories: one is homogeneous model and the other is exciatory inhibitory separated model (E/I seperated SIRS model). The homogeneous model is the basic SIRS epidemics model, which treats all neurons as the same type and simulates their state transitions (S→I→R→S) based on fixed probabilities. The E/I separated model, on the other hand, distinguishes between excitatory and
 inhibitory neurons and incorporates different transition probabilities
 for each type, reflecting their distinct roles in network dynamics. This
 allows us to capture more realistic patterns of activation and
@@ -843,7 +841,7 @@ network activity while preserving fundamental dynamic patterns. Both
 distributions were non-normal (Shapiro-Wilk $p < 10^{-40}$), validating
 our use of non-parametric statistics. The variance ratio (E/I separated
 to homogeneous) was 1.56, reflecting enhanced dynamic variability in the
-E/I separated model (Figure.[16], Figure.[17]).
+E/I separated model (Figure.16, Figure.17).
 <import>
 <figure id="fig:fig16">
 <img src="paper/figures/Picture16.png" style="width:100.0%" />
@@ -866,7 +864,7 @@ test). The temporal correlation was exceptionally strong in this larger
 network ($r = 0.961$), suggesting that the relative advantage of E/I
 separation becomes more consistent and predictable at larger scales. The
 variance ratio was 1.49, again indicating greater dynamic complexity in
-the E/I separated implementation (Figure.[18], Figure.[19]).
+the E/I separated implementation (Figure.18, Figure.19).
 <import>
 <figure id="fig:fig18">
 <img src="paper/figures/Picture18.png" style="width:100.0%" />
@@ -889,7 +887,7 @@ stability properties that emerge from balanced E/I interactions.
 
 The dynamics of firing rates for CTC and M2M1S1 networks under different
 stimulations, visual stimuli, TMS and pain stimuli, 
-are also available in Figure.[20]and Figure.[21]. The visual stimuli evoke sustained increases in firing rates, while TMS induces transient peaks followed by rapid decay, and pain stimuli produce moderate but prolonged elevations. These dynamic patterns are consistent with the known physiological responses to these stimulus types and further validate the realism of our network models.
+are also available in Figure.20 and Figure.21. The visual stimuli evoke sustained increases in firing rates, while TMS induces transient peaks followed by rapid decay, and pain stimuli produce moderate but prolonged elevations. These dynamic patterns are consistent with the known physiological responses to these stimulus types and further validate the realism of our network models.
 <import>
 <figure id="fig:fig20">
 <img src="paper/GIF/max_CTC_plus_stimulation_response.gif" style="width:100.0%" />

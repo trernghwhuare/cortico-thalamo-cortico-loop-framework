@@ -2,13 +2,15 @@
 version: 1
 project:
   id: b618323c-a65f-44e0-9f90-78639fe2c81c
-  # title:
+  title: "Morphologically Defined Thalamic Projection Motifs as Structural Control Parameters in Cortico-Thalamo-Cortical Networks in silico"
   # description:
   # keywords: []
   # authors: []
+  bibliography: paper.bib
+  csl: nature.csl
   exports:
    - format: typst
-   - template: https://github.com/myst-templates/lapreprint-typst.git
+   - template: lapreprint-typst
      
   github: https://github.com/trernghwhuare/cortico-thalamo-cortico-loop-framework
   # To autogenerate a Table of Contents, run "myst init --write-toc"
