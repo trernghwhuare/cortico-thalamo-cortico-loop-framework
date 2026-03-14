@@ -655,6 +655,7 @@ def create_TCRil_cell():
     
     return nml_cell_file
 
+
 def create_TCRil_network():
     net_doc = NeuroMLDocument(id="network",notes="TCRil net")
     net_doc_fn = "TCRil.net.nml"
@@ -676,6 +677,8 @@ def create_TCRil_network():
     # net.add("ExplicitInput", target="pop0[0]", input="vClamp_nRTil")
     pynml.write_neuroml2_file(nml2_doc=net_doc, nml2_file_name=net_doc_fn, validate=True)
     return net_doc_fn
+
+
 
 if __name__ == "__main__":
     main()

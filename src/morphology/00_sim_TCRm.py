@@ -336,6 +336,7 @@ def plot_data(sim_id):
     pynml.generate_plot([data_array[:, 0]], [data_array[:, 3]], "Membrane potential (dend seg 0)", show_plot_already=False, save_figure_to=sim_id + "_seg0_dend129-v.png", xaxis="time (s)", yaxis="membrane potential (V)")
     pynml.generate_plot([data_array[:, 0]], [data_array[:, 4]], "Membrane potential (dend seg 1)", show_plot_already=False, save_figure_to=sim_id + "_seg1_dend129-v.png", xaxis="time (s)", yaxis="membrane potential (V)")
 
+
 def create_TCRm_cell():
     nml_cell_doc = NeuroMLDocument(id="TCRm_cell")
     cell = nml_cell_doc.add(Cell,id="TCRm", neuro_lex_id="NLXCELL:091206")  # type neuroml.Cell
@@ -906,6 +907,7 @@ def create_TCRm_cell():
         title_above_plot=True)
     return nml_cell_file
 
+
 def create_TCRm_network():
     net_doc = NeuroMLDocument(id="network",notes="TCRm net")
     net_doc_fn = "TCRm.net.nml"
@@ -929,6 +931,7 @@ def create_TCRm_network():
     # net.add("ExplicitInput", target="pop0[0]", input="vClamp_nRTil")
     pynml.write_neuroml2_file(nml2_doc=net_doc, nml2_file_name=net_doc_fn, validate=True)
     return net_doc_fn
+
 
 if __name__ == "__main__":
     main()

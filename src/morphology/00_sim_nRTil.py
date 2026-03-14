@@ -624,6 +624,8 @@ def create_nRTil_cell():
         title_above_plot=True)
     return nml_cell_file
 
+
+
 def create_nRTil_network():
     net_doc = NeuroMLDocument(id="network",notes="nRTil net")
     net_doc_fn = "nRTil.net.nml"
@@ -645,6 +647,8 @@ def create_nRTil_network():
     # net.add("ExplicitInput", target="pop0[0]", input="vClamp_nRTil")
     pynml.write_neuroml2_file(nml2_doc=net_doc, nml2_file_name=net_doc_fn, validate=True)
     return net_doc_fn
+
+
 
 if __name__ == "__main__":
     main()

@@ -873,5 +873,7 @@ def create_nRTm_network():
     pynml.write_neuroml2_file(nml2_doc=net_doc, nml2_file_name=net_doc_fn, validate=True)
     return net_doc_fn
 
+
+
 if __name__ == "__main__":
     main()
