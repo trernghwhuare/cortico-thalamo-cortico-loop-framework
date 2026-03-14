@@ -396,21 +396,21 @@ networks and their dynamics. We perform an analysis of the centralities
 of CTC network model and M2M1S1 network model based on the preferential
 attachment network model $\text{ Price's}$, or $\text{Barabási-Albert}$.
 The generalized Price's network generated dynamically by at each step
-adding a new vertex, and connecting it to $text{m}$ other vertices,
-chosen with probability $text{\pi}$ defined as:
+adding a new vertex, and connecting it to ${m}$ other vertices,
+chosen with probability ${\pi}$ defined as:
 $$\pi \propto k^\gamma + c$$ where $k$ is the (in-) degree of the vertex
 (or simply the degree in the undirected case). For directed graphs,
 $c \ge 0$, and for undirected graphs,
 $c > -\min(k_{\text{min}}, m)^{\gamma}$, where $k_{\text{min}}$ is the
-smallest degree in the seed graph. If $gamma=1$, the tail of resulting
+smallest degree in the seed graph. If γ=1, the tail of resulting
 in-degree distribution of the directed case is given by:
 $$P_{k_\text{in}} \sim k_\text{in}^{-(2 + c/m)}$$ or for the undirected
 case, $$P_{k} \sim k^{-(3 + c/m)}$$
 
-However, if $\gamma \ne 1$, the in-degree distribution is not
+However, if γ≠1, the in-degree distribution is not
 scale-free. If `seed_graph` is not given, the algorithm will always
-start with one vertex if $c > 0$, or with two vertices with an edge
-between them otherwise. If $m > 1$, the degree of the newly added
+start with one vertex if c > 0, or with two vertices with an edge
+between them otherwise. If m > 1, the degree of the newly added
 vertices will be varied dynamically as $m'(t) = \min(m, V(t))$, where
 $V(t)$ is the number of vertices added so far. If this behaviour is
 undesired, a proper seed graph with $V \ge m$ vertices must be provided.
@@ -656,45 +656,34 @@ Single-cell MF provides better absolute-rate agreement than coarse
 population MF for the CTC case, yet neither MF variant achieves high
 linear correspondence across all conditions as
 Table.5.
-**Table 5:** Coefficient of variation (CV) comparison between NEST simulations and mean-field predictions across different stimulation protocols for CTC and M2M1S1 networks
-   Network | Condition | CV$_E$ (mean $\pm$ std) | CV$_I$ (mean $\pm$ std) |
-   ------- | --------- | ----------------------- | ------------------------|
-   max_CTC_plus | Simulation -- Visual | 1.00034 $\pm$ 0.01652 | 0.99976 $\pm$ 0.02264 |
-   max_CTC_plus | Simulation -- Pain | 0.99807 $\pm$ 0.01499 | 1.00203 $\pm$ 0.01767 |
-   max_CTC_plus | Simulation -- TMS Mono | 0.99907 $\pm$ 0.01827 | 1.00218 $\pm$ 0.02312 |
-   max_CTC_plus | Simulation -- TMS Half | 1.00015 $\pm$ 0.01416 | 1.00124 $\pm$ 0.02577 |
-   max_CTC_plus | Simulation -- TMS Bi | 0.99881 $\pm$ 0.02103 | 0.99680 $\pm$ 0.02469 |
-   max_CTC_plus | Mean-field Single | 1.00138 $\pm$ 0.02568 | 0.99816 $\pm$ 0.02547 |
-   max_CTC_plus | Mean-field Population | 0.99884 $\pm$ 0.02681 | 0.99773 $\pm$ 0.05287 |
-   M2M1S1_max_plus | Simulation -- Visual | 1.00000 $\pm$ 0.01252 | 1.00272 $\pm$ 0.02301 |
-   M2M1S1_max_plus | Simulation -- Pain | 0.99841 $\pm$ 0.01680 | 0.99616 $\pm$ 0.02833 |
-   M2M1S1_max_plus | Simulation -- TMS Mono | 0.99677 $\pm$ 0.01825 | 0.99429 $\pm$ 0.02291 |
-   M2M1S1_max_plus | Simulation -- TMS Half | 0.99932 $\pm$ 0.01781 | 0.99531 $\pm$ 0.06123 |
-   M2M1S1_max_plus | Simulation -- TMS Bi | 1.00514 $\pm$ 0.01711 | 0.99484 $\pm$ 0.03331 |
-   M2M1S1_max_plus | Mean-field Single | 1.00036 $\pm$ 0.02134 | 0.99671 $\pm$ 0.01695 |
-   M2M1S1_max_plus | Mean-field Population | 0.99016 $\pm$ 0.03358 | 0.99324 $\pm$ 0.03567 |
 
-
-**Table 6:** Comparison of neural activity statistics between M2M1S1_max_plus (cortical microcircuit) and max_CTC_plus (thalamocortical loop) networks under visual stimulation conditions
-   Metric | M2M1S1_max_plus | max_CTC_plus |
-   ------ | --------------- | ------------ |
-  Firing Rates (Hz) | | |                                        
-  Excitatory (E) | 500.0 | 500.0 |
-  Inhibitory (I) | 228.7 | 228.6 |
-  E/I Ratio | 2.19:1 | 2.19:1 |
-  Coefficient of Variation | | |                                     
-  CV$_E$ (mean $\pm$ std) | 1.00103 $\pm$ 0.02009 | 0.99967 $\pm$ 0.01652 |
-  CV$_I$ (mean $\pm$ std) | 1.00177 $\pm$ 0.02292 | 1.00037 $\pm$ 0.02264 |
-  Network Architecture | Multi-regional CTC microcircuit | Single-regional CTC microcircuit |
-  Neurons Recorded | 74 E, 74 I | 74 E, 74 I | 
-
-  : Comparison of neural activity statistics between M2M1S1_max_plus
-  (cortical microcircuit) and max_CTC_plus (thalamocortical loop)
-  networks under visual stimulation conditions.
+**Table 5:** Fit quality (RMSE and Pearson *r*) between simulation visual mean rates and mean-field predictions (single-cell and population MF)
+  Network | MF | RMSE_E | r_E | RMSE_I | r_I |
+  ------- |----|--------|-----|--------|-----|
+  max_CTC_plus | single (visual) | 88.47 | 0.104 | 89.17 | 0.201 |
+  || population (visual) | 445.72 | 0.116 | 244.49 | 0.072 |
+  || single (TMS mono) | 92.67 | -0.135 | 96.08 | -0.011 |
+  || population (TMS mono) | 449.47 | 0.026 | 250.01 | -0.021 |
+  || single (TMS half) | 90.74 | -0.094 | 103.94 | -0.025 |
+  || population (TMS half) | 454.96 | -0.111 | 238.84 | 0.192 |
+  || single (TMS bi) | 368.81 | 0.030 | 107.87 | -0.265 |
+  || population (TMS bi) | 579.11 | -0.004 | 250.46 | -0.017 |
+  || single (pain) | 91.25 | -0.021 | 148.60 | -0.018 |
+  || population (pain) | 453.87 | -0.064 | 267.31 | 0.038 |
+  M2M1S1_max_plus | single (visual) | 734.31 | -0.026 | 894.44 | -0.197 |
+  || population (visual) | 484.15 | 0.028 | 672.91 | -0.042 |
+  || single (TMS mono) | 823.38 | -0.014 | 834.16 | 0.237 |
+  || population (TMS mono) | 622.20 | -0.024 | 817.72 | 0.004 |
+  || single (TMS half) | 821.49 | 0.015 | 811.69 | -0.007 |
+  || population (TMS half) | 636.01 | -0.012 | 658.21 | -0.030 |
+  || single (TMS bi) | 690.60 | -0.016 | 896.29 | -0.025 |
+  || population (TMS bi) | 429.52 | 0.012 | 747.80 | -0.006 |
+  || single (pain) | 1125.64 | -0.020 | 912.81 | -0.014 |
+  || population (pain) | 964.31 | 0.027 | 754.41 | 0.058 |
 
 ### Quantitative comparison
 
-For clarity we report mean firing-rate comparisons (simulation  *vs.*
+This analysis integrates data from three complementary sources (`results/MF_optimized/mean_field_vs_simulation_comparison.json`, `actual_simulation_results.json`, and `cv_comparison_results.json`) across all stimulation conditions (visual, pain, TMS). For clarity we report mean firing-rate comparisons (simulation  *vs.*
 mean-field single / population predictions). For **max_CTC_plus** the
 simulation visual means are E=4573.02, I=2353.51 while mean-field
 single/pop predict E=3268.18 / 1610.38 and I=3425.16 / 988.50. This
@@ -705,7 +694,48 @@ For **M2M1S1_max_plus** the simulation visual means are E=5347.70,
 I=2172.28 while mean-field single/pop predict E=3317.75 / 1332.63 and
 I=3606.59 / 909.74, i.e. single MF underestimates E by 38.0% and
 population MF underestimates E by 75.1%; for I the single MF
-overestimates by 66.1% while the population MF underestimates by 58.1%.
+overestimates by 66.1% while the population MF underestimates by 58.1%. 
+For stimulation configurations, data were shown in Table 6.
+
+**Table 6:** Comparison of neural activity statistics between M2M1S1_max_plus (multi-regional circuit) and max_CTC_plus (single-regional circuit) networks under different stimulation conditions
+   Stimulation Condition | Metric |  | M2M1S1_max_plus | max_CTC_plus |
+   --------------------- | ------ |--|--------------- | ------------ |
+   **mean_field_single** | Firing Rates (Hz)  | Excitatory (E) (mean $\pm$ std) | 3317.75 $\pm$ 1785.85 | 3268.18 $\pm$ 1402.8|
+  |                      |                    | Inhibitory (I) (mean $\pm$ std) | 3606.59 $\pm$ 2154.59| 3425.16 $\pm$ 1466.91|
+  |                      |                    | E/I Ratio | 0.92:1 | 0.95:1 |
+  |                      | Coefficient of Variation | CV$_E$ (mean $\pm$ std) | 1.00036 $\pm$ 0.02134 | 1.00138 $\pm$ 0.02568 |                                     
+  |                      |                    | CV$_I$ (mean $\pm$ std) | 0.99671 $\pm$ 0.01695 | 0.99816 $\pm$ 0.02547 |
+   **mean_field_population** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 1332.63 $\pm$ 698.00| 1610.38 $\pm$ 607.01|
+  |                          | | Inhibitory (I) (mean $\pm$ std) | 909.74 $\pm$ 495.36| 988.50 $\pm$ 365.10|
+  |                          | | E/I Ratio | 1.47:1 | 1.63:1 |
+  |                          | Coefficient of Variation | CV$_E$ (mean $\pm$ std) | 0.99016 $\pm$ 0.03358 | 0.99884 $\pm$ 0.02681 |                                   
+  |                          | | CV$_I$ (mean $\pm$ std) | 0.99324 $\pm$ 0.03567 | 0.99850 $\pm$ 0.03331 | 
+   **Visual** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 5347.70 $\pm$ 2442.06 | 4573.02 $\pm$ 2048.11 |                                      
+  |           | | Inhibitory (I) (mean $\pm$ std) | 2172.28 $\pm$ 1108.70 | 2353.51 $\pm$ 942.90 |
+  |           | | E/I Ratio | 2.19:1 | 2.19:1 |
+  |           | Coefficient of Variation | CV$_E$ (mean $\pm$ std) | 1.00103 $\pm$ 0.02009 | 1.00034 $\pm$ 0.01652 |                                   
+  |           | | CV$_I$ (mean $\pm$ std) | 1.00177 $\pm$ 0.02292 | 0.99976 $\pm$ 0.02264 |
+   **Pain** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 4465.28 $\pm$ 2710.85 | 5161.03 $\pm$ 1907.04 |
+  |         | | Inhibitory (I) (mean $\pm$ std) | 4795.55 $\pm$ 2647.69| 4580.65 $\pm$ 2052.58 |
+  |         | | E/I Ratio | 1.00:1 | 1.00:1 |
+  |         | Coefficient of Variation | CV$_E$ (mean $\pm$ std) | 0.99841 $\pm$ 0.01680 | 0.99807 $\pm$ 0.01499 |
+  |         | | CV$_I$ (mean $\pm$ std) | 0.99616 $\pm$ 0.02833 | 1.00203 $\pm$ 0.01767 |
+   **TMS Monophasic** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 4744.51 $\pm$ 3193.96 | 4868.79 $\pm$ 1816.69 |
+  |         |  |Inhibitory (I) (mean $\pm$ std) | 2403.21 $\pm$ 1559.07 | 2476.16 $\pm$ 965.07 |
+  |         | | E/I Ratio | 2.00:1 | 2.00:1 |
+  |         | Coefficient of Variation | CV$_E$  (mean $\pm$ std) | 0.99677 $\pm$ 0.01825 | 0.99907 $\pm$ 0.01827 |
+  |         | | CV$_I$  (mean $\pm$ std) | 0.99429 $\pm$ 0.02291 | 1.00218 $\pm$ 0.02312 |
+   **TMS Half-sine** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 4810.35 $\pm$ 2835.60 | 4780.25 $\pm$ 1710.95 |
+  |                 | | Inhibitory (I) (mean $\pm$ std) | 2589.13 $\pm$ 1443.34 | 2610.80 $\pm$ 1034.89 |
+  |                 | | E/I Ratio | 2.00:1 | 2.00:1 |
+  |                 | Coefficient of Variation | CV$_E$  (mean $\pm$ std) | 0.99932 $\pm$ 0.01781 | 1.00015 $\pm$ 0.01416 |
+  |                 | | CV$_I$  (mean $\pm$ std) | 0.99531 $\pm$ 0.06123 | 1.00124 $\pm$ 0.02577 |
+   **TMS Biphasic** | Firing Rates (Hz) | Excitatory (E) (mean $\pm$ std) | 5009.5 $\pm$ 2713.04 | 4976.90 $\pm$ 2138.17 |
+  |                 | | Inhibitory (I) (mean $\pm$ std) | 2776.64 $\pm$ 1716.15 | 2706.22 $\pm$ 1013.25 |
+  |                 | | E/I Ratio | 1.87:1 | 1.85:1 |
+  |                 | Coefficient of Variation | CV$_E$ (mean $\pm$ std)  | 1.00514 $\pm$ 0.01711 | 0.99881 $\pm$ 0.02103 |
+  |                 | |CV$_I$ (mean $\pm$ std)  | 0.99484 $\pm$ 0.03331 | 0.99680 $\pm$ 0.02469 |
+ 
 
 <import>
 <figure id="fig:fig11">
@@ -717,29 +747,7 @@ pain-stimulus conditions in CTC loops (A) and M2M1S1 loops
 </figure>
 </import>
 
-**Table 7:** Fit quality (RMSE and Pearson *r*) between simulation visual mean rates and mean-field predictions (single-cell and population MF)
-  Network | MF | RMSE_E | r_E | RMSE_I | r_I |
-  ------- |----|--------|-----|--------|-----|
-  max_CTC_plus | single (visual) | 88.47 | 0.104 | 89.17 | 0.201 |
-  max_CTC_plus | population (visual) | 445.72 | 0.116 | 244.49 | 0.072 |
-  max_CTC_plus | single (TMS mono) | 92.67 | -0.135 | 96.08 | -0.011 |
-  max_CTC_plus | population (TMS mono) | 449.47 | 0.026 | 250.01 | -0.021 |
-  max_CTC_plus | single (TMS half) | 90.74 | -0.094 | 103.94 | -0.025 |
-  max_CTC_plus | population (TMS half) | 454.96 | -0.111 | 238.84 | 0.192 |
-  max_CTC_plus | single (TMS bi) | 368.81 | 0.030 | 107.87 | -0.265 |
-  max_CTC_plus | population (TMS bi) | 579.11 | -0.004 | 250.46 | -0.017 |
-  max_CTC_plus | single (pain) | 91.25 | -0.021 | 148.60 | -0.018 |
-  max_CTC_plus | population (pain) | 453.87 | -0.064 | 267.31 | 0.038 |
-  M2M1S1_max_plus | single (visual) | 734.31 | -0.026 | 894.44 | -0.197 |
-  M2M1S1_max_plus | population (visual) | 484.15 | 0.028 | 672.91 | -0.042 |
-  M2M1S1_max_plus | single (TMS mono) | 823.38 | -0.014 | 834.16 | 0.237 |
-  M2M1S1_max_plus | population (TMS mono) | 622.20 | -0.024 | 817.72 | 0.004 |
-  M2M1S1_max_plus | single (TMS half) | 821.49 | 0.015 | 811.69 | -0.007 |
-  M2M1S1_max_plus | population (TMS half) | 636.01 | -0.012 | 658.21 | -0.030 |
-  M2M1S1_max_plus | single (TMS bi) | 690.60 | -0.016 | 896.29 | -0.025 |
-  M2M1S1_max_plus | population (TMS bi) | 429.52 | 0.012 | 747.80 | -0.006 |
-  M2M1S1_max_plus | single (pain) | 1125.64 | -0.020 | 912.81 | -0.014 |
-  M2M1S1_max_plus | population (pain) | 964.31 | 0.027 | 754.41 | 0.058 |
+
  
 
 ## Dynamics of CTC loops and M2M1S1 loops under stimulations
