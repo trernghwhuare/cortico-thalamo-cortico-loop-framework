@@ -99,7 +99,7 @@ neural systems.
 ## Thalamus neurons construction
 
 In terms of morphological, canonical NeuroML v2 files for each class
-(TCRil, TCRm, TCRc, nRTil, nRTm, nRTc) (see Supplementary).
+, which are TCRil, TCRm, TCRc, nRTil, nRTm and nRTc.
 Morphological metrics reported include total axonal length, branch order
 distribution, and Sholl counts. Five variants of morphological
 perturbations per class by resampling branch length and branching angles
@@ -107,7 +107,7 @@ within ±10 percent for sensitivity checks. In electrophysiology, each
 class parameterized to reproduce resting potential (Vrest), input
 resistance (Rin), spike threshold and F-I curve from literature. Active
 conductances implemented as Hodgkin-Huxley style channels where
-required; channel kinetics referenced in Supplementary Table S2.
+required; channel kinetics referenced to Nucleus Reticularis (nRT) Thalami Cell model and thalamocortical relay (TCR) cell model.
 Single-cell validation runs in NEURON / PyNeuroML, dt = 0.025 ms for
 validation with the metrics of spike count at standard current steps,
 rheobase, adaptation index, and subthreshold impedance. Representative
@@ -120,7 +120,7 @@ Bezaire [@Bezaire2016] (see Figure.2).
 <import>
 <figure id="fig:fig2">
 <img src="paper/figures/Picture2.png" style="width:100.0%" />
-<figcaption>Three-dimensional morphology renders (left) and example membrane potential responses (right) for each thalamic class. Traces show characteristic firing patterns used for single-cell validation (see Supplementary Table S2).</figcaption>
+<figcaption>Three-dimensional morphology renders (left) and example membrane potential responses (right) for each thalamic class. Traces show characteristic firing patterns used for single-cell validation.</figcaption>
 </figure>
 </import>
 
@@ -144,7 +144,7 @@ are adjusted from previously works of Alexandra, Clemente-Perez [@Alexandra2017]
 inputs to thalamic relay cells. Connection probabilities are denoted
 $p_{\mathrm{CT}\rightarrow\mathrm{TCR}}$ and
 $p_{\mathrm{PT}\rightarrow\mathrm{TCR}}$ and are specified per
-pre/post class in Supplementary Table S3.
+pre/post class.
 
 **Thalamus $\rightarrow$ Cortex**: TC classes
 (intralaminar/matrix/core) target specific cortical layers and
@@ -162,7 +162,7 @@ For synapse models, chemical synapses (AMPA, NMDA, GABA$a$, GABA$b$)
 and electrical synapses (GapJunction, GapJ) were used (features display
 of synapses in Table 1). Short-term plasticity was omitted from the main
 experiments and noted as a limitation; synaptic weights and delay
-distributions are given in Supplementary Table S3.
+distributions are randomly generated for each synapse.
 
 **Table 1:** Synaptic model parameters used in the network simulations
    Synapse Type | Model | Conductance (nS) | Reversal Potential (mV) | Rise Time (ms) | Decay Time (ms) |
@@ -440,8 +440,7 @@ Figure.8 and Figure.5). These
 differences are robust across the CTC and M2M1S1 instantiations reported
 in Table.1. All pairwise class comparisons were
 evaluated using Wilcoxon tests with Benjamini-Hochberg FDR correction;
-effect sizes are reported in the Supplementary materials (Cliff's delta)
-alongside the sample counts used for each comparison.
+effect sizes (Cliff's delta) alongside the sample count are reported in the supplementary materials for each comparison.
 
 Projection-class modulates synchrony and band power. Projection motifs
 materially affect temporal coordination: matrix-dominant networks show
@@ -449,8 +448,7 @@ larger low-frequency (delta/theta) band power and more pronounced
 transient synchrony following perturbation than core-dominant networks.
 Representative intracellular traces and class-resolved PSTH/rate
 distributions illustrating these trends are presented in
-Figure.12 and Figure.13; band-power and coherence summaries are provided in the Supplementary
-figures. Statistical comparisons used permutation testing (10,000 permutations) with FDR correction and report both p-values and effect sizes.
+Figure.22 and Figure.23. Statistical comparisons used permutation testing (10,000 permutations) with FDR correction and report both p-values and effect sizes.
 
 Distinct stimulus-evoked dynamics for visual, TMS and pain protocols.
 Each stimulus family produces characteristic temporal signatures that
@@ -463,7 +461,7 @@ responses. Example waveforms, trial-averaged PSTHs and exemple rasters
 are shown in Figure.9; condition-by-class PSTH summaries (peak
 amplitude, latency) and per-trial metrics are supplied as JSON outputs.
 PSTH peak and latency comparisons were performed using nonparametric
-tests with effect sizes reported in the Supplementary.
+tests with effect sizes.
 
 Mean-field approximation performance. We compared single-cell and
 population mean-field maps against full NEST simulations across stimulus
@@ -481,11 +479,10 @@ supervised classifiers trained on these features achieve consistent
 accuracy across cross-validation folds and retain discriminative
 performance under modest feature ablation (see
 Figure.7); cluster maps and heatmaps that visualise motif grouping are shown in
-Figure.6. Reported metrics include cross-validated accuracy, confusion matrices and
-feature-ablation effect sizes in the Supplementary.
+Figure.6. Reported metrics include cross-validated accuracy, confusion matrices and feature-ablation effect sizes.
 
 Single-cell validation and morphologies. NeuroML v2 morphologies and the electrophysiological parameterization reproduce canonical single-cell signatures used for model calibration. Representative morphology renders
-and validation voltage traces are shown in Figure.1 and Figure.2; numerical validation metrics (rheobase, FI-curve fits, adaptation indices) are tabulated in Supplementary Table S2.
+and validation voltage traces are shown in Figure.1 and Figure.2.
 
 Robustness and sensitivity. We verified that the principal qualitative
 conclusions hold across parameter perturbations and alternate sampling
@@ -922,7 +919,7 @@ The differences under variate stimulations in voltage traces are as the Figure 2
 <import>
 <figure id="fig:fig23">
 <img src="paper/figures/Picture23.png" style="width:100.0%" />
-<figcaption>Kernel density estimates of spike-rate distributions across conditions and classes. KDEs summarize how projection motifs shift population firing distributions and support the E/I and synchrony claims (see Results and Supplementary Table S5 for statistics).</figcaption>
+<figcaption>Kernel density estimates of spike-rate distributions across conditions and classes. KDEs summarize how projection motifs shift population firing distributions and support the E/I and synchrony claims.</figcaption>
 </figure>
 </import>
 
@@ -1031,7 +1028,7 @@ coupling in TRN, all of which can reshape E/I balance and
 synchronization. Parameter choices for some class-pair connection
 probabilities and synaptic weights relied on literature synthesis or
 tuning where empirical data were sparse; although sensitivity analyses
-(Supplementary) indicate qualitative robustness, quantitative
+indicate qualitative robustness, quantitative
 predictions (*e.g.*, exact E/I ratios or oscillation amplitudes) should
 be interpreted cautiously. Scale limitations (networks at thousands, not
 tens of thousands, of morphologically detailed cells) and the use of
